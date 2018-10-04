@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Black Volga</title>
+    <title>Tags on BLACKVOLGA</title>
     <link>https://blackvolga.github.io/tags/</link>
-    <description>Recent content in Tags on Black Volga</description>
+    <description>Recent content in Tags on BLACKVOLGA</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (Agent23)</managingEditor>
     <webMaster>blackvolga@pm.me (Agent23)</webMaster>
@@ -40,20 +40,20 @@
     </item>
     
     <item>
+      <title>Intel</title>
+      <link>https://blackvolga.github.io/tags/intel/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Markdown</title>
       <link>https://blackvolga.github.io/tags/markdown/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (Agent23)</author>
       <guid>https://blackvolga.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Math</title>
-      <link>https://blackvolga.github.io/tags/math/</link>
-      <pubDate>Sun, 05 Mar 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
-      <guid>https://blackvolga.github.io/tags/math/</guid>
       <description></description>
     </item>
     

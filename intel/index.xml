@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intels on BLACKVOLGA</title>
+    <link>https://blackvolga.github.io/intel/</link>
+    <description>Recent content in Intels on BLACKVOLGA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>blackvolga@pm.me (Agent23)</managingEditor>
+    <webMaster>blackvolga@pm.me (Agent23)</webMaster>
+    <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blackvolga.github.io/intel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>101</title>
+      <link>https://blackvolga.github.io/intel/101/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/101/</guid>
+      <description>https://antergos.com/try-it/ https://tails.boum.org/install/index.en.html
+https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
+https://ssd.eff.org/en
+https://github.com/Jguer/yay https://github.com/sorin-ionescu/prezto
+https://wiki.archlinux.org/index.php/Etckeeper https://github.com/evertiro/packup https://github.com/jbernard/dotfiles
+For everything else, see the oracle: https://wiki.archlinux.org/index.php</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://blackvolga.github.io/intel/guides/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/guides/</guid>
+      <description>https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://blackvolga.github.io/intel/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/random/</guid>
+      <description>ASCII/ANSI ART https://github.com/nrlquaker/nfov
+Fonts https://github.com/rewtnull/amigafonts https://github.com/ansilove/BlockZone
+Misc 3d scanning - https://github.com/alicevision/meshroom</description>
+    </item>
+    
+    <item>
+      <title>Cheats</title>
+      <link>https://blackvolga.github.io/intel/cheats/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/cheats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>https://blackvolga.github.io/intel/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PenTesting</title>
+      <link>https://blackvolga.github.io/intel/pentest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/pentest/</guid>
+      <description>https://github.com/enaqx/awesome-pentest https://github.com/sbilly/awesome-security https://github.com/meirwah/awesome-incident-response https://github.com/coreb1t/awesome-pentest-cheat-sheets https://github.com/carpedm20/awesome-hacking https://github.com/vitalysim/Awesome-Hacking-Resources https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html https://github.com/yeyintminthuhtut/Awesome-Red-Teaming https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki https://wiki.sans.blue/#!index.md https://www.cybrary.it/ https://mkto.cisco.com/security-scholarship https://nostarch.com/nsm https://nostarch.com/packetanalysis3</description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://blackvolga.github.io/intel/tools/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (Agent23)</author>
+      <guid>https://blackvolga.github.io/intel/tools/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
