@@ -28,13 +28,8 @@
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/2015-02-20-test-markdown/</loc>
+    <loc>https://blackvolga.github.io/dispatch/003/</loc>
     <lastmod>2015-02-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blackvolga.github.io/</loc>
-    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -42,7 +37,9 @@
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/intel/random/</loc>
+    <loc>https://blackvolga.github.io/</loc>
+    <lastmod>2017-10-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -108,6 +105,10 @@
     <loc>https://blackvolga.github.io/tags/photoswipe/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/intel/random/</loc>
   </url>
   
   <url>

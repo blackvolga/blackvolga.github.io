@@ -1,7 +1,7 @@
 /* --- General --- */
 
 body {
-  font-family: 'Lora', 'Times New Roman', serif;
+  font-family: 'Muli', Verdana, Helvetica, serif;
   font-size: 18px;
   position: relative;
   background: #171714;
@@ -33,9 +33,32 @@ p a {
   /* text-decoration: underline */
   color: #dd8603;
 }
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+h1 {
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.35;
+  text-shadow: 4px 4px 4px #000000;
+}
+h2 {
+  font-family: 'Muli', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 0.6;
+  text-shadow: 2px 2px 0px #000000;
+}  
+h3,h4,h5,h6 {
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
+code {
+  background-color: rgb(68, 11, 11);
+  color: #f3efd5;
+}
+pre {
+  background-color: rgb(68, 11, 11);
+  color: #f3efd5;
 }
 a {
   color: #dd8603;
@@ -69,7 +92,7 @@ hr.small {
 }
 
 .main-explain-area {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   padding: 15px inherit;
 }
 
@@ -78,7 +101,7 @@ hr.small {
 }
 
 div.panel-body a.list-group-item {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
   border-radius: 0;
   border: none;
@@ -137,8 +160,8 @@ img {
 
 .navbar-custom {
   background: #220808;
-  border-bottom: 1px solid #a7926a;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid #efe5e5;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .navbar-custom .nav li a {
@@ -158,7 +181,7 @@ img {
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
   /* color: #cc7b00; */
-  color: #561111;
+  color: #ece2d4;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -267,7 +290,7 @@ img {
 }
 @media only screen and (max-width: 767px) {
   .navbar-custom .nav .navlinks-container.show-children {
-    background: #d4bda0;
+    background: #561111;
   }
   .navbar-custom .nav .navlinks-container.show-children .navlinks-children {
     display: block;
@@ -278,7 +301,7 @@ img {
     text-align: center;
   }
   .navbar-custom .nav .navlinks-container:hover {
-    background: #d4bda0;
+    background: #561111;
   }
   .navbar-custom .nav .navlinks-container:hover .navlinks-children {
     display: block;
@@ -288,7 +311,7 @@ img {
   }
   .navbar-custom .nav .navlinks-container .navlinks-children a {
     padding-left: 10px;
-    border: 1px solid #d4bda0;
+    border: 1px solid #561111;
     border-width: 0 1px 1px;
   }
 }
@@ -298,7 +321,7 @@ img {
 footer {
   padding: 30px 0;
   background: #03090a;
-  border-top: 1px #a7926a solid;
+  border-top: 1px #efe5e5 solid;
   margin-top: auto;
   font-size: 14px;
 }
@@ -312,7 +335,7 @@ footer .list-inline {
   padding: 0;
 }
 footer .copyright {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-align: center;
   margin-bottom: 0;
 }
@@ -383,7 +406,7 @@ footer .theme-by {
   text-decoration: none;
 }
 .post-preview .post-entry {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 .post-entry-container {
   display: inline-block;
@@ -422,7 +445,7 @@ footer .theme-by {
 /* --- Tags --- */
 
 .blog-tags {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #999;
   font-size: 15px;
   margin-bottom: 30px;
@@ -514,23 +537,25 @@ footer .theme-by {
 .intro-header .page-heading h1,
 .intro-header .tags-heading h1 {
   margin-top: 0;
-  font-size: 40px;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 .intro-header .post-heading h1 {
   margin-top: 0;
-  font-size: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 .intro-header .page-heading .page-subheading,
 .intro-header .post-heading .post-subheading {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 1.1;
   display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
-  margin: 10px 0 0;
+  margin: 5px 0 0;
 }
 .intro-header .post-heading .post-subheading {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .intro-header.big-img .page-heading .page-subheading,
 .intro-header.big-img .post-heading .post-subheading {
@@ -550,7 +575,7 @@ footer .theme-by {
   padding: 5px 10px;
   font-size: 11px;
   color: #EEE;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   right: 0;
   bottom: 0;
   display: none;
@@ -568,10 +593,12 @@ footer .theme-by {
   }
   .intro-header .page-heading h1,
   .intro-header .tags-heading h1 {
-    font-size: 80px;
+    font-size: 40px;
+    text-transform: uppercase;
   }
   .intro-header .post-heading h1 {
-    font-size: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
   }
   .intro-header.big-img .img-desc {
     font-size: 14px;
@@ -625,7 +652,7 @@ footer .theme-by {
 /* --- Pager --- */
 
 .pager li a {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Ovo', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
@@ -672,23 +699,27 @@ table {
   padding: 0;
 }
 table tr {
-  border-top: 1px solid #a7926a;
-  background-color: #ffffff;
+  border-top: 1px solid #efe5e5;
+  background-color: #650000;
+  color: #f3efd5;
   margin: 0;
   padding: 0;
 }
 table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #460000;
+  color: #f3efd5;
 }
-table tr th {
+table th {
   font-weight: bold;
-  border: 1px solid #a7926a;
+  border: 1px solid #efe5e5;
   text-align: left;
   margin: 0;
   padding: 6px 13px;
+  background-color: #280000;
+  color: #f3efd5;
 }
 table tr td {
-  border: 1px solid #a7926a;
+  border: 1px solid #efe5e5;
   text-align: left;
   margin: 0;
   padding: 6px 13px;

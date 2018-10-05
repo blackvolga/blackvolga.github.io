@@ -5,8 +5,8 @@
     <link>https://blackvolga.github.io/tags/intel/</link>
     <description>Recent content in Intel on BLACKVOLGA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>blackvolga@pm.me (Agent23)</managingEditor>
-    <webMaster>blackvolga@pm.me (Agent23)</webMaster>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
     <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blackvolga.github.io/tags/intel/index.xml" rel="self" type="application/rss+xml" />
@@ -16,14 +16,15 @@
       <title>101</title>
       <link>https://blackvolga.github.io/intel/101/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>https://antergos.com/try-it/ https://tails.boum.org/install/index.en.html
-https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
-https://ssd.eff.org/en
-https://github.com/Jguer/yay https://github.com/sorin-ionescu/prezto
-https://wiki.archlinux.org/index.php/Etckeeper https://github.com/evertiro/packup https://github.com/jbernard/dotfiles
-For everything else, see the oracle: https://wiki.archlinux.org/index.php</description>
+      <description>Antergos OR TAILS
+Bonus! https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
+Start with the basics: https://ssd.eff.org/en
+Arch First Steps:
+https://github.com/Jguer/yay
+https://github.com/sorin-ionescu/prezto
+For everything else, see the oracle: wiki.archlinux.org</description>
     </item>
     
   </channel>

@@ -5,23 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Code Sample</title>
-  <meta property="og:title" content="Code Sample" />
-  <meta name="twitter:title" content="Code Sample" />
-  <meta name="description" content="Using Hugo or Pygments">
-  <meta property="og:description" content="Using Hugo or Pygments">
-  <meta name="twitter:description" content="Using Hugo or Pygments">
+  <title>Test markdown</title>
+  <meta property="og:title" content="Test markdown" />
+  <meta name="twitter:title" content="Test markdown" />
+  <meta name="description" content="Each post also has a subtitle">
+  <meta property="og:description" content="Each post also has a subtitle">
+  <meta name="twitter:description" content="Each post also has a subtitle">
   <meta name="author" content="GAZ23"/>
   <link href='https://blackvolga.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://blackvolga.github.io/dispatch/2016-03-08-code-sample/" />
+  <meta property="og:url" content="https://blackvolga.github.io/dispatch/003/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BLACKVOLGA" />
 
   <meta name="generator" content="Hugo 0.49" />
-  <link rel="canonical" href="https://blackvolga.github.io/dispatch/2016-03-08-code-sample/" />
+  <link rel="canonical" href="https://blackvolga.github.io/dispatch/003/" />
   <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLACKVOLGA">
 
   
@@ -178,11 +178,11 @@
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <div class="dispatch-heading">
               
-                <h1>Code Sample</h1>
+                <h1>Test markdown</h1>
               
               
                 
-                  <h2 class="dispatch-subheading">Using Hugo or Pygments</h2>
+                  <h2 class="dispatch-subheading">Each post also has a subtitle</h2>
                 
               
               
@@ -199,41 +199,69 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>The following are two code samples using syntax highlighting.</p>
+        
 
-<p></p>
+<p>You can write regular <a href="http://markdowntutorial.com/">markdown</a> here and Jekyll will automatically convert it to a nice webpage.  I strongly encourage you to <a href="http://markdowntutorial.com/">take 5 minutes to learn how to write in markdown</a> - it&rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.</p>
 
-<p>The following is a code sample using triple backticks ( ``` ) code fencing provided in Hugo. This is client side highlighting and does not require any special installation.</p>
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">sum</span>
-    <span class="nx">num1</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter first number&#34;</span><span class="p">)</span>
-    <span class="nx">num2</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter second number&#34;</span><span class="p">)</span>
-    <span class="nx">sum</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num2</span><span class="p">)</span> <span class="c1">// &#34;+&#34; means &#34;add&#34;
-</span><span class="c1"></span>    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Sum = &#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">)</span>  <span class="c1">// &#34;+&#34; means combine into a string
-</span><span class="c1"></span></code></pre></div>
-<p>The following is a code sample using the &ldquo;highlight&rdquo; shortcode provided in Hugo. This is server side highlighting and requires Python and Pygments to be installed.</p>
+<p><strong>Here is some bold text</strong></p>
 
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript">    <span class="kd">var</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">sum</span>
-    <span class="nx">num1</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter first number&#34;</span><span class="p">)</span>
-    <span class="nx">num2</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter second number&#34;</span><span class="p">)</span>
-    <span class="nx">sum</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num2</span><span class="p">)</span> <span class="c1">// &#34;+&#34; means &#34;add&#34;
-</span><span class="c1"></span>    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Sum = &#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">)</span>  <span class="c1">// &#34;+&#34; means combine into a string
-</span><span class="c1"></span></code></pre></div>
+<h2 id="here-is-a-secondary-heading">Here is a secondary heading</h2>
 
-<p>And here is the same code with line numbers:</p>
+<p>Here&rsquo;s a useless table:</p>
 
-<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="ln">1</span>    <span class="kd">var</span> <span class="nx">num1</span><span class="p">,</span> <span class="nx">num2</span><span class="p">,</span> <span class="nx">sum</span>
-<span class="ln">2</span>    <span class="nx">num1</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter first number&#34;</span><span class="p">)</span>
-<span class="ln">3</span>    <span class="nx">num2</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s2">&#34;Enter second number&#34;</span><span class="p">)</span>
-<span class="ln">4</span>    <span class="nx">sum</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">num2</span><span class="p">)</span> <span class="c1">// &#34;+&#34; means &#34;add&#34;
-</span><span class="ln">5</span><span class="c1"></span>    <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;Sum = &#34;</span> <span class="o">+</span> <span class="nx">sum</span><span class="p">)</span>  <span class="c1">// &#34;+&#34; means combine into a string
-</span><span class="ln">6</span><span class="c1"></span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th align="left">Number</th>
+<th align="left">Next number</th>
+<th align="left">Previous number</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">Five</td>
+<td align="left">Six</td>
+<td align="left">Four</td>
+</tr>
+
+<tr>
+<td align="left">Ten</td>
+<td align="left">Eleven</td>
+<td align="left">Nine</td>
+</tr>
+
+<tr>
+<td align="left">Seven</td>
+<td align="left">Eight</td>
+<td align="left">Six</td>
+</tr>
+
+<tr>
+<td align="left">Two</td>
+<td align="left">Three</td>
+<td align="left">One</td>
+</tr>
+</tbody>
+</table>
+
+<p>How about a yummy crepe?</p>
+
+<p><img src="http://s3-media3.fl.yelpcdn.com/bphoto/cQ1Yoa75m2yUFFbY2xwuqw/348s.jpg" alt="Crepe" /></p>
+
+<p>Here&rsquo;s a code chunk with syntax highlighting:</p>
+<div class="highlight"><pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">foo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">5</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">foo</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
 
         
           <div class="blog-tags">
             
               <a href="https://blackvolga.github.io/tags/example/">example</a>&nbsp;
             
-              <a href="https://blackvolga.github.io/tags/code/">code</a>&nbsp;
+              <a href="https://blackvolga.github.io/tags/markdown/">markdown</a>&nbsp;
             
           </div>
         
@@ -244,13 +272,9 @@
       
         <ul class="pager blog-pager">
           
-            <li class="previous">
-              <a href="https://blackvolga.github.io/dispatch/2015-02-26-flake-it-till-you-make-it/" data-toggle="tooltip" data-placement="top" title="Flake it till you make it">&larr; Previous Post</a>
-            </li>
-          
           
             <li class="next">
-              <a href="https://blackvolga.github.io/dispatch/002/" data-toggle="tooltip" data-placement="top" title="Big Image Sample">Next Post &rarr;</a>
+              <a href="https://blackvolga.github.io/dispatch/2015-02-26-flake-it-till-you-make-it/" data-toggle="tooltip" data-placement="top" title="Flake it till you make it">Next Post &rarr;</a>
             </li>
           
         </ul>

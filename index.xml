@@ -5,8 +5,8 @@
     <link>https://blackvolga.github.io/</link>
     <description>Recent content on BLACKVOLGA</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>blackvolga@pm.me (Agent23)</managingEditor>
-    <webMaster>blackvolga@pm.me (Agent23)</webMaster>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
     <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blackvolga.github.io/index.xml" rel="self" type="application/rss+xml" />
@@ -16,21 +16,22 @@
       <title>101</title>
       <link>https://blackvolga.github.io/intel/101/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>https://antergos.com/try-it/ https://tails.boum.org/install/index.en.html
-https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
-https://ssd.eff.org/en
-https://github.com/Jguer/yay https://github.com/sorin-ionescu/prezto
-https://wiki.archlinux.org/index.php/Etckeeper https://github.com/evertiro/packup https://github.com/jbernard/dotfiles
-For everything else, see the oracle: https://wiki.archlinux.org/index.php</description>
+      <description>Antergos OR TAILS
+Bonus! https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
+Start with the basics: https://ssd.eff.org/en
+Arch First Steps:
+https://github.com/Jguer/yay
+https://github.com/sorin-ionescu/prezto
+For everything else, see the oracle: wiki.archlinux.org</description>
     </item>
     
     <item>
       <title>Photoswipe Gallery Sample</title>
       <link>https://blackvolga.github.io/dispatch/001/</link>
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/dispatch/001/</guid>
       <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;http://photoswipe.com&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;
 
@@ -89,7 +90,7 @@ For everything else, see the oracle: https://wiki.archlinux.org/index.php</descr
       <title>Big Image Sample</title>
       <link>https://blackvolga.github.io/dispatch/002/</link>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/dispatch/002/</guid>
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
 
@@ -100,7 +101,7 @@ For everything else, see the oracle: https://wiki.archlinux.org/index.php</descr
       <title>Code Sample</title>
       <link>https://blackvolga.github.io/dispatch/2016-03-08-code-sample/</link>
       <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/dispatch/2016-03-08-code-sample/</guid>
       <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
 
@@ -111,17 +112,17 @@ For everything else, see the oracle: https://wiki.archlinux.org/index.php</descr
       <title>Flake it till you make it</title>
       <link>https://blackvolga.github.io/dispatch/2015-02-26-flake-it-till-you-make-it/</link>
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/dispatch/2015-02-26-flake-it-till-you-make-it/</guid>
       <description>Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?</description>
     </item>
     
     <item>
       <title>Test markdown</title>
-      <link>https://blackvolga.github.io/dispatch/2015-02-20-test-markdown/</link>
+      <link>https://blackvolga.github.io/dispatch/003/</link>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
-      <guid>https://blackvolga.github.io/dispatch/2015-02-20-test-markdown/</guid>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/dispatch/003/</guid>
       <description>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
 Here is some bold text
 Here is a secondary heading Here&amp;rsquo;s a useless table:
@@ -132,27 +133,16 @@ Here is a secondary heading Here&amp;rsquo;s a useless table:
       <title></title>
       <link>https://blackvolga.github.io/intel/guides/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/guides/</guid>
       <description>https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://blackvolga.github.io/intel/random/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
-      <guid>https://blackvolga.github.io/intel/random/</guid>
-      <description>ASCII/ANSI ART https://github.com/nrlquaker/nfov
-Fonts https://github.com/rewtnull/amigafonts https://github.com/ansilove/BlockZone
-Misc 3d scanning - https://github.com/alicevision/meshroom</description>
     </item>
     
     <item>
       <title>Cheats</title>
       <link>https://blackvolga.github.io/intel/cheats/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/cheats/</guid>
       <description></description>
     </item>
@@ -161,7 +151,7 @@ Misc 3d scanning - https://github.com/alicevision/meshroom</description>
       <title>Links</title>
       <link>https://blackvolga.github.io/intel/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/links/</guid>
       <description></description>
     </item>
@@ -170,16 +160,27 @@ Misc 3d scanning - https://github.com/alicevision/meshroom</description>
       <title>PenTesting</title>
       <link>https://blackvolga.github.io/intel/pentest/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/pentest/</guid>
       <description>https://github.com/enaqx/awesome-pentest https://github.com/sbilly/awesome-security https://github.com/meirwah/awesome-incident-response https://github.com/coreb1t/awesome-pentest-cheat-sheets https://github.com/carpedm20/awesome-hacking https://github.com/vitalysim/Awesome-Hacking-Resources https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html https://github.com/yeyintminthuhtut/Awesome-Red-Teaming https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki https://wiki.sans.blue/#!index.md https://www.cybrary.it/ https://mkto.cisco.com/security-scholarship https://nostarch.com/nsm https://nostarch.com/packetanalysis3</description>
+    </item>
+    
+    <item>
+      <title>Random</title>
+      <link>https://blackvolga.github.io/intel/random/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/intel/random/</guid>
+      <description>ASCII/ANSI ART https://github.com/nrlquaker/nfov
+Fonts https://github.com/rewtnull/amigafonts https://github.com/ansilove/BlockZone
+Misc 3d scanning - https://github.com/alicevision/meshroom</description>
     </item>
     
     <item>
       <title>Tools</title>
       <link>https://blackvolga.github.io/intel/tools/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (Agent23)</author>
+      <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
       <description></description>
     </item>
