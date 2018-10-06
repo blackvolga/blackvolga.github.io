@@ -8,27 +8,27 @@
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/001/</loc>
+    <loc>https://blackvolga.github.io/post/001/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/002/</loc>
+    <loc>https://blackvolga.github.io/post/002/</loc>
     <lastmod>2017-03-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/2016-03-08-code-sample/</loc>
+    <loc>https://blackvolga.github.io/post/2016-03-08-code-sample/</loc>
     <lastmod>2016-03-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/2015-02-26-flake-it-till-you-make-it/</loc>
+    <loc>https://blackvolga.github.io/post/2015-02-26-flake-it-till-you-make-it/</loc>
     <lastmod>2015-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/dispatch/003/</loc>
+    <loc>https://blackvolga.github.io/post/003/</loc>
     <lastmod>2015-02-20T00:00:00+00:00</lastmod>
   </url>
   
@@ -60,12 +60,6 @@
   <url>
     <loc>https://blackvolga.github.io/tags/code/</loc>
     <lastmod>2016-03-08T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://blackvolga.github.io/dispatch/</loc>
-    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -103,6 +97,12 @@
   
   <url>
     <loc>https://blackvolga.github.io/tags/photoswipe/</loc>
+    <lastmod>2017-03-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/post/</loc>
     <lastmod>2017-03-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
