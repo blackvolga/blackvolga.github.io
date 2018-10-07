@@ -5,23 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>PenTesting</title>
-  <meta property="og:title" content="PenTesting" />
-  <meta name="twitter:title" content="PenTesting" />
-  <meta name="description" content="Little thieves are hanged, but great ones escape">
-  <meta property="og:description" content="Little thieves are hanged, but great ones escape">
-  <meta name="twitter:description" content="Little thieves are hanged, but great ones escape">
+  <title>wsl</title>
+  <meta property="og:title" content="wsl" />
+  <meta name="twitter:title" content="wsl" />
+  <meta name="description" content="Without torture, no science">
+  <meta property="og:description" content="Without torture, no science">
+  <meta name="twitter:description" content="Without torture, no science">
   <meta name="author" content="GAZ23"/>
   <link href='https://blackvolga.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://blackvolga.github.io/intel/pentest/" />
+  <meta property="og:url" content="https://blackvolga.github.io/post/wsl/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BLACKVOLGA" />
 
   <meta name="generator" content="Hugo 0.49" />
-  <link rel="canonical" href="https://blackvolga.github.io/intel/pentest/" />
+  <link rel="canonical" href="https://blackvolga.github.io/post/wsl/" />
   <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLACKVOLGA">
 
   
@@ -178,15 +178,29 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="intel-heading">
+            <div class="post-heading">
               
-                <h1>PenTesting</h1>
+                <h1>wsl</h1>
               
               
                 
-                  <h2 class="intel-subheading">Little thieves are hanged, but great ones escape</h2>
+                  <h2 class="post-subheading">Without torture, no science</h2>
                 
               
+              
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 6, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 2 minutes (361 words)
+  
+  
+</span>
+
+
               
             </div>
           </div>
@@ -201,28 +215,136 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p><a href="https://github.com/enaqx/awesome-pentest">https://github.com/enaqx/awesome-pentest</a>
-<a href="https://github.com/sbilly/awesome-security">https://github.com/sbilly/awesome-security</a>
-<a href="https://github.com/meirwah/awesome-incident-response">https://github.com/meirwah/awesome-incident-response</a>
-<a href="https://github.com/coreb1t/awesome-pentest-cheat-sheets">https://github.com/coreb1t/awesome-pentest-cheat-sheets</a>
-<a href="https://github.com/carpedm20/awesome-hacking">https://github.com/carpedm20/awesome-hacking</a>
-<a href="https://github.com/vitalysim/Awesome-Hacking-Resources">https://github.com/vitalysim/Awesome-Hacking-Resources</a>
-<a href="https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges">https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges</a>
-<a href="https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html">https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html</a>
-<a href="https://github.com/yeyintminthuhtut/Awesome-Red-Teaming">https://github.com/yeyintminthuhtut/Awesome-Red-Teaming</a>
-<a href="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki">https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki</a>
-<a href="https://wiki.sans.blue/#!index.md">https://wiki.sans.blue/#!index.md</a>
-<a href="https://www.cybrary.it/">https://www.cybrary.it/</a>
-<a href="https://mkto.cisco.com/security-scholarship">https://mkto.cisco.com/security-scholarship</a>
-<a href="https://nostarch.com/nsm">https://nostarch.com/nsm</a>
-<a href="https://nostarch.com/packetanalysis3">https://nostarch.com/packetanalysis3</a></p>
+        
+
+<p>Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.</p>
+
+<hr />
+
+<p><strong>First Thing&rsquo;s First</strong></p>
+
+<p>Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&rsquo;t you done this already?)</p>
+
+<p><a href="https://github.com/adolfintel/Windows10-Privacy">https://github.com/adolfintel/Windows10-Privacy</a></p>
+
+<hr />
+
+<p><strong>Debian WSL Install</strong></p>
+
+<ol>
+<li>Install WSL - Open PowerShell as Administrator (restart required)
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span></code></pre></div></li>
+<li>Install Debian
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">wsl-debian-gnulinux</span> <span class="n">-OutFile</span> <span class="n">Ubuntu</span><span class="p">.</span><span class="n">appx</span> <span class="n">-UseBasicParsing</span></code></pre></div></li>
+</ol>
+
+<p>You will prompted to create a linux user and pass on first start which will also be granted sudo membership.</p>
+
+<hr />
+
+<p><strong>WSL Terminal</strong></p>
+
+<h3 id="wsltty">wsltty</h3>
+
+<p>wsltty is <em>the</em> terminal for WSL if you can deal with no tabs. Installing xfce4-terminal is left as an exercise for the reader.</p>
+
+<p>Use <code>choco install wsltty</code> or download from <a href="https://github.com/mintty/wsltty/releases">https://github.com/mintty/wsltty/releases</a></p>
+
+<h3 id="hyper">Hyper</h3>
+
+<p><a href="https://github.com/zeit/hyper">Hyper</a> is an electron-based terminal for win, macos and linux. Not the slowest and uses less than 200MB memory with 5 tabs open.</p>
+
+<p><code>choco install hyper</code> or download from <a href="https://releases.hyper.is/download/win">https://releases.hyper.is/download/win</a></p>
+
+<ul>
+<li>Hyper settings:
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">    shell: <span class="s1">&#39;C:\\Windows\\System32\\bash.exe&#39;</span>,
+    bell: <span class="s1">&#39;false&#39;</span>,
+    plugins: <span class="o">[</span><span class="s1">&#39;material-shell&#39;</span><span class="o">]</span>,</code></pre></div></li>
+<li>Add to end of ~/.bashrc:
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">    bash -c zsh
+    <span class="k">case</span> <span class="nv">$-</span> in # don<span class="err">&#39;</span>t <span class="k">do</span> anything <span class="k">if</span> not running interactively</code></pre></div></li>
+</ul>
+
+<hr />
+
+<p><strong>Debian WSL Setup</strong></p>
+
+<ol>
+<li>Check for updates
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade</code></pre></div></li>
+<li>Base system (ymmv)
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get -y install zsh neovim tmux htop gnupg mlocate zip unzip rsync watch sed gawk grep jq git lolcat screenfetch curl wget nmap tcpdump netcat dnsutils ssh python3-dev</code></pre></div></li>
+
+<li><p>Sane defaults
+(feat zsh and <a href="https://github.com/sorin-ionescu/prezto">Prezto</a>)
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">/.zprezto&#34;</span>
+setopt EXTENDED_GLOB
+<span class="k">for</span> rcfile in <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">&#34;</span>/.zprezto/runcoms/^README.md<span class="o">(</span>.N<span class="o">)</span><span class="p">;</span> <span class="k">do</span>
+  ln -s <span class="s2">&#34;</span><span class="nv">$rcfile</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">/.</span><span class="si">${</span><span class="nv">rcfile</span><span class="p">:</span><span class="nv">t</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="k">done</span>
+chsh -s /bin/zsh</code></pre></div></p></li>
+
+<li><p>Zsh config. Add to ~/.zshrc:
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">alias</span> <span class="nv">clip</span><span class="o">=</span><span class="s1">&#39;clip.exe&#39;</span> <span class="c1"># clipboard support
+</span><span class="c1"></span>
+autoload -Uz promptinit
+promptinit
+prompt smiley
+screenfetch</code></pre></div></p></li>
+
+<li><p>Install <a href="https://github.com/wslutilities/wslu">wslu</a>
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt install apt-transport-https
+wget -O - https://api.patrickwu.ml/public.key <span class="p">|</span> sudo apt-key add -
+<span class="nb">echo</span> <span class="s2">&#34;deb https://apt.patrickwu.ml/ stable main&#34;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list 
+sudo apt update
+sudo apt install wslu</code></pre></div></p></li>
+
+<li><p>We use <a href="https://sourceforge.net/projects/vcxsrv/">VcxSrv</a> since Xming is no longer maintained. Download &amp; add to ~/.zshrc:
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:0.0
+<span class="nb">export</span> <span class="nv">LIBGL_ALWAYS_INDIRECT</span><span class="o">=</span><span class="m">1</span></code></pre></div>
+<strong>WARNING!</strong> Only allow connections to/from 127.0.0.1 as VcXsrv listens on all interfaces! <a href="https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/#installinganxserver">[Details]</a></p></li>
+
+<li><p>VSCode Integration
+<div class="highlight"><pre class="chroma"><code class="language-VSCode" data-lang="VSCode">&#34;terminal.integrated.shell.windows&#34;:&#34;C:\\WINDOWS\\System32\\bash.exe&#34;,
+&#34;terminal.integrated.fontFamily&#34;: &#34;Menlo&#34;,
+&#34;workbench.panel.location&#34;: &#34;bottom&#34;</code></pre></div></p></li>
+</ol>
+
+<hr />
+
+<p><strong>Useful Links</strong></p>
+
+<p>Kali - <a href="https://www.microsoft.com/store/productId/9PKR34TNCV07">https://www.microsoft.com/store/productId/9PKR34TNCV07</a></p>
+
+<p><a href="https://github.com/NathanCastle/BootShellCredentialProvider">https://github.com/NathanCastle/BootShellCredentialProvider</a></p>
+
+<p><a href="https://blogs.msdn.microsoft.com/wsl/2016/06/08/wsl-system-calls/">https://blogs.msdn.microsoft.com/wsl/2016/06/08/wsl-system-calls/</a></p>
+
+<p><a href="https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf">Menlo</a></p>
 
 
+        
+          <div class="blog-tags">
+            
+              <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/wsl/">wsl</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/debian/">debian</a>&nbsp;
+            
+          </div>
         
 
         
       </article>
 
+      
+        
+        
       
 
     </div>

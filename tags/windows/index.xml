@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Intel on BLACKVOLGA</title>
-    <link>https://blackvolga.github.io/tags/intel/</link>
-    <description>Recent content in Intel on BLACKVOLGA</description>
+    <title>Windows on BLACKVOLGA</title>
+    <link>https://blackvolga.github.io/tags/windows/</link>
+    <description>Recent content in Windows on BLACKVOLGA</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
     <lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blackvolga.github.io/tags/intel/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blackvolga.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -24,28 +24,6 @@ Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as yo
 https://github.com/adolfintel/Windows10-Privacy
 Debian WSL Install
  Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.</description>
-    </item>
-    
-    <item>
-      <title>101</title>
-      <link>https://blackvolga.github.io/intel/101/</link>
-      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>#OS Antergos OR TAILS
-Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
-##Arch First Steps
-https://github.com/Jguer/yay
-https://github.com/sorin-ionescu/prezto
-https://wiki.archlinux.org/index.php/security
-For everything else, see the oracle: wiki.archlinux.org
-##SSH
-EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
-ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
-Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-##GPG
-~/.gnupg/gpg.conf:
-# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &amp;gt; s &amp;gt; e &amp;gt; q 4096 &amp;gt; 1y &amp;gt; y</description>
     </item>
     
     <item>

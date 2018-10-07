@@ -10,7 +10,7 @@ body {
   flex-flow: column;
   height: 100vh;
 }
-.container[role=main] {
+.container[rol e=main] {
   margin-bottom:50px;
   flex: 1 0 auto;
 }
@@ -76,7 +76,9 @@ a:focus {
   color: #fff;
 }
 blockquote {
-  color: #220808;
+  border-left: 10px solid rgb(68, 11, 11);
+  color: #f3efd5;
+  background-color: #220808;
   font-style: italic;
 }
 blockquote p:first-child {
@@ -336,9 +338,11 @@ footer {
 }
 
 footer a {
-  color: #404040;
+  color: rgb(68, 11, 11);
 }
-
+footer a:hover {
+  color: rgb(190, 94, 15);
+}
 footer .list-inline {
   margin: 0;
   padding: 0;

