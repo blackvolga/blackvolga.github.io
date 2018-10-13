@@ -1,0 +1,15 @@
+# basic ~/.zshrc for Debian WSL
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+alias clip='clip.exe'
+alias hyper='cmd.exe /c hyper'
+
+autoload -Uz promptinit
+promptinit
+prompt smiley
+screenfetch
+
+export DISPLAY=:0.0
+export LIBGL_ALWAYS_INDIRECT=1

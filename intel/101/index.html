@@ -18,11 +18,11 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://blackvolga.github.io/intel/101/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BLACKVOLGA" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
 
   <meta name="generator" content="Hugo 0.49" />
   <link rel="canonical" href="https://blackvolga.github.io/intel/101/" />
-  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLACKVOLGA">
+  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
 
   
   
@@ -59,10 +59,6 @@
                 
                   <a href="/post/wsl">wsl</a>
                 
-                  <a href="/post/002">#002</a>
-                
-                  <a href="/post/003">#003</a>
-                
               </div>
             </li>
           
@@ -86,7 +82,7 @@
         
           
             <li>
-              <a title="links" href="/intel/links">links</a>
+              <a title="ref" href="/intel/links">ref</a>
             </li>
           
         
@@ -100,8 +96,8 @@
     
       <div class="avatar-container">
         <div class="avatar-img-border">
-          <a title="BLACKVOLGA" href="https://blackvolga.github.io">
-            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLACKVOLGA" />
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
           </a>
         </div>
       </div>
@@ -223,31 +219,34 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>#OS
-<a href="https://antergos.com/try-it/">Antergos</a> OR <a href="https://tails.boum.org/install/index.en.html">TAILS</a></p>
+        
 
-<p>Start with the basics: <a href="https://ssd.eff.org/en">https://ssd.eff.org/en</a>
-Advanced Mode: <a href="https://www.qubes-os.org/">https://www.qubes-os.org/</a></p>
+<h1 id="os">OS</h1>
 
-<p>##Arch First Steps</p>
+<p><a href="https://antergos.com/try-it/" target="_blank">Antergos</a> OR <a href="https://tails.boum.org/install/index.en.html" target="_blank">TAILS</a></p>
 
-<p><a href="https://github.com/Jguer/yay">https://github.com/Jguer/yay</a></p>
+<p>Start with the basics: <a href="https://ssd.eff.org/en" target="_blank">https://ssd.eff.org/en</a><br />
+Advanced Mode: <a href="https://www.qubes-os.org/" target="_blank">https://www.qubes-os.org/</a></p>
 
-<p><a href="https://github.com/sorin-ionescu/prezto">https://github.com/sorin-ionescu/prezto</a></p>
+<h1 id="arch-first-steps">Arch First Steps</h1>
 
-<p><a href="https://wiki.archlinux.org/index.php/security">https://wiki.archlinux.org/index.php/security</a></p>
+<p><a href="https://github.com/Jguer/yay" target="_blank">https://github.com/Jguer/yay</a></p>
 
-<p>For everything else, see the oracle: <a href="https://wiki.archlinux.org/index.php">wiki.archlinux.org</a></p>
+<p><a href="https://github.com/sorin-ionescu/prezto" target="_blank">https://github.com/sorin-ionescu/prezto</a></p>
 
-<p>##SSH</p>
+<p><a href="https://wiki.archlinux.org/index.php/security" target="_blank">https://wiki.archlinux.org/index.php/security</a></p>
+
+<p>For everything else, see the oracle: <a href="https://wiki.archlinux.org/index.php" target="_blank">wiki.archlinux.org</a></p>
+
+<h1 id="ssh">SSH</h1>
 
 <p>EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.</p>
 
 <p><code>ssh-keygen -t ed25519 -a 100</code> OR <code>ssh-keygen -t rsa -b 4096 -o -a 100</code></p>
 
-<p>Ref: <a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html">https://stribika.github.io/2015/01/04/secure-secure-shell.html</a></p>
+<p>Ref: <a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html" target="_blank">https://stribika.github.io/2015/01/04/secure-secure-shell.html</a></p>
 
-<p>##GPG</p>
+<h1 id="gpg">GPG</h1>
 
 <p>~/.gnupg/gpg.conf:</p>
 <div class="highlight"><pre class="chroma"># Avoid information leaked
@@ -280,71 +279,77 @@ s2k-cipher-algo AES256
 s2k-digest-algo SHA512
 s2k-mode 3
 s2k-count 65011712</pre></div>
-<p>###Create Master Key
-<code>gpg2 --expert --full-gen-key</code>
-OPTION 8 &gt; s &gt; e &gt; q
+<h2 id="create-master-key">Create Master Key</h2>
+
+<p><code>gpg2 --expert --full-gen-key</code><br />
+OPTION 8 &gt; s &gt; e &gt; q<br />
 4096 &gt; 1y &gt; y</p>
 
-<p>###Create Sub-Keys
-<code>gpg2 --list-keys</code>
+<h2 id="create-sub-keys">Create Sub-Keys</h2>
+
+<p><code>gpg2 --list-keys</code><br />
 <code>gpg2 --expert --edit-key &lt;KEYID&gt;</code></p>
 
 <blockquote>
-<p>addkey
+<p>addkey<br />
 8 &gt; s &gt; q &gt; 1y &gt; y &gt; y</p>
 </blockquote>
 
 <p>Repeat for Signing and Authentication key.</p>
 
-<p>gpg&gt; save
+<p>gpg&gt; save<br />
 gpg&gt; quit</p>
 
-<p>###Create Revocation For Master Key
-<code>gpg2 --output &lt;KEYID&gt;.rev --gen-revoke &lt;KEYID&gt;</code></p>
+<h2 id="create-revocation-for-master-key">Create Revocation For Master Key</h2>
 
-<p>###Save All Keys
-<code>gpg2 --export --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.pub.asc</code>
-<code>gpg2 --export-secret-keys --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.priv.asc</code>
-<code>gpg2 --export-secret-subkeys --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.sub_priv.asc</code>
+<p><code>gpg2 --output &lt;KEYID&gt;.rev --gen-revoke &lt;KEYID&gt;</code></p>
+
+<h2 id="save-all-keys">Save All Keys</h2>
+
+<p><code>gpg2 --export --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.pub.asc</code><br />
+<code>gpg2 --export-secret-keys --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.priv.asc</code><br />
+<code>gpg2 --export-secret-subkeys --armor &lt;KEYID&gt; &gt; &lt;KEYID&gt;.sub_priv.asc</code><br />
 These files all goto secure offline storage (take backups!)</p>
 
-<p>###Delete All Keys
-<code>gpg2 --delete-secret-key &lt;KEYID&gt;</code></p>
+<h2 id="delete-all-keys">Delete All Keys</h2>
 
-<p>###Import Sub Keys
-<code>gpg2 --import &lt;KEYID&gt;.sub_priv.asc</code></p>
+<p><code>gpg2 --delete-secret-key &lt;KEYID&gt;</code></p>
 
-<p><a href="https://blog.eleven-labs.com/en/openpgp-almost-perfect-key-pair-part-1/">https://blog.eleven-labs.com/en/openpgp-almost-perfect-key-pair-part-1/</a></p>
+<h2 id="import-sub-keys">Import Sub Keys</h2>
 
-<p>Bonus! <a href="https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst">https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst</a></p>
+<p><code>gpg2 --import &lt;KEYID&gt;.sub_priv.asc</code></p>
 
-<p>Ref:
-Debian Guide <a href="https://wiki.debian.org/Keysigning#Step_1:_Create_a_RSA_keypair">https://wiki.debian.org/Keysigning#Step_1:_Create_a_RSA_keypair</a>
-GNU Privacy Handbook <a href="https://www.gnupg.org/gph/en/manual.html">https://www.gnupg.org/gph/en/manual.html</a></p>
+<p><a href="https://blog.eleven-labs.com/en/openpgp-almost-perfect-key-pair-part-1/" target="_blank">https://blog.eleven-labs.com/en/openpgp-almost-perfect-key-pair-part-1/</a></p>
 
-<p>#Firefox</p>
+<p>Bonus! <a href="https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst" target="_blank">https://github.com/lfit/ssh-gpg-smartcard-config/blob/master/YubiKey_NEO.rst</a></p>
 
-<p>##Addons</p>
+<p>Ref:<br />
+Debian Guide <a href="https://wiki.debian.org/Keysigning#Step_1:_Create_a_RSA_keypair" target="_blank">https://wiki.debian.org/Keysigning#Step_1:_Create_a_RSA_keypair</a><br />
+GNU Privacy Handbook <a href="https://www.gnupg.org/gph/en/manual.html" target="_blank">https://www.gnupg.org/gph/en/manual.html</a></p>
 
-<p>Multi Account Containers <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/">https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/</a></p>
+<h1 id="firefox">Firefox</h1>
 
-<p>Temporary Containers <a href="https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/">https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/</a></p>
+<h1 id="addons">Addons</h1>
 
-<p>HTTPS Everywhere <a href="https://www.eff.org/https-everywhere">https://www.eff.org/https-everywhere</a></p>
+<p>Multi Account Containers <a href="https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/</a></p>
 
-<p>Privacy Badger <a href="https://www.eff.org/privacybadger">https://www.eff.org/privacybadger</a></p>
+<p>Temporary Containers <a href="https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/</a></p>
 
-<p>uBlock Origin <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></p>
+<p>HTTPS Everywhere <a href="https://www.eff.org/https-everywhere" target="_blank">https://www.eff.org/https-everywhere</a></p>
 
-<p>NoScript <a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/">https://addons.mozilla.org/en-US/firefox/addon/noscript/</a></p>
+<p>Privacy Badger <a href="https://www.eff.org/privacybadger" target="_blank">https://www.eff.org/privacybadger</a></p>
 
-<p>NoCoin <a href="https://addons.mozilla.org/en-US/firefox/addon/no-coin/">https://addons.mozilla.org/en-US/firefox/addon/no-coin/</a></p>
+<p>uBlock Origin <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/</a></p>
 
-<p>KeepassXC-Browser <a href="https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/">https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/</a></p>
+<p>NoScript <a href="https://addons.mozilla.org/en-US/firefox/addon/noscript/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/noscript/</a></p>
 
-<p>DuckDuckGo <a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/">https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/</a></p>
+<p>NoCoin <a href="https://addons.mozilla.org/en-US/firefox/addon/no-coin/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/no-coin/</a></p>
 
-<p>##about:config tweaks</p>
+<p>KeepassXC-Browser <a href="https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/keepassxc-browser/</a></p>
+
+<p>DuckDuckGo <a href="https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/" target="_blank">https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/</a></p>
+
+<h1 id="about-config-tweaks">about:config tweaks</h1>
 <div class="highlight"><pre class="chroma">privacy.firstparty.isolate = true
 privacy.resistFingerprinting = true
 browser.search.geoip.url = blank

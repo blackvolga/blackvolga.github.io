@@ -18,11 +18,11 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://blackvolga.github.io/post/wsl/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BLACKVOLGA" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
 
   <meta name="generator" content="Hugo 0.49" />
   <link rel="canonical" href="https://blackvolga.github.io/post/wsl/" />
-  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLACKVOLGA">
+  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
 
   
   
@@ -59,10 +59,6 @@
                 
                   <a href="/post/wsl">wsl</a>
                 
-                  <a href="/post/002">#002</a>
-                
-                  <a href="/post/003">#003</a>
-                
               </div>
             </li>
           
@@ -86,7 +82,7 @@
         
           
             <li>
-              <a title="links" href="/intel/links">links</a>
+              <a title="ref" href="/intel/links">ref</a>
             </li>
           
         
@@ -100,8 +96,8 @@
     
       <div class="avatar-container">
         <div class="avatar-img-border">
-          <a title="BLACKVOLGA" href="https://blackvolga.github.io">
-            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLACKVOLGA" />
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
           </a>
         </div>
       </div>
@@ -195,7 +191,7 @@
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 2 minutes (361 words)
+  <i class="fa fa-clock-o"></i> 2 minutes (415 words)
   
   
 </span>
@@ -215,120 +211,112 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.</p>
-
-<hr />
-
-<p><strong>First Thing&rsquo;s First</strong></p>
-
-<p>Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&rsquo;t you done this already?)</p>
-
-<p><a href="https://github.com/adolfintel/Windows10-Privacy">https://github.com/adolfintel/Windows10-Privacy</a></p>
+        <p>Sometimes we all get stuck on a windows machine. Since the <a href="https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/" target="_blank">March 2018 Update</a>, Windows Subsystem for Linux has become a surprisingly superior alternative to cygwin for your basic terminal needs.<br />
+</p>
 
 <hr />
 
-<p><strong>Debian WSL Install</strong></p>
+<p><strong>First Thing&rsquo;s First</strong><br />
+Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&rsquo;t you done this already?)</p>
 
-<ol>
-<li>Install WSL - Open PowerShell as Administrator (restart required)
-<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span></code></pre></div></li>
-<li>Install Debian
-<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">wsl-debian-gnulinux</span> <span class="n">-OutFile</span> <span class="n">Ubuntu</span><span class="p">.</span><span class="n">appx</span> <span class="n">-UseBasicParsing</span></code></pre></div></li>
-</ol>
+<p>This guide is updated regularly: <a href="https://github.com/adolfintel/Windows10-Privacy" target="_blank">https://github.com/adolfintel/Windows10-Privacy</a></p>
 
-<p>You will prompted to create a linux user and pass on first start which will also be granted sudo membership.</p>
+<hr />
+
+<p><strong>Debian WSL Install</strong><br />
+1. Install WSL - Open PowerShell as Administrator<br />
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Enable-WindowsOptionalFeature</span> <span class="n">-Online</span> <span class="n">-FeatureName</span> <span class="n">Microsoft-Windows-Subsystem-Linux</span></code></pre></div><br />
+2. Install Debian (restart required)<br />
+<div class="highlight"><pre class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="n">https</span><span class="err">:</span><span class="p">//</span><span class="n">aka</span><span class="p">.</span><span class="n">ms</span><span class="p">/</span><span class="n">wsl-debian-gnulinux</span> <span class="n">-OutFile</span> <span class="n">Ubuntu</span><span class="p">.</span><span class="n">appx</span> <span class="n">-UseBasicParsing</span></code></pre></div><br />
+You will prompted to create a linux user and pass on first start which will also be granted sudo membership.</p>
 
 <hr />
 
 <p><strong>WSL Terminal</strong></p>
 
-<h3 id="wsltty">wsltty</h3>
+<h2 id="barebones">Barebones</h2>
 
-<p>wsltty is <em>the</em> terminal for WSL if you can deal with no tabs. Installing xfce4-terminal is left as an exercise for the reader.</p>
+<p>wsltty is <em>the</em> terminal for WSL if you can deal with no tabs.</p>
 
-<p>Use <code>choco install wsltty</code> or download from <a href="https://github.com/mintty/wsltty/releases">https://github.com/mintty/wsltty/releases</a></p>
+<p>Use <code>choco install wsltty</code> or download from <a href="https://github.com/mintty/wsltty/releases" target="_blank">https://github.com/mintty/wsltty/releases</a></p>
 
-<h3 id="hyper">Hyper</h3>
+<p>Installing xfce4-terminal is left as an <a href="https://solarianprogrammer.com/2017/04/16/windows-susbsystem-for-linux-xfce-4/" target="_blank">exercise</a> for the reader.</p>
 
-<p><a href="https://github.com/zeit/hyper">Hyper</a> is an electron-based terminal for win, macos and linux. Not the slowest and uses less than 200MB memory with 5 tabs open.</p>
+<h2 id="eyecandy">Eyecandy</h2>
 
-<p><code>choco install hyper</code> or download from <a href="https://releases.hyper.is/download/win">https://releases.hyper.is/download/win</a></p>
+<p><img src="/img/hyperwsl.gif" alt="The finished product" /></p>
+
+<p><a href="https://github.com/zeit/hyper" target="_blank">Hyper</a> is an electron-based terminal for win, macos and linux. Not the slowest and uses less than 200MB memory with 5 tabs open.</p>
+
+<p><code>choco install hyper</code> or download from <a href="https://releases.hyper.is/download/win" target="_blank">https://releases.hyper.is/download/win</a></p>
 
 <ul>
-<li>Hyper settings:
+<li>Hyper settings:<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">    shell: <span class="s1">&#39;C:\\Windows\\System32\\bash.exe&#39;</span>,
+    fontFamily: <span class="s1">&#39;Menlo, Monaco, Inconsolata, monospace&#39;</span>,
     bell: <span class="s1">&#39;false&#39;</span>,
-    plugins: <span class="o">[</span><span class="s1">&#39;material-shell&#39;</span><span class="o">]</span>,</code></pre></div></li>
-<li>Add to end of ~/.bashrc:
+    plugins: <span class="o">[</span>
+    <span class="s1">&#39;hyper-materialshell&#39;</span>,
+    <span class="s1">&#39;hyper-tab-icons&#39;</span>,
+    <span class="s1">&#39;hyperline&#39;</span>,
+    <span class="s1">&#39;hyperpower&#39;</span>,
+    <span class="s1">&#39;hyperborder&#39;</span>,
+    <span class="s1">&#39;hyper-tabs-enhanced&#39;</span><span class="o">]</span>,</code></pre></div><br /></li>
+<li>Add to end of ~/.bashrc:<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">    bash -c zsh
-    <span class="k">case</span> <span class="nv">$-</span> in # don<span class="err">&#39;</span>t <span class="k">do</span> anything <span class="k">if</span> not running interactively</code></pre></div></li>
+    <span class="k">case</span> <span class="nv">$-</span> in # don<span class="err">&#39;</span>t <span class="k">do</span> anything <span class="k">if</span> not running interactively</code></pre></div><br />
+<br /></li>
 </ul>
 
 <hr />
 
-<p><strong>Debian WSL Setup</strong></p>
-
-<ol>
-<li>Check for updates
-<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade</code></pre></div></li>
-<li>Base system (ymmv)
-<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get -y install zsh neovim tmux htop gnupg mlocate zip unzip rsync watch sed gawk grep jq git lolcat screenfetch curl wget nmap tcpdump netcat dnsutils ssh python3-dev</code></pre></div></li>
-
-<li><p>Sane defaults
-(feat zsh and <a href="https://github.com/sorin-ionescu/prezto">Prezto</a>)
+<p><strong>Debian WSL Setup</strong><br />
+1. Check for updates<br />
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get update <span class="o">&amp;&amp;</span> sudo apt-get upgrade</code></pre></div><br />
+2. Base system (ymmv)<br />
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt-get -y install zsh neovim tmux htop gnupg mlocate zip unzip rsync watch sed gawk grep jq git lolcat screenfetch curl wget nmap tcpdump netcat dnsutils ssh python3-dev</code></pre></div><br />
+3. Sane default terminal<br />
+(feat zsh and <a href="https://github.com/sorin-ionescu/prezto" target="_blank">Prezto</a>)<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">zsh
 git clone --recursive https://github.com/sorin-ionescu/prezto.git <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">/.zprezto&#34;</span>
 setopt EXTENDED_GLOB
 <span class="k">for</span> rcfile in <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">&#34;</span>/.zprezto/runcoms/^README.md<span class="o">(</span>.N<span class="o">)</span><span class="p">;</span> <span class="k">do</span>
   ln -s <span class="s2">&#34;</span><span class="nv">$rcfile</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">ZDOTDIR</span><span class="k">:-</span><span class="nv">$HOME</span><span class="si">}</span><span class="s2">/.</span><span class="si">${</span><span class="nv">rcfile</span><span class="p">:</span><span class="nv">t</span><span class="si">}</span><span class="s2">&#34;</span>
 <span class="k">done</span>
-chsh -s /bin/zsh</code></pre></div></p></li>
-
-<li><p>Zsh config. Add to ~/.zshrc:
+chsh -s /bin/zsh</code></pre></div><br />
+4. Zsh config. Add to ~/.zshrc:<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">alias</span> <span class="nv">clip</span><span class="o">=</span><span class="s1">&#39;clip.exe&#39;</span> <span class="c1"># clipboard support
 </span><span class="c1"></span>
 autoload -Uz promptinit
 promptinit
 prompt smiley
-screenfetch</code></pre></div></p></li>
-
-<li><p>Install <a href="https://github.com/wslutilities/wslu">wslu</a>
+screenfetch</code></pre></div><br />
+5. Install <a href="https://github.com/wslutilities/wslu" target="_blank">wslu</a><br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">sudo apt install apt-transport-https
 wget -O - https://api.patrickwu.ml/public.key <span class="p">|</span> sudo apt-key add -
 <span class="nb">echo</span> <span class="s2">&#34;deb https://apt.patrickwu.ml/ stable main&#34;</span> <span class="p">|</span> sudo tee -a /etc/apt/sources.list 
 sudo apt update
-sudo apt install wslu</code></pre></div></p></li>
-
-<li><p>We use <a href="https://sourceforge.net/projects/vcxsrv/">VcxSrv</a> since Xming is no longer maintained. Download &amp; add to ~/.zshrc:
+sudo apt install wslu</code></pre></div><br />
+6. We use <a href="https://sourceforge.net/projects/vcxsrv/" target="_blank">VcXsrv</a> since Xming is no longer maintained. Download and add to ~/.zshrc:<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">export</span> <span class="nv">DISPLAY</span><span class="o">=</span>:0.0
-<span class="nb">export</span> <span class="nv">LIBGL_ALWAYS_INDIRECT</span><span class="o">=</span><span class="m">1</span></code></pre></div>
-<strong>WARNING!</strong> Only allow connections to/from 127.0.0.1 as VcXsrv listens on all interfaces! <a href="https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/#installinganxserver">[Details]</a></p></li>
-
-<li><p>VSCode Integration
+<span class="nb">export</span> <span class="nv">LIBGL_ALWAYS_INDIRECT</span><span class="o">=</span><span class="m">1</span></code></pre></div><strong>WARNING!</strong> Only allow connections to/from 127.0.0.1 as VcXsrv listens on <a href="https://blog.ropnop.com/configuring-a-pretty-and-usable-terminal-emulator-for-wsl/#installinganxserver" target="_blank">all interfaces</a>!<br />
+7. VSCode Integration<br />
 <div class="highlight"><pre class="chroma"><code class="language-VSCode" data-lang="VSCode">&#34;terminal.integrated.shell.windows&#34;:&#34;C:\\WINDOWS\\System32\\bash.exe&#34;,
 &#34;terminal.integrated.fontFamily&#34;: &#34;Menlo&#34;,
-&#34;workbench.panel.location&#34;: &#34;bottom&#34;</code></pre></div></p></li>
-</ol>
+&#34;workbench.panel.location&#34;: &#34;bottom&#34;</code></pre></div></p>
 
 <hr />
 
-<p><strong>Useful Links</strong></p>
-
-<p>Kali - <a href="https://www.microsoft.com/store/productId/9PKR34TNCV07">https://www.microsoft.com/store/productId/9PKR34TNCV07</a></p>
-
-<p><a href="https://github.com/NathanCastle/BootShellCredentialProvider">https://github.com/NathanCastle/BootShellCredentialProvider</a></p>
-
-<p><a href="https://blogs.msdn.microsoft.com/wsl/2016/06/08/wsl-system-calls/">https://blogs.msdn.microsoft.com/wsl/2016/06/08/wsl-system-calls/</a></p>
-
-<p><a href="https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf">Menlo</a></p>
-
+<p><strong>References</strong><br />
+* .zshrc - <a href="/ref/wsl_zshrc">Raw</a><br />
+* Menlo Font - <a href="https://github.com/hbin/top-programming-fonts/blob/master/Menlo-Regular.ttf" target="_blank">Download</a><br />
+* Start\stop VcXsrv automagically - <a href="https://old.reddit.com/r/bashonubuntuonwindows/comments/8gwc8t/automatically_start_and_stop_vcxsrv_when_when/" target="_blank">Reddit</a><br />
+* Replace windows shell entirely - <a href="https://github.com/NathanCastle/BootShellCredentialProvider" target="_blank">Github</a><br />
+* Kali WSL - <a href="https://www.microsoft.com/store/productId/9PKR34TNCV07" target="_blank">Windows Store</a><br />
+* WSL System Calls - <a href="https://blogs.msdn.microsoft.com/wsl/2016/06/08/wsl-system-calls/" target="_blank">MSDN Blogs</a></p>
 
         
           <div class="blog-tags">
-            
-              <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
             
               <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
             

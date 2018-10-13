@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Debian on BLACKVOLGA</title>
+    <title>Debian on BLVCKƔXLGV</title>
     <link>https://blackvolga.github.io/tags/debian/</link>
-    <description>Recent content in Debian on BLACKVOLGA</description>
+    <description>Recent content in Debian on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
@@ -18,12 +18,8 @@
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/wsl/</guid>
-      <description>Sometimes we all get stuck on a windows machine. Luckily Windows subsystem for Linux has matured into a surprising alternative to cygwin or VMs for your basic terminal needs.
-First Thing&amp;rsquo;s First
-Windows 10 is a clusterfuck of bloatware, ads and tracking. Remove as much as you can before you begin (why haven&amp;rsquo;t you done this already?)
-https://github.com/adolfintel/Windows10-Privacy
-Debian WSL Install
- Install WSL - Open PowerShell as Administrator (restart required) Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux Install Debian Invoke-WebRequest -Uri https://aka.</description>
+      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has become a surprisingly superior alternative to cygwin for your basic terminal needs.&lt;br /&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>
