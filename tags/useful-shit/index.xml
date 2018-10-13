@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Useful Shit on BLVCKƔXLGV</title>
+    <link>https://blackvolga.github.io/tags/useful-shit/</link>
+    <description>Recent content in Useful Shit on BLVCKƔXLGV</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
+    
+	<atom:link href="https://blackvolga.github.io/tags/useful-shit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Links</title>
+      <link>https://blackvolga.github.io/ref/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/ref/links/</guid>
+      <description>Basics  Notepad http://etherpad.org/
+ Email https://protonmail.com/
+ Chat https://crypto.cat/
+ Mobile https://signal.org/
+  CTF  https://picoctf.com/
+An always-open game targeted for high school students
+ http://ghostintheshellcode.com/
+An annual capture-the-flag contest that takes place Jan/Feb.
+  Challenges  https://www.microcorruption.com/
+Play entirely in your browser
+ http://pwnadventure.com/
+Hack the Pwn Adventure 3: Pwnie Island MMORPG
+ http://overthewire.org/
+This is a series of games played over SSH
+ https://exploit-exercises.com/</description>
+    </item>
+    
+  </channel>
+</rss>
