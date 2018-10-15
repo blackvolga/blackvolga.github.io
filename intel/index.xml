@@ -18,8 +18,10 @@
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/101/</guid>
-      <description>Network Pi-Hole
-BIOS CoreBoot
+      <description>Network Start with a router that supports firmware like DD-WRT or OpenWRT
+Setup a firewall like ipFire or pfSense OR purchase a dedicated device like the SG-1000
+Blacklist ad/tracking domains with Pi-Hole
+BIOS Use CoreBoot if your hardware allows
 OS Antergos OR TAILS
 Start with the basics: https://ssd.eff.org/en
 Advanced Mode: https://www.qubes-os.org/
@@ -27,10 +29,7 @@ Arch First Steps https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
 For everything else, see the oracle: wiki.archlinux.org
-SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.1 (gpg –version) so use 4096 bit RSA keys if ED25519 is not available.
-ssh-keygen -t ed25519 -a 100 OR ssh-keygen -t rsa -b 4096 -o -a 100
-Ref: https://stribika.github.io/2015/01/04/secure-secure-shell.html
-GPG ~/.</description>
+SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.</description>
     </item>
     
     <item>
@@ -56,11 +55,7 @@ https://github.com/carpedm20/awesome-hacking
 https://github.com/vitalysim/Awesome-Hacking-Resources
 https://github.com/AnarchoTechNYC/meta/wiki/InfoSec#hacking-challenges
 https://web.archive.org/web/20161227061020/http://www.zapyaapkforpc.com/2016/12/top-hacking-sites-ctfs-and-wargames-to.html
-https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
-https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
 https://wiki.sans.blue/#!index.md
-https://www.cybrary.it/
-https://mkto.cisco.com/security-scholarship
 https://nostarch.com/nsm
 https://nostarch.com/packetanalysis3</description>
     </item>
@@ -87,6 +82,7 @@ Misc
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
       <description>Living Off The Land https://github.com/LOLBAS-Project/LOLBAS
+BlackHat Arsenal https://github.com/toolswatch/blackhat-arsenal-tools
 Recon https://github.com/jordanpotti/AWSBucketDump
 https://github.com/laramies/theHarvester
 https://github.com/thewhiteh4t/pwnedOrNot

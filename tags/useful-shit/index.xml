@@ -21,6 +21,9 @@
  Email https://protonmail.com/
  Chat https://crypto.cat/
  Mobile https://signal.org/
+ https://zerossl.com/
+ https://haveibeenpwned.com/
+ http://www.shodan.io/
   CTF  https://picoctf.com/
 An always-open game targeted for high school students
  http://ghostintheshellcode.com/
@@ -30,8 +33,7 @@ Play entirely in your browser
  http://pwnadventure.com/
 Hack the Pwn Adventure 3: Pwnie Island MMORPG
  http://overthewire.org/
-This is a series of games played over SSH
- https://exploit-exercises.com/</description>
+This is a series of games played over SSH</description>
     </item>
     
   </channel>

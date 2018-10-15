@@ -24,12 +24,12 @@
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/intel/cheats/</loc>
+    <loc>https://blackvolga.github.io/tags/cheats/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/tags/cheatsheets/</loc>
-    <priority>0</priority>
+    <loc>https://blackvolga.github.io/intel/cheats/</loc>
   </url>
   
   <url>
@@ -56,6 +56,10 @@
   
   <url>
     <loc>https://blackvolga.github.io/intel/pentest/</loc>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/ref/pentest/</loc>
   </url>
   
   <url>
