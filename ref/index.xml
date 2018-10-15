@@ -22,7 +22,7 @@
  Identity https://keybase.io/
  Email https://protonmail.com/
  Chat https://crypto.cat/
- Mobile https://signal.org/
+ Mobile https://signal.org/ AND https://briarproject.org/
  Disk\File Encryption https://www.veracrypt.fr/en/Home.html
  https://letsencrypt.org/
  https://haveibeenpwned.com/
@@ -30,8 +30,7 @@
  WebGun - WebGun, XSS Payload Creator
  Hackvertor - Tool to convert various encodings and generate attack vectors
  Fuzzdb - Dictionary of attack patterns and primitives for black-box application testing
-Polyglot Challenge with submitted solutions
- SecList - A collection of multiple types of lists used during security assessments.</description>
+Polyglot Challenge with submitted solutions</description>
     </item>
     
     <item>
@@ -70,6 +69,7 @@ https://nostarch.com/packetanalysis3</description>
   Videos
 * Internet Security Weakness and Targets Lectures 2017/18
 * Curated list of Security Talks and Videos
+* How Tor Users Got Caught
 Courses
 Cybary  Certified Information Systems Security Professional
  Advanced Penetration Testing
