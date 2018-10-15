@@ -79,13 +79,19 @@ SSH EdDSA requires OpenSSH 6.</description>
  Chat https://crypto.cat/
  Mobile https://signal.org/ AND https://briarproject.org/
  Disk\File Encryption https://www.veracrypt.fr/en/Home.html
- https://letsencrypt.org/
- https://haveibeenpwned.com/
- http://www.shodan.io/
- WebGun - WebGun, XSS Payload Creator
- Hackvertor - Tool to convert various encodings and generate attack vectors
- Fuzzdb - Dictionary of attack patterns and primitives for black-box application testing
-Polyglot Challenge with submitted solutions</description>
+  Hosting  https://letsencrypt.org/
+ https://njal.la/
+DNS Registration
+  Fun Stuff  haveibeenpwned
+ Shodan
+ WebGun
+XSS Payload Creator
+ Hackvertor
+Convert encodings
+ Fuzzdb
+ SecList
+  CTF  https://picoctf.com/
+An always-open game targeted for high school students</description>
     </item>
     
     <item>
