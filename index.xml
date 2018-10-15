@@ -36,12 +36,12 @@ Blacklist ad/tracking domains with Pi-Hole
 BIOS Use CoreBoot if your hardware allows
 OS Antergos OR TAILS
 Start with the basics: https://ssd.eff.org/en
-Advanced Mode: https://www.qubes-os.org/
+Advanced Mode: Qubes or Whonix
 Arch First Steps https://github.com/Jguer/yay
 https://github.com/sorin-ionescu/prezto
 https://wiki.archlinux.org/index.php/security
 For everything else, see the oracle: wiki.archlinux.org
-SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.</description>
+SSH EdDSA requires OpenSSH 6.</description>
     </item>
     
     <item>
@@ -50,7 +50,16 @@ SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/cheats/</guid>
-      <description></description>
+      <description>Docker Cheat Sheet
+ Mobile App Pentest Cheat Sheet
+ OSX Command Line Cheat Sheet
+ PowerShell Cheat Sheet
+ Regexp Security Cheat Sheet
+ Security Cheat Sheets
+ Unix / Linux Cheat Sheet
+ JavaScript Cheat Sheet - Learn javascript in one picture (Online version) (PNG version)
+ Python Cheat Sheet #1 - Learn python3 in one picture (PNG version)
+ Python Cheat Sheet #2  - Learn python3 in one picture (Online version) (PNG version)</description>
     </item>
     
     <item>
@@ -59,23 +68,21 @@ SSH EdDSA requires OpenSSH 6.5 (ssh -V) or GnuPG 2.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/ref/links/</guid>
-      <description>Basics  Notepad http://etherpad.org/
+      <description>Basics  Notepad https://privatebin.net/
+ Shared Notepad http://etherpad.org/
+ Identity https://keybase.io/
  Email https://protonmail.com/
  Chat https://crypto.cat/
  Mobile https://signal.org/
- https://zerossl.com/
+ Disk\File Encryption https://www.veracrypt.fr/en/Home.html
+ https://letsencrypt.org/
  https://haveibeenpwned.com/
  http://www.shodan.io/
-  CTF  https://picoctf.com/
-An always-open game targeted for high school students
- http://ghostintheshellcode.com/
-An annual capture-the-flag contest that takes place Jan/Feb.
-  Challenges  https://www.microcorruption.com/
-Play entirely in your browser
- http://pwnadventure.com/
-Hack the Pwn Adventure 3: Pwnie Island MMORPG
- http://overthewire.org/
-This is a series of games played over SSH</description>
+ WebGun - WebGun, XSS Payload Creator
+ Hackvertor - Tool to convert various encodings and generate attack vectors
+ Fuzzdb - Dictionary of attack patterns and primitives for black-box application testing
+Polyglot Challenge with submitted solutions
+ SecList - A collection of multiple types of lists used during security assessments.</description>
     </item>
     
     <item>
@@ -142,18 +149,17 @@ Misc
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/ref/list/</guid>
       <description>CTF Field Guide
+ CTF Resources
  Metasploit Unleashed
  Digital Privacy at borders
   Videos
 * Internet Security Weakness and Targets Lectures 2017/18
-* Introductory x86
+* Curated list of Security Talks and Videos
 Courses
 Cybary  Certified Information Systems Security Professional
  Advanced Penetration Testing
 Course follows book &amp;ldquo;Penetration Testing: A Hands-On Introduction to Hacking&amp;rdquo; that Georgia Weidman wrote
-  MIT  Advanced Topics in Cryptography 2003
- Cryptography and Cryptanalysis 2005
- Network and Computer Security 2014</description>
+  MIT  Advanced Topics in Cryptography 2003</description>
     </item>
     
     <item>
@@ -162,16 +168,16 @@ Course follows book &amp;ldquo;Penetration Testing: A Hands-On Introduction to H
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
-      <description>Living Off The Land https://github.com/LOLBAS-Project/LOLBAS
-BlackHat Arsenal https://github.com/toolswatch/blackhat-arsenal-tools
-Recon https://github.com/jordanpotti/AWSBucketDump
-https://github.com/laramies/theHarvester
-https://github.com/thewhiteh4t/pwnedOrNot
-DNS https://github.com/darkoperator/dnsrecon
-https://github.com/michenriksen/aquatone
-Moar https://github.com/infosecn1nja/Red-Teaming-Toolkit
-https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
-https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki</description>
+      <description>Recon  https://github.com/jordanpotti/AWSBucketDump
+ https://github.com/laramies/theHarvester
+ https://github.com/thewhiteh4t/pwnedOrNot
+  DNS  https://github.com/darkoperator/dnsrecon
+ https://github.com/michenriksen/aquatone
+  CTF  https://github.com/zardus/ctf-tools
+ https://github.com/apsdehal/awesome-ctf
+  Exploits Linux  linux-exploit-suggester.sh - Linux privilege escalation auditing tool written in bash
+ Linux_Exploit_Suggester.pl v2 - Next-generation exploit suggester based on Linux_Exploit_Suggester
+ Linux Soft Exploit Suggester - linux-soft-exploit-suggester finds exploits for all vulnerable software in a system helping with the privilege escalation. It focuses on software packages instead of Kernel vulnerabilities</description>
     </item>
     
     <item>
