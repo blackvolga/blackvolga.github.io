@@ -1,0 +1,21 @@
+# Home/End
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line
+
+# Delete/Insert
+"\e[3~": delete-char
+"\e[2~": quoted-insert
+
+# PageUp/PageDown
+"\e[5~": history-search-backward
+"\e[6~": history-search-forward
+
+# Ctrl+Up/Ctrl+Down
+"\e[1;5A": beginning-of-line
+"\e[1;5B": end-of-line
+
+# Ctrl+Left/Ctrl+Right
+"\eOC": forward-word
+"\eOD": backward-word
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word%

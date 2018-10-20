@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on BLVCKƔXLGV</title>
-    <link>https://blackvolga.github.io/post/</link>
-    <description>Recent content in Posts on BLVCKƔXLGV</description>
+    <title>Vbox on BLVCKƔXLGV</title>
+    <link>https://blackvolga.github.io/tags/vbox/</link>
+    <description>Recent content in Vbox on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
     <lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://blackvolga.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blackvolga.github.io/tags/vbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -26,16 +26,6 @@
 &lt;p&gt;Talk by &lt;a href=&#34;https://twitter.com/_niklasb&#34; target=&#34;_blank&#34;&gt;Niklas Baumstark&lt;/a&gt; from Insomni&amp;rsquo;hack 2018&lt;/p&gt;
 
 &lt;p&gt;Many of these bugs have probably been around since 2001.&lt;br /&gt;
-&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>wsl</title>
-      <link>https://blackvolga.github.io/post/wsl/</link>
-      <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/post/wsl/</guid>
-      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Luckily, since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     

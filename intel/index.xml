@@ -94,16 +94,31 @@ Misc
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
-      <description>Recon  https://github.com/jordanpotti/AWSBucketDump
+      <description> Recon  https://github.com/jordanpotti/AWSBucketDump
  https://github.com/laramies/theHarvester
  https://github.com/thewhiteh4t/pwnedOrNot
   DNS  https://github.com/darkoperator/dnsrecon
  https://github.com/michenriksen/aquatone
   CTF  https://github.com/zardus/ctf-tools
  https://github.com/apsdehal/awesome-ctf
-  Exploits Linux  linux-exploit-suggester.sh - Linux privilege escalation auditing tool written in bash
- Linux_Exploit_Suggester.pl v2 - Next-generation exploit suggester based on Linux_Exploit_Suggester
- Linux Soft Exploit Suggester - linux-soft-exploit-suggester finds exploits for all vulnerable software in a system helping with the privilege escalation. It focuses on software packages instead of Kernel vulnerabilities</description>
+  Misc  Living Off The Land
+ BlackHat Arsenal
+  More Curated Lists  https://github.com/infosecn1nja/Red-Teaming-Toolkit
+ https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
+ https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
+ https://github.com/meitar/awesome-cybersecurity-blueteam
+ https://github.com/m4ll0k/Awesome-Hacking-Tools
+ https://github.com/jekil/awesome-hacking
+ https://github.com/0x90/wifi-arsenal
+ https://github.com/Cugu/awesome-forensics
+ https://github.com/devsecops/awesome-devsecops
+ https://github.com/onlurking/awesome-infosec
+ https://github.com/jivoi/awesome-osint
+ https://github.com/enaqx/awesome-pentest
+ https://github.com/tylerha97/awesome-reversing
+ https://github.com/qazbnm456/awesome-web-security
+ https://github.com/sneakerhax/Runbooks
+  </description>
     </item>
     
     <item>

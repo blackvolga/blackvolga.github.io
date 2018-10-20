@@ -7,10 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
-    <lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blackvolga.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Unboxing VirtualBox</title>
+      <link>https://blackvolga.github.io/post/vbox/</link>
+      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/post/vbox/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/fFaWE3jt7qU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;Talk by &lt;a href=&#34;https://twitter.com/_niklasb&#34; target=&#34;_blank&#34;&gt;Niklas Baumstark&lt;/a&gt; from Insomni&amp;rsquo;hack 2018&lt;/p&gt;
+
+&lt;p&gt;Many of these bugs have probably been around since 2001.&lt;br /&gt;
+&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>wsl</title>
@@ -18,9 +35,7 @@
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/wsl/</guid>
-      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine.&lt;/p&gt;
-
-&lt;p&gt;Luckily, since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.&lt;br /&gt;
+      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Luckily, since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.&lt;br /&gt;
 &lt;/p&gt;</description>
     </item>
     
@@ -79,9 +94,8 @@ SSH EdDSA requires OpenSSH 6.</description>
  Chat https://crypto.cat/
  Mobile https://signal.org/ AND https://briarproject.org/
  Disk\File Encryption https://www.veracrypt.fr/en/Home.html
-  Hosting  https://letsencrypt.org/
- https://njal.la/
-DNS Registration
+  Hosting  SSL Certs https://letsencrypt.org/
+ DNS Registration https://njal.la/
   Fun Stuff  haveibeenpwned
  Shodan
  WebGun
@@ -90,8 +104,8 @@ XSS Payload Creator
 Convert encodings
  Fuzzdb
  SecList
-  CTF  https://picoctf.com/
-An always-open game targeted for high school students</description>
+  Coding  Linux kernel coding style
+  CTF  https://picoctf.</description>
     </item>
     
     <item>
@@ -178,16 +192,31 @@ Course follows book &amp;ldquo;Penetration Testing: A Hands-On Introduction to H
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/intel/tools/</guid>
-      <description>Recon  https://github.com/jordanpotti/AWSBucketDump
+      <description> Recon  https://github.com/jordanpotti/AWSBucketDump
  https://github.com/laramies/theHarvester
  https://github.com/thewhiteh4t/pwnedOrNot
   DNS  https://github.com/darkoperator/dnsrecon
  https://github.com/michenriksen/aquatone
   CTF  https://github.com/zardus/ctf-tools
  https://github.com/apsdehal/awesome-ctf
-  Exploits Linux  linux-exploit-suggester.sh - Linux privilege escalation auditing tool written in bash
- Linux_Exploit_Suggester.pl v2 - Next-generation exploit suggester based on Linux_Exploit_Suggester
- Linux Soft Exploit Suggester - linux-soft-exploit-suggester finds exploits for all vulnerable software in a system helping with the privilege escalation. It focuses on software packages instead of Kernel vulnerabilities</description>
+  Misc  Living Off The Land
+ BlackHat Arsenal
+  More Curated Lists  https://github.com/infosecn1nja/Red-Teaming-Toolkit
+ https://github.com/yeyintminthuhtut/Awesome-Red-Teaming
+ https://github.com/bluscreenofjeff/Red-Team-Infrastructure-Wiki
+ https://github.com/meitar/awesome-cybersecurity-blueteam
+ https://github.com/m4ll0k/Awesome-Hacking-Tools
+ https://github.com/jekil/awesome-hacking
+ https://github.com/0x90/wifi-arsenal
+ https://github.com/Cugu/awesome-forensics
+ https://github.com/devsecops/awesome-devsecops
+ https://github.com/onlurking/awesome-infosec
+ https://github.com/jivoi/awesome-osint
+ https://github.com/enaqx/awesome-pentest
+ https://github.com/tylerha97/awesome-reversing
+ https://github.com/qazbnm456/awesome-web-security
+ https://github.com/sneakerhax/Runbooks
+  </description>
     </item>
     
     <item>
