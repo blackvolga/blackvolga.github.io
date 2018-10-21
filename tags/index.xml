@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
-    <lastBuildDate>Sat, 06 Oct 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://blackvolga.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Apache</title>
+      <link>https://blackvolga.github.io/tags/apache/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/apache/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Cheats</title>
@@ -31,11 +40,47 @@
     </item>
     
     <item>
+      <title>Htaccess</title>
+      <link>https://blackvolga.github.io/tags/htaccess/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/htaccess/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Intel</title>
       <link>https://blackvolga.github.io/tags/intel/</link>
       <pubDate>Tue, 03 Oct 2017 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/tags/intel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Jquery</title>
+      <link>https://blackvolga.github.io/tags/jquery/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lulzsec</title>
+      <link>https://blackvolga.github.io/tags/lulzsec/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/lulzsec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>News</title>
+      <link>https://blackvolga.github.io/tags/news/</link>
+      <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/tags/news/</guid>
       <description></description>
     </item>
     
@@ -63,15 +108,6 @@
       <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/tags/vbox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtualbox</title>
-      <link>https://blackvolga.github.io/tags/virtualbox/</link>
-      <pubDate>Sat, 20 Oct 2018 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/tags/virtualbox/</guid>
       <description></description>
     </item>
     
