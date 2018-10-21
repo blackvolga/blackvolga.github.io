@@ -18,10 +18,10 @@
       <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/htaccess/</guid>
-      <description>&lt;p&gt;Popular &lt;a href=&#34;https://github.com/blueimp/jQuery-File-Upload&#34; target=&#34;_blank&#34;&gt;jQuery upload plugin&lt;/a&gt; uses .htaccess for security control. The default behaviour in Apache was changed &lt;strong&gt;8 years ago&lt;/strong&gt; (v2.3.9) which meant attackers can upload payloads using the plugin. Luckily it has only been forked 7,834 times!&lt;br /&gt;
-&lt;br /&gt;
-But wait! It gets better:&lt;br /&gt;
-&lt;img src=&#34;https://blackvolga.github.io/img/htaccess_facepalm.png&#34; alt=&#34;twitter.com/stevewerby/status/1053354746658967552&#34; /&gt;&lt;/p&gt;</description>
+      <description>&lt;p&gt;So a &lt;a href=&#34;https://github.com/blueimp/jQuery-File-Upload&#34; target=&#34;_blank&#34;&gt;popular&lt;/a&gt; jQuery upload plugin used .htaccess for security control but the default behaviour in Apache was changed &lt;strong&gt;8 years ago&lt;/strong&gt; (v2.3.9) so attackers have been able to upload payloads using the plugin.&lt;/p&gt;
+
+&lt;p&gt;Luckily it&amp;rsquo;s only the second biggest jQuery repo on GitHub (and has only been forked 7,834 times!)&lt;br /&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>
