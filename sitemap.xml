@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://blackvolga.github.io/post/pixelfun/</loc>
+    <lastmod>2018-12-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://blackvolga.github.io/post/htaccess/</loc>
     <lastmod>2018-10-21T00:00:00+00:00</lastmod>
   </url>
@@ -30,7 +35,7 @@
   
   <url>
     <loc>https://blackvolga.github.io/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,6 +94,12 @@
   </url>
   
   <url>
+    <loc>https://blackvolga.github.io/tags/magisk/</loc>
+    <lastmod>2018-12-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blackvolga.github.io/tags/news/</loc>
     <lastmod>2018-10-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -103,8 +114,14 @@
   </url>
   
   <url>
+    <loc>https://blackvolga.github.io/tags/pixel/</loc>
+    <lastmod>2018-12-16T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://blackvolga.github.io/post/</loc>
-    <lastmod>2018-10-21T00:00:00+00:00</lastmod>
+    <lastmod>2018-12-16T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Magisk on BLVCKƔXLGV</title>
+    <link>https://blackvolga.github.io/tags/magisk/</link>
+    <description>Recent content in Magisk on BLVCKƔXLGV</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
+    <lastBuildDate>Sun, 16 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blackvolga.github.io/tags/magisk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rooting Pixel 3</title>
+      <link>https://blackvolga.github.io/post/pixelfun/</link>
+      <pubDate>Sun, 16 Dec 2018 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/post/pixelfun/</guid>
+      <description>Magisk for Pixel 3 Our very first drop test immediately confirmed initial suspicions about the questionable design decision to accommodate wireless charging by using the thinnest possible moulded plastic for the rear body (wrapped in glass no less!).
+Needless to say, we&amp;rsquo;ve gotten pretty good at flashing and rooting the Pixel 3.
+First Things First  System &amp;gt; About Phone
+ Hit Build Number 7 times
+  System &amp;gt; Developer Options</description>
+    </item>
+    
+  </channel>
+</rss>
