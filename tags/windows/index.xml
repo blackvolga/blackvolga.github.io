@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows on BLVCKƔXLGV</title>
+    <title>windows on BLVCKƔXLGV</title>
     <link>https://blackvolga.github.io/tags/windows/</link>
-    <description>Recent content in Windows on BLVCKƔXLGV</description>
+    <description>Recent content in windows on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
@@ -18,8 +18,7 @@
       <pubDate>Sat, 06 Oct 2018 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/wsl/</guid>
-      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Luckily, since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.&lt;br /&gt;
-&lt;/p&gt;</description>
+      <description>&lt;p&gt;Sometimes we all get stuck on a windows machine. Luckily, since the &lt;a href=&#34;https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/&#34; target=&#34;_blank&#34;&gt;March 2018 Update&lt;/a&gt;, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.&lt;/p&gt;</description>
     </item>
     
     <item>

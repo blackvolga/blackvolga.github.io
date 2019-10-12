@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Arch Linux VFIO 2019</title>
+  <meta property="og:title" content="Arch Linux VFIO 2019" />
+  <meta name="twitter:title" content="Arch Linux VFIO 2019" />
+  <meta name="description" content="It’s good to be a guest, but being home is better">
+  <meta property="og:description" content="It’s good to be a guest, but being home is better">
+  <meta name="twitter:description" content="It’s good to be a guest, but being home is better">
+  <meta name="author" content="GAZ23"/>
+  <link href='https://blackvolga.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://blackvolga.github.io/post/archvfio2019/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
+
+  <meta name="generator" content="Hugo 0.58.3" />
+  <link rel="canonical" href="https://blackvolga.github.io/post/archvfio2019/" />
+  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
+
+  
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://blackvolga.github.io/css/main.css" /><link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link rel="stylesheet" href="https://blackvolga.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://blackvolga.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">dispatch</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/wsl">wsl</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">intel</a>
+              <div class="navlinks-children">
+                
+                  <a href="/intel/101">101</a>
+                
+                  <a href="/intel/tools">tools</a>
+                
+                  <a href="/intel/powershell">powershell</a>
+                
+                  <a href="/intel/cheats">cheatsheets</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">ref</a>
+              <div class="navlinks-children">
+                
+                  <a href="/ref/links">links</a>
+                
+                  <a href="/ref/list">reading list</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Arch Linux VFIO 2019</h1>
+              
+              
+                
+                  <h2 class="post-subheading">It’s good to be a guest, but being home is better</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 12, 2019
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 13 minutes (2587 words)
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>An incredibly opinionated attempt at updating the Arch Linux VFIO install notes for late 2019 from a disparate collection of sources.</p>
+
+<p>We strongly discourage blindly following this document. References have been provided if you are unsure what you are about to do.</p>
+
+<hr />
+
+<ul>
+<li><a href="#background">Background</a><br /></li>
+<li><a href="#first-things-first">First Things First</a><br />
+
+<ul>
+<li><a href="#bios">BIOS</a><br /></li>
+<li><a href="#update-bios">Update BIOS</a><br /></li>
+<li><a href="#bios-settings">BIOS Settings</a><br /></li>
+<li><a href="#boot-installer">Boot Installer</a><br /></li>
+</ul></li>
+<li><a href="#partitions--filesystems">Partitions &amp; Filesystems</a><br />
+
+<ul>
+<li><a href="#initial-partitioning">Initial Partitioning</a><br /></li>
+<li><a href="#encrypt-system-parition">Encrypt System Parition</a><br /></li>
+<li><a href="#format-system-partition">Format System Partition</a><br /></li>
+<li><a href="#swap">Swap</a><br /></li>
+<li><a href="#boot-config">Boot Config</a><br /></li>
+<li><a href="#auto-mount-luksxfs">Auto-mount LUKS+xfs</a><br /></li>
+<li><a href="#bonus-access-veracrypt-container-with-cryptsetup">Bonus! Access veracrypt container with cryptsetup</a><br /></li>
+</ul></li>
+<li><a href="#arch-install">Arch Install</a><br />
+
+<ul>
+<li><a href="#arch-chroot">Arch chroot</a><br /></li>
+<li><a href="#initramfs">initramfs</a><br /></li>
+<li><a href="#tz--localization">TZ &amp; Localization</a><br /></li>
+<li><a href="#systemd-boot">Systemd-boot</a><br /></li>
+<li><a href="#bootstrap">Bootstrap</a><br /></li>
+<li><a href="#essentials">Essentials</a><br />
+
+<ul>
+<li><a href="#improve-compile-time">Improve Compile Time</a><br /></li>
+<li><a href="#aria2-download-manager">aria2 download manager</a><br /></li>
+</ul></li>
+<li><a href="#base-system">Base System</a><br />
+
+<ul>
+<li><a href="#cli">cli</a><br /></li>
+<li><a href="#xwindows">xwindows</a><br /></li>
+<li><a href="#mouse-config">mouse config</a><br /></li>
+<li><a href="#user">User</a><br /></li>
+<li><a href="#prezto">prezto</a><br /></li>
+<li><a href="#yay-aur-helper">yay (AUR helper)</a><br /></li>
+<li><a href="#userland-goodies">Userland Goodies</a><br /></li>
+<li><a href="#snapper">Snapper</a><br /></li>
+<li><a href="#pacman-integration">pacman integration</a><br /></li>
+<li><a href="#backups">Backups</a><br /></li>
+</ul></li>
+<li><a href="#tweaks--hardening">Tweaks &amp; Hardening</a><br /></li>
+</ul></li>
+<li><a href="#vfio">VFIO</a><br />
+
+<ul>
+<li><a href="#qemu">QEMU</a><br /></li>
+<li><a href="#bonus-mount-raw-images">Bonus! mount raw images</a><br /></li>
+<li><a href="#gpu-passthru">GPU passthru</a><br /></li>
+<li><a href="#evdev">EvDev</a><br /></li>
+<li><a href="#audio">Audio</a><br /></li>
+</ul></li>
+<li><a href="#extras">Extras</a><br />
+
+<ul>
+<li><a href="#hardware-security">Hardware security</a><br /></li>
+<li><a href="#personal-vpn">Personal VPN</a><br /></li>
+<li><a href="#personal-dns">Personal DNS</a><br /></li>
+<li><a href="#docker">Docker</a><br />
+
+<ul>
+<li><a href="#useful-images">Useful Images</a><br /></li>
+</ul></li>
+<li><a href="#docker-all-the-things">Docker <em>all</em> the things</a><br /></li>
+</ul></li>
+<li><a href="#reference">Reference</a><br />
+
+<ul>
+<li><a href="#arch-stuff">Arch Stuff</a><br /></li>
+<li><a href="#linux-tweaks">Linux Tweaks</a><br /></li>
+<li><a href="#xfs">XFS</a><br /></li>
+<li><a href="#btrfs">Btrfs</a><br /></li>
+<li><a href="#butter-cheatsheet">Butter Cheatsheet</a><br />
+
+<ul>
+<li><a href="#basic-stuff">Basic stuff</a><br /></li>
+<li><a href="#recovery">Recovery</a><br /></li>
+</ul></li>
+<li><a href="#vfio--kvm--qemu">VFIO / KVM / QEMU</a><br /></li>
+<li><a href="#notes">Notes</a><br /></li>
+<li><a href="#misc">Misc.</a><br />
+<br /></li>
+</ul></li>
+</ul>
+
+<hr />
+
+<h2 id="background">Background</h2>
+
+<p><strong>Ryzen2 3900X</strong><br />
+  Intel. <a href="https://arxiv.org/abs/1801.01207" target="_blank">That’s</a>¹ <a href="https:/foreshadowattack.eu/foreshadow.pdf" target="_blank">the</a>² <a href="https:/zombieloadattack.com/zombieload.pdf" target="_blank">joke</a>³.<br />
+  12 cores, 24 threads and 64MB L3 cache? What&rsquo;s not to like?<br />
+  <strong>NOTE:</strong> Ryzen2 suffered a <a href="https://github.com/systemdsystemd-stable/commit/29dda7597af5ab40746d81cec2e69d28126c1142" target="_blank">showstopper</a> that was fixed in AGESA 1.0.0.3ABA</p>
+
+<p><strong>X570</strong><br />
+  Too many bugs, keep an eye on BIOS updates and take backups. Annoyingly, settings are not recommended to be loaded between versions FFS</p>
+
+<p><strong>RX 570 / 5700XT</strong><br />
+  The pace of amdgpu, vulkan and dxvk development has made team green a laughing stock - more so since Pascal and later require signed drivers(pour one out for the nouveau      homies).</p>
+
+<p><strong>systemd-boot</strong><br />
+  cause fuck grub</p>
+
+<p><strong>btrfs</strong><br />
+  Btrfs has been <a href="https://wiki.debian.org/Btrfs#Recommendations" target="_blank">usable</a> in raid0 for a few years as long as you aren’t storing DBs/VMs or expecting reasonable performance with      quotas/qgroups enabled.<br />
+  Obligatory old man <a href="https://wiki.debian.org/Btrfs#Warnings" target="_blank">warning</a> included for the haters.<br />
+  still waiting for kent to clean up those <a href="https://lkml.org/lkml/2019/6/10/762" target="_blank">empty commit msgs</a> before the end of the year lulz</p>
+
+<p><strong>xfs</strong><br />
+  solid and performant for mixed media and qcow2 images</p>
+
+<p><strong>vfio</strong><br />
+    cuz dual booting is so 1995 (s/o crash override)</p>
+
+<p><strong>NOTE:</strong> Linux kernel 5.3-rc2 has <a href="https://patchwork.kernel.org/patch/11051537/" target="_blank">both</a>¹ <a href="https://patchwork.kernel.org/patch/11051539/" target="_blank">patches</a>² for kvm <a href="https://     lkml.org/lkml/2019/7/17/758" target="_blank">regression</a> while 5.2.5 only has <a href="https://bugzilla.kernel.org/show_bug.cgi?id=204209" target="_blank">one</a>.</p>
+
+<p><strong><em>UPDATE:</em></strong> 5.2.14 works a charm</p>
+
+<hr />
+
+<h2 id="first-things-first">First Things First</h2>
+
+<h3 id="bios">BIOS</h3>
+
+<h4 id="update-bios">Update BIOS</h4>
+
+<p>We recommend finding the overclocking community for your board, they always have the hottest pro-tips, eg:</p>
+
+<ul>
+<li><p>Official: <a href="https://www.gigabyte.com/au/Motherboard/X570-AORUS-MASTER-rev-10/support#support-dl-bios" target="_blank">https://www.gigabyte.com/au/Motherboard/X570-AORUS-MASTER-rev-10/support#support-dl-bios</a></p></li>
+
+<li><p>Community: <a href="https://www.overclock.net/forum/11-amd-motherboards/1728360-gigabyte-x570-aorus-owners-thread.html" target="_blank">https://www.overclock.net/forum/11-amd-motherboards/1728360-gigabyte-x570-aorus-owners-thread.html</a></p></li>
+</ul>
+
+<h4 id="bios-settings">BIOS Settings</h4>
+
+<ul>
+<li><p>This will vary by board manufacturer, they are all confusing piles of trash</p>
+<div class="highlight"><pre class="chroma">Tweaker -&gt; Advanced CPU Settings -&gt; SVM Mode -&gt; Enabled
+Settings -&gt; Miscellaneous -&gt; IOMMU -&gt; Enabled</pre></div></li>
+</ul>
+
+<hr />
+
+<h3 id="boot-installer">Boot Installer</h3>
+
+<p>Download from <a href="https://www.archlinux.org/download/" target="_blank">www.archlinux.org/download/</a></p>
+
+<ul>
+<li><p>Keymap:</p>
+<div class="highlight"><pre class="chroma">loadkeys us</pre></div></li>
+
+<li><p>Start network:</p>
+<div class="highlight"><pre class="chroma">dhcpcd</pre></div>
+<p>or</p>
+<div class="highlight"><pre class="chroma">wifi-menu</pre></div></li>
+</ul>
+
+<hr />
+
+<h2 id="partitions-filesystems">Partitions &amp; Filesystems</h2>
+
+<ul>
+<li>To encrypt the root partition, make sure to use the GPT partition table type instead of the default MSDOS type. Otherwise the GRUB2 boot loader may not have enough space for the second stage loader.<br />
+<br /></li>
+</ul>
+
+<h3 id="initial-partitioning">Initial Partitioning</h3>
+
+<ul>
+<li><p>Start gdisk:</p>
+<div class="highlight"><pre class="chroma">gdisk /dev/sda</pre></div></li>
+
+<li><p>EFI:</p>
+<div class="highlight"><pre class="chroma">n (Add a new partition)
+Partition number 1
+First sector 2048 (default)
+Last sector +512M
+Hex code EF00</pre></div></li>
+
+<li><p>Btrfs:</p>
+<div class="highlight"><pre class="chroma">n (Add a new partition)
+Partition number 2
+First sector 2099200 (default)
+Last sector (press Enter to use remaining disk)
+Hex code 8300</pre></div></li>
+
+<li><p>Format EFI Partition</p>
+<div class="highlight"><pre class="chroma">mkfs.fat -F32 -n EFI /dev/sda1</pre></div></li>
+</ul>
+
+<h3 id="encrypt-system-parition">Encrypt System Parition</h3>
+
+<ul>
+<li><p>Check algo performance:</p>
+<div class="highlight"><pre class="chroma">cryptsetup benchmark</pre></div></li>
+
+<li><p>Encrypt the parition:</p>
+<div class="highlight"><pre class="chroma">cryptsetup luksFormat --align-payload=8192 -c aes-xts-plain64 -s 512 -h sha512 --use-random /dev/sda2</pre></div></li>
+
+<li><p>Open the encrypted partition:</p>
+<div class="highlight"><pre class="chroma">cryptsetup --allow-discards --persistent open /dev/sda2 buttah</pre></div></li>
+</ul>
+
+<h3 id="format-system-partition">Format System Partition</h3>
+
+<ul>
+<li><p>Make the filesystem:</p>
+<div class="highlight"><pre class="chroma">mkfs.btrfs -L btrfs /dev/mapper/buttah</pre></div></li>
+
+<li><p>Create sub-vols:</p>
+<div class="highlight"><pre class="chroma">mount /dev/mapper/buttah /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@swap
+btrfs subvolume create /mnt/@snapshots
+btrfs subvolume create /mnt/@var</pre></div></li>
+
+<li><p>Mount sub-vols:<br />
+Avoid <a href="https://www.spinics.net/lists/linux-btrfs/msg81293.html" target="_blank">compress</a> in <a href="https://www.spinics.net/lists/linux-btrfs/msg56563.html" target="_blank">2019</a>  (still dreaming of <a href="https://lkml.org/lkml/2019/1/28/1930" target="_blank">zstd:1</a>)<br />
+ALSO avoid: discard, space_cache=v2 (sigh)</p>
+<div class="highlight"><pre class="chroma">umount /mnt
+mount -o subvol=@,ssd,compress=no,space_cache,noatime /dev/mapper/buttah /mnt
+mkdir /mnt/{home,swap,.snapshots,var}
+mount -o subvol=@home,ssd,compress=no,space_cache,noatime /dev/mapper/buttah /mnt/home
+mount -o subvol=@swap,ssd,compress=no,space_cache,noatime /dev/mapper/buttah /mnt/swap
+mount -o subvol=@snapshots,ssd,compress=no,space_cache,noatime /dev/mapper/buttah /mnt/.snapshots
+mount -o subvol=@var,ssd,compress=no,space_cache,noatime /dev/mapper/buttah /mnt/var</pre></div></li>
+
+<li><p>Nested sub-vols:<br />
+Creating nested subvolumes excludes these paths from top-level snapshots</p>
+<div class="highlight"><pre class="chroma">btrfs subvolume create /mnt/var/cache/pacman/pkg
+btrfs subvolume create /mnt/var/tmp
+btrfs subvolume create /mnt/srv</pre></div></li>
+
+<li><p>Create subvols after the fact<br />
+See: <a href="https://www.spinics.net/lists/linux-btrfs/msg33258.html" target="_blank">https://www.spinics.net/lists/linux-btrfs/msg33258.html</a><br />
+Some paths you probably want to avoid:</p>
+<div class="highlight"><pre class="chroma">/home/user/.cache/yay
+/home/user/.local/share/Trash
+/home/user/.local/share/Steam
+/home/user/.ccache</pre></div></li>
+</ul>
+
+<h3 id="swap">Swap</h3>
+
+<ul>
+<li><p>From kernel 5.0+ btrfs natively supports swap files</p>
+
+<p>(must be fully allocated as NOCOW with no compression on one device)</p>
+<div class="highlight"><pre class="chroma">truncate -s 0 /mnt/swap/swapfile
+chattr +C /mnt/swap/swapfile
+dd if=/dev/zero of=/mnt/swap/swapfile bs=1M count=16384 status=progress
+chmod 600 /mnt/swap/swapfile
+mkswap /mnt/swap/swapfile
+swapon /mnt/swap/swapfile</pre></div></li>
+</ul>
+
+<hr />
+
+<h3 id="boot-config">Boot Config</h3>
+
+<ul>
+<li><p>Mount boot parition</p>
+<div class="highlight"><pre class="chroma">mkdir /mnt/boot
+mount /dev/sda1 /mnt/boot</pre></div></li>
+
+<li><p>Generate fstab</p>
+<div class="highlight"><pre class="chroma">mkdir /mnt/etc
+genfstab -U /mnt &gt; /mnt/etc/fstab</pre></div></li>
+</ul>
+
+<h3 id="auto-mount-luks-xfs">Auto-mount LUKS+xfs</h3>
+
+<ul>
+<li><p>First things first:</p>
+<div class="highlight"><pre class="chroma">gdisk /dev/sdd
+Command (? for help): n
+Partition number (1-128, default 1): 
+First sector (34-15628053134, default = 2048) or {+-}size{KMGTP}: 
+Last sector (2048-15628053134, default = 15628053134) or {+-}size{KMGTP}: 
+Current type is &#39;Linux filesystem&#39;
+Hex code or GUID (L to show codes, Enter = 8300): 8e00
+Changed type of partition to &#39;Linux LVM&#39;
+
+lvmdiskscan
+
+pvcreate /dev/sdd1
+vgcreate vault /dev/sdd1
+lvcreate -l 100%FREE vault -n mydata /dev/sdd1
+
+vgdisplay
+lvdisplay
+
+cryptsetup luksFormat --align-payload=8192 -c aes-xts-plain64 -s 512 -h sha512 --use-random /dev/mapper/vault-mydata  
+cryptsetup luksOpen /dev/mapper/vault-mydata pool
+
+dd if=/dev/urandom bs=1024 count=512 of=/etc/luks_vault.key
+chmod 400 /etc/luks_vault.key
+cryptsetup luksAddKey /dev/mapper/vault-mydata /etc/luks_vault.key
+cryptsetup luksDump /dev/mapper/vault-mydata
+
+lsblk -o name,uuid</pre></div></li>
+
+<li><p>vim /etc/crypttab:</p>
+<div class="highlight"><pre class="chroma">vault           UUID=&lt;BLKID&gt;    /etc/luks_vault.key</pre></div></li>
+
+<li><p>vim /etc/fstab:</p>
+<div class="highlight"><pre class="chroma">/dev/mapper/mydata    /mnt/data    xfs         rw,nodev,noexec,nosuid                                                  0 0 
+
+mkfs.xfs /dev/mapper/mydata
+mkdir /mnt/data
+mount /dev/mapper/mydata /mnt/data
+
+df /mnt/data </pre></div></li>
+</ul>
+
+<h4 id="bonus-access-veracrypt-container-with-cryptsetup">Bonus! Access veracrypt container with cryptsetup</h4>
+
+<ul>
+<li><p>mounting:</p>
+<div class="highlight"><pre class="chroma">mkdir /mnt/crypt
+cryptsetup --type tcrypt --veracrypt open /mnt/tomb/stash/deaddrop/tomb vera-tomb --key-file /mnt/tomb/stash/deaddrop/pg19322.txt
+mount /dev/mapper/vera-tomb /mnt/crypt
+exa --tree /mnt/crypt</pre></div></li>
+
+<li><p>unmounting:</p>
+<div class="highlight"><pre class="chroma">umount /mnt/crypt
+cryptsetup --type tcrypt --veracrypt close vera-tomb</pre></div></li>
+</ul>
+
+<hr />
+
+<h2 id="arch-install">Arch Install</h2>
+
+<ul>
+<li><p>Strap it!</p>
+<div class="highlight"><pre class="chroma">pacstrap /mnt base base-devel btrfs-progs efibootmgr sudo zsh zsh-completions amd-ucode neovim wireless_tools wpa_supplicant dialog</pre></div></li>
+</ul>
+
+<h3 id="arch-chroot">Arch chroot</h3>
+
+<ul>
+<li><p>Chroot:</p>
+<div class="highlight"><pre class="chroma">arch-chroot /mnt /bin/zsh
+chsh -s /bin/zsh</pre></div></li>
+</ul>
+
+<h3 id="initramfs">initramfs</h3>
+
+<ul>
+<li><p>Edit /etc/mkinitcpio.conf:</p>
+<div class="highlight"><pre class="chroma">BINARIES=(&#34;/usr/bin/btrfs&#34;)
+HOOKS=(base systemd autodetect modconf block sd-encrypt btrfs filesystems keyboard fsck)</pre></div></li>
+
+<li><p>Generate with:</p>
+<div class="highlight"><pre class="chroma">mkinitcpio -p linux</pre></div></li>
+</ul>
+
+<h4 id="tz-localization">TZ &amp; Localization</h4>
+
+<ul>
+<li><p>Set the tz:</p>
+<div class="highlight"><pre class="chroma">ln -sf /usr/share/zoneinfo/Region/City /etc/localtime </pre></div></li>
+
+<li><p>Generate /etc/adjtime:</p>
+<div class="highlight"><pre class="chroma">hwclock --systohc</pre></div></li>
+
+<li><p>Enable NTP:</p>
+<div class="highlight"><pre class="chroma">timedatectl set-ntp true</pre></div></li>
+
+<li><p>Localization:</p>
+<div class="highlight"><pre class="chroma">vim /etc/locale.gen (uncomment en_US.UTF-8 UTF-8)
+locale-gen
+echo LANG=en_US.UTF-8 &gt; /etc/locale.conf</pre></div></li>
+
+<li><p>Keyboard layout:</p>
+<div class="highlight"><pre class="chroma">echo KEYMAP=us &gt; /etc/vconsole.conf</pre></div></li>
+
+<li><p>Hostname:</p>
+<div class="highlight"><pre class="chroma">echo hostname &gt; /etc/hostname</pre></div></li>
+
+<li><p>Edit /etc/hosts:</p>
+<div class="highlight"><pre class="chroma">127.0.0.1   localhost
+::1     localhost</pre></div></li>
+
+<li><p>Set root password:</p>
+<div class="highlight"><pre class="chroma">passwd</pre></div></li>
+</ul>
+
+<h4 id="systemd-boot">Systemd-boot</h4>
+
+<ul>
+<li><p>Initialise systemd-boot:</p>
+<div class="highlight"><pre class="chroma">bootctl --path=/boot install</pre></div></li>
+
+<li><p>Get System UUID:</p>
+<div class="highlight"><pre class="chroma">lsblk -o name,uuid</pre></div></li>
+
+<li><p>Create /boot/loader/entries/arch.conf:</p>
+<div class="highlight"><pre class="chroma">title Arch Linux
+linux /vmlinuz-linux
+initrd /amd-ucode.img
+initrd /initramfs-linux.img
+options rd.luks.name=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx=buttah luks.options=discard root=/dev/mapper/buttah rw rootflags=subvol=@ quiet </pre></div></li>
+
+<li><p>Edit /boot/loader/loader.conf:</p>
+<div class="highlight"><pre class="chroma">timeout 1
+default arch</pre></div></li>
+</ul>
+
+<hr />
+
+<h4 id="bootstrap">Bootstrap</h4>
+
+<ul>
+<li><p>Reboot into Live System</p>
+<div class="highlight"><pre class="chroma">exit
+umount -R /mnt
+reboot</pre></div></li>
+</ul>
+
+<h3 id="essentials">Essentials</h3>
+
+<ul>
+<li><p>Check for updates:</p>
+<div class="highlight"><pre class="chroma">pacman -Syyuu </pre></div></li>
+
+<li><p>Install git:</p>
+<div class="highlight"><pre class="chroma">pacman -S git</pre></div></li>
+</ul>
+
+<h5 id="improve-compile-time">Improve Compile Time</h5>
+
+<ul>
+<li><p>Install ccache:</p>
+<div class="highlight"><pre class="chroma">pacman -S ccache</pre></div></li>
+
+<li><p>Edit /etc/makepkg.conf:</p>
+<div class="highlight"><pre class="chroma">MAKEFLAGS=&#34;-j$(nproc --ignore 1)”
+BUILDDIR=/tmp/makepkg
+PKGEXT=&#39;.pkg.tar&#39;
+BUILDENV=(fakeroot !distcc color ccache check !sign)
+COMPRESSXZ=(xz -c -T 22 -z -)</pre></div></li>
+
+<li><p>Add the following line to enable for command line compilations:</p>
+<div class="highlight"><pre class="chroma">export PATH=&#34;/usr/lib/ccache/bin/:$PATH&#34;</pre></div></li>
+</ul>
+
+<h5 id="aria2-download-manager">aria2 download manager</h5>
+
+<ul>
+<li><p><a href="https://aria2.github.io/manual/en/html/aria2c.html#synopsis" target="_blank">Read This</a></p></li>
+
+<li><p>install</p>
+<div class="highlight"><pre class="chroma">yay -S aria2</pre></div></li>
+
+<li><p>vim /etc/pacman.conf:</p>
+<div class="highlight"><pre class="chroma">XferCommand = /usr/bin/aria2c --allow-overwrite=true --continue=true --file-allocation=none --log-level=error --max-tries=2 --max-connection-per-server=2 --max-file-not-found=5 --min-split-size=5M --no-conf --remote-time=true --summary-interval=60 --timeout=5 --dir=/ --out %o %u</pre></div></li>
+</ul>
+
+<hr />
+
+<h4 id="base-system">Base System</h4>
+
+<h5 id="cli">cli</h5>
+
+<ul>
+<li><p>just the basics:</p>
+<div class="highlight"><pre class="chroma">pacman -S p7zip unrar unzip zip bind-tools openssh wget tmux htop ranger ncdu</pre></div></li>
+</ul>
+
+<h5 id="xwindows">xwindows</h5>
+
+<ul>
+<li><p>base:</p>
+<div class="highlight"><pre class="chroma">pacman -S xorg xorg-xinit xorg-server
+pacman -S mesa xf86-video-amdgpu libva-mesa-driver nvidia nvidia-utils vulkan-radeon 
+pacman -S ttf-{bitstream-vera,dejavu,droid,hack,iosevka,liberation,roboto,ubuntu-font-family} freetype2 
+pacman -S alsa-utils alsa-plugins alsa-lib pulseaudio pulseaudio-alsa pulseaudio-bluetooth</pre></div></li>
+
+<li><p>wm:</p>
+<div class="highlight"><pre class="chroma">pacman -S caja cinnamon gnome-screenshot gnome-system-monitor xfce4-terminal
+
+systemctl enable NetworkManager.service</pre></div></li>
+
+<li><p>greeter:</p>
+<div class="highlight"><pre class="chroma">pacman -S lightdm lightdm-gtk-greeter
+
+systemctl enable lightdm</pre></div></li>
+</ul>
+
+<h6 id="mouse-config">mouse config</h6>
+
+<ul>
+<li><p><a href="https://wiki.archlinux.org/index.php/Mouse_buttons" target="_blank">Read This</a></p></li>
+
+<li><p>Find device name</p>
+<div class="highlight"><pre class="chroma">egrep &#34;Name|Handlers&#34; /proc/bus/input/devices | egrep -B1 &#39;Handlers.*mouse&#39;</pre></div></li>
+
+<li><p>Create /etc/X11/xorg.d/10-mouse.conf:</p>
+<div class="highlight"><pre class="chroma">Section &#34;InputDevice&#34;
+  Identifier      &#34;Evdev Mouse&#34;
+  Driver          &#34;evdev&#34;
+  Option          &#34;Name&#34; &#34;Logitech USB Gaming Mouse&#34;
+  Option          &#34;evBits&#34;  &#34;+1-2&#34;
+  Option          &#34;keyBits&#34; &#34;~272-287&#34;
+  Option          &#34;relBits&#34; &#34;~0-2 ~6 ~8&#34;
+  Option          &#34;Pass&#34;    &#34;3&#34;
+  Option          &#34;CorePointer&#34;
+EndSection</pre></div></li>
+</ul>
+
+<h5 id="user">User</h5>
+
+<ul>
+<li><p>create a user</p>
+<div class="highlight"><pre class="chroma">useradd -m -g users -G wheel,storage,power,network -s /bin/zsh user
+passwd user
+sudo pacman -S sudo</pre></div></li>
+
+<li><p>edit /etc/sudoers to uncomment <code>%wheel ALL=(ALL) ALL</code></p></li>
+
+<li><p>Login as user</p></li>
+</ul>
+
+<h5 id="prezto">prezto</h5>
+
+<ul>
+<li><a href="https://github.com/sorin-ionescu/prezto" target="_blank">Read This</a><br />
+<br /></li>
+</ul>
+
+<h5 id="yay-aur-helper">yay (AUR helper)</h5>
+
+<ul>
+<li><p>Install:</p>
+<div class="highlight"><pre class="chroma">mkdir src
+cd src
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+yay --nodiffmenu --save</pre></div></li>
+</ul>
+
+<h5 id="userland-goodies">Userland Goodies</h5>
+
+<ul>
+<li><p>cli essentials:</p>
+<div class="highlight"><pre class="chroma">yay -S atool bat cmus exa fasd fd fzf gnupg httpie jq masscan mpv neofetch nmap gnu-netcat pakbak-git peco ripgrep rsync thefuck
+pip3 install git+https://github.com/tehmaze/lolcat.git</pre></div>
+<p>terminal theme(s) from: <a href="https://mayccoll.github.io/Gogh/#0" target="_blank">https://mayccoll.github.io/Gogh/#0</a></p></li>
+
+<li><p>gui stuff:</p>
+
+<p>yay -S blueberry bluez-utils</p>
+<div class="highlight"><pre class="chroma">yay -S audacious bibata-cursor-theme bookworm capitaine-cursors celluloid cherrytree chromium code dosbox evince firefox geary gitkraken keepassxc kupfer lollypop netactview pinta plank redshift snapper-git snapper-gui-git spideroak-one spotify tela-icon-theme-git typora viewnior xpad</pre></div></li>
+
+<li><p>Hella Extras:</p>
+
+<p>yay -S spaceship-prompt-git powerline powerline-fonts-git noto-fonts-emoji</p>
+<div class="highlight"><pre class="chroma">yay -S fortune-mod-archer fortune-mod-arresteddevelopment fortune-mod-iasip fortune-mod-futurama fortune-mod-hitchhiker fortune-mod-metalocalypse fortune-mod-portal-game fortune-mod-rickandmorty fortune-mod-southpark</pre></div>
+<p><a href="https://github.com/denysdovhan/spaceship-prompt" target="_blank">Spaceship prompt reference</a></p></li>
+
+<li><p>Winfonts</p>
+
+<p><a href="https://wiki.archlinux.org/index.php/Microsoft_fonts#Extracting_fonts_from_a_Windows_ISO" target="_blank">Read This</a></p>
+<div class="highlight"><pre class="chroma">yay -G ttf-ms-win10 
+
+7z e Win10_1709_English_x64.iso sources/install.wim
+7z e install.wim 1/Windows/{Fonts/&#34;*&#34;.{ttf,ttc},System32/Licenses/neutral/&#34;*&#34;/&#34;*&#34;/license.rtf} -ofonts/
+
+mv fonts/* ttf-ms-win10
+
+cd ttf-ms-win10
+makepkg --skipchecksums</pre></div></li>
+</ul>
+
+<hr />
+
+<h5 id="snapper">Snapper</h5>
+
+<ul>
+<li><p>setup</p>
+<div class="highlight"><pre class="chroma">umount /.snapshots
+rm -rf /.snapshots 
+snapper -c root create-config /
+mount -a
+chmod 750 /.snapshots</pre></div></li>
+</ul>
+
+<p>Add files to /etc/snapper/configs/* matching your desired volumes to snapshot</p>
+
+<ul>
+<li><p>Enable and start with:</p>
+<div class="highlight"><pre class="chroma">systemctl enable snapper-timeline.timer
+systemctl enable snapper-cleanup.timer
+systemctl start snapper-timeline.timer
+systemctl start snapper-cleanup.timer</pre></div></li>
+
+<li><p>Two-hourly snapshots:<br />
+vim /usr/lib/systemd/system/snapper-timeline.timer:</p>
+<div class="highlight"><pre class="chroma">[Timer]
+OnCalendar=0/2:00:00</pre></div></li>
+</ul>
+
+<hr />
+
+<h6 id="pacman-integration">pacman integration</h6>
+
+<ul>
+<li><p>install</p>
+<div class="highlight"><pre class="chroma">yay -S snap-pac</pre></div></li>
+
+<li><p>default config</p>
+<div class="highlight"><pre class="chroma">cp /etc/snap-pac/root.conf.example /etc/snap-pac/hostname.conf
+mv cp /etc/snap-pac/root.conf.example /etc/snap-pac/root.conf</pre></div></li>
+
+<li><p>vim /etc/snap-pac/hostname.conf:</p>
+<div class="highlight"><pre class="chroma">CLEANUP_ALGORITHM=&#34;timeline&#34;</pre></div></li>
+
+<li><p>vim /etc/snap-pac.conf:</p>
+<div class="highlight"><pre class="chroma">SNAPPER_CONFIGS=&#34;hostname&#34;</pre></div></li>
+
+<li><p>vim /etc/snap-pac/root.conf:</p>
+<div class="highlight"><pre class="chroma">SNAPSHOT=&#34;no&#34;</pre></div></li>
+</ul>
+
+<h5 id="backups">Backups</h5>
+
+<ul>
+<li><p><a href="https://github.com/digint/btrbk" target="_blank">Read This</a></p>
+<div class="highlight"><pre class="chroma">yay -S btrbk-git</pre></div></li>
+</ul>
+
+<h3 id="tweaks-hardening">Tweaks &amp; Hardening</h3>
+
+<ul>
+<li><p>Deadline scheduler:</p>
+<div class="highlight"><pre class="chroma">echo &#34;block/sda/queue/scheduler = deadline&#34; &gt; /etc/sysctl.d/10-deadline.conf</pre></div></li>
+
+<li><p>Max files:</p>
+<div class="highlight"><pre class="chroma">echo &#34;fs.file-max = 100000&#34; &gt; /etc/sysctl.d/20-fs.conf</pre></div></li>
+
+<li><p>/etc/sysctl.d/30-jit_harden.conf</p>
+<div class="highlight"><pre class="chroma">echo &#34;net.core.bpf_jit_harden = 2&#34; &gt; /etc/sysctl.d/30-jit_harden.conf</pre></div></li>
+
+<li><p>/etc/sysctl.d/30-kexec-restrict.conf:</p>
+<div class="highlight"><pre class="chroma">echo &#34;kernel.kexec_loaded_disabled = 1&#34; &gt; /etc/sysctl.d/30-kexec-restrict.conf</pre></div></li>
+
+<li><p>/etc/sysctl.d/40-tcp_harden.conf:</p>
+<div class="highlight"><pre class="chroma">net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_rfc1337 = 1
+net.ipv4.conf.default.rp_filter = 1
+net.ipv4.conf.all.rp_filter = 1
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.default.accept_redirects = 0
+net.ipv4.conf.all.secure_redirects = 0
+net.ipv4.conf.default.secure_redirects = 0
+net.ipv6.conf.all.accept_redirects = 0
+net.ipv6.conf.default.accept_redirects = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.default.send_redirects = 0</pre></div></li>
+
+<li><p>/etc/sysctl.d/40-network.conf:</p>
+<div class="highlight"><pre class="chroma">net.core.netdev_max_backlog = 100000
+net.core.netdev_budget = 50000
+net.core.netdev_budget_usecs = 5000
+net.core.somaxconn = 1024  
+net.core.rmem_max = 16777216
+net.core.wmem_max = 16777216
+net.core.rmem_default = 16777216
+net.core.wmem_default = 16777216
+net.core.optmem_max = 40960
+net.ipv4.tcp_rmem = 4096 87380 16777216
+net.ipv4.tcp_wmem = 4096 65536 16777216
+net.ipv4.udp_rmem_min = 8192
+net.ipv4.udp_wmem_min = 8192
+net.ipv4.tcp_fastopen = 3
+net.ipv4.tcp_max_tw_buckets = 2000000
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_fin_timeout = 10
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.tcp_keepalive_time = 60
+net.ipv4.tcp_keepalive_intvl = 10
+net.ipv4.tcp_keepalive_probes = 6
+net.ipv4.tcp_mtu_probing = 1
+net.ipv4.ip_local_port_range = 10000 65000</pre></div></li>
+
+<li><p>/etc/sysctl.d/50-vm.conf:</p>
+<div class="highlight"><pre class="chroma">vm.swappiness = 10
+vm.dirty_ratio = 3
+vm.dirty_background_ratio = 2
+vm.vfs_cache_pressure = 50
+vm.min_free_kbytes = 131072</pre></div></li>
+
+<li><p>/etc/pam.d/system-login:</p>
+<div class="highlight"><pre class="chroma">auth       optional   pam_faildelay.so     delay=5000000
+auth       required   pam_tally2.so        deny=3 unlock_time=600 onerr=succeed file=/var/log/tallylog</pre></div></li>
+
+<li><p>/etc/ssh/sshd_config:</p>
+<div class="highlight"><pre class="chroma">Protocol 2
+
+HostKey /etc/ssh/ssh_host_ed25519_key
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_ecdsa_key
+
+KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp521,ecdh-sha2-nistp384,ecdh-sha2-nistp256,diffie-hellman-group-exchange-sha256
+
+Ciphers chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr
+
+MACs hmac-sha2-512-etm@openssh.com,hmac-sha2-256-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512,hmac-sha2-256,umac-128@openssh.com
+
+AuthenticationMethods publickey
+PermitRootLogin no
+UsePrivilegeSeparation sandbox
+
+LogLevel VERBOSE
+Subsystem sftp  /usr/lib/ssh/sftp-server -f AUTHPRIV -l INFO</pre></div></li>
+
+<li><p>De-activate short moduli:</p>
+<div class="highlight"><pre class="chroma">awk &#39;$5 &gt;= 3071&#39; /etc/ssh/moduli &gt; /etc/ssh/moduli.tmp &amp;&amp; mv /etc/ssh/moduli.tmp /etc/ssh/moduli</pre></div></li>
+
+<li><p>~/.ssh/config:</p>
+<div class="highlight"><pre class="chroma">HashKnownHosts yes
+HostKeyAlgorithms ssh-ed25519-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ssh-ed25519,ssh-rsa,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256</pre></div></li>
+</ul>
+
+<hr />
+
+<h2 id="vfio">VFIO</h2>
+
+<ul>
+<li><p>Install deps:</p>
+<div class="highlight"><pre class="chroma">yay -S linux-vfio linux-vfio-headers qemu libvirt ovmf virt-manager bridge-utils dmidecode</pre></div></li>
+
+<li><p>Clone boot entry</p>
+<div class="highlight"><pre class="chroma">cp /boot/loader/entries/arch.conf /boot/loader/entries/vfio.conf
+vim /boot/loader/entries/vfio.conf</pre></div></li>
+
+<li><p>Enable iommu (and some other tweaks)<br />
+vim /boot/loader/entries/vfio.conf:</p>
+<div class="highlight"><pre class="chroma">iommu=pt kvm-amd.avic=1 rd.driver.pre=vfio-pci</pre></div></li>
+
+<li><p>Force secondary GPU<br />
+vim /etc/xorg.conf.d/10-amdgpu.conf:</p>
+<div class="highlight"><pre class="chroma">Section &#34;Device&#34; 
+Identifier &#34;AMD&#34; 
+Driver &#34;amdgpu&#34; 
+BusID &#34;PCI:2:0:0&#34; # omit first digit from `lspci -k` 0x:00.0 
+EndSection </pre></div></li>
+
+<li><p>Enable hugepages<br />
+ <a href="https://wiki.archlinux.org/index.php/KVM#Enabling_huge_pages" target="_blank">Read This</a></p>
+<div class="highlight"><pre class="chroma">mkdir -p /dev/hugepages</pre></div>
+<p>vim /etc/fstab:</p>
+<div class="highlight"><pre class="chroma">hugetlbfs       /dev/hugepages  hugetlbfs       mode=1770,gid=78        0 0</pre></div></li>
+
+<li><p>Interupt mapping</p>
+<div class="highlight"><pre class="chroma">echo &#34;options vfio_iommu_type1 allow_unsafe_interrupts=1&#34; &gt; /etc/modprobe.d/iommu_unsafe_interrupts.conf
+echo &#34;options kvm ignore_msrs=1&#34; &gt; /etc/modprobe.d/kvm.conf
+echo &#34;options kvm report_ignored_msrs=N&#34; &gt;&gt; /etc/modprobe.d/kvm.conf</pre></div></li>
+
+<li><p>reboot</p></li>
+
+<li><p>Check iommu is enabled: <code>dmesg | grep -e DMAR -e IOMMU</code></p></li>
+
+<li><p>Inspect iommu groups:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">shopt</span> -s nullglob
+<span class="k">for</span> d in /sys/kernel/iommu_groups/*/devices/*<span class="p">;</span> <span class="k">do</span>
+  <span class="nv">n</span><span class="o">=</span><span class="si">${</span><span class="nv">d</span><span class="p">#*/iommu_groups/*</span><span class="si">}</span><span class="p">;</span> <span class="nv">n</span><span class="o">=</span><span class="si">${</span><span class="nv">n</span><span class="p">%%/*</span><span class="si">}</span>
+  <span class="nb">printf</span> <span class="s1">&#39;IOMMU Group %s &#39;</span> <span class="s2">&#34;</span><span class="nv">$n</span><span class="s2">&#34;</span>
+  lspci -nns <span class="s2">&#34;</span><span class="si">${</span><span class="nv">d</span><span class="p">##*/</span><span class="si">}</span><span class="s2">&#34;</span>
+<span class="k">done</span><span class="p">;</span></code></pre></div></li>
+</ul>
+
+<hr />
+
+<h3 id="qemu">QEMU</h3>
+
+<ul>
+<li><p>Add user to <em>libvirt</em> group</p>
+<div class="highlight"><pre class="chroma">sudo usermod -aG libvirt username</pre></div></li>
+
+<li><p>Configure libvirt</p>
+<div class="highlight"><pre class="chroma">cp /usr/share/ovmf/x64/OVMF_VARS.fd /var/lib/libvirt/images/ovmf_vars_x64.bin</pre></div>
+<p>vim /etc/libvirt/qemu.conf:</p>
+<div class="highlight"><pre class="chroma">nvram = [
+    &#34;/usr/share/ovmf/x64/OVMF_CODE.fd:/var/lib/libvirt/images/ovmf_vars_x64.bin&#34;
+]</pre></div></li>
+
+<li><p>Enable &amp; Start libvirtd</p>
+<div class="highlight"><pre class="chroma">systemctl enable --now libvirtd.service
+systemctl enable --now virtlogd.socket</pre></div></li>
+
+<li><p>Default libvirt network</p>
+<div class="highlight"><pre class="chroma">yay -Syu dnsmasq firewalld
+sudo systemctl start firewalld
+sudo systemctl enable firewalld
+sudo systemctl restart libvirtd
+
+sudo virsh net-autostart default
+sudo virsh net-start default</pre></div></li>
+
+<li><p>Note: this will probably fuck up your docker containers<br />
+vim /etc/docker/daemon.json</p>
+<div class="highlight"><pre class="chroma">{
+      &#34;bridge&#34;: &#34;virbr0&#34;,
+}</pre></div></li>
+</ul>
+
+<h4 id="bonus-mount-raw-images">Bonus! mount raw images</h4>
+
+<ul>
+<li><p>using the loopback driver:</p>
+<div class="highlight"><pre class="chroma">mkdir /mnt/raw
+partx -av /path/to/img/file
+mount /dev/loop0p2 /mnt/raw 
+umount /mnt/raw
+partx -dv /dev/loop0</pre></div></li>
+</ul>
+
+<h3 id="gpu-passthru">GPU passthru</h3>
+
+<ul>
+<li><p>acs overwride<br />
+add <code>pcie_acs_override=downstream</code> to kernel boot line</p></li>
+
+<li><p>get pci ids with <code>lspci -nn</code></p></li>
+
+<li><p>vim /etc/modprobe.d/vfio.conf:</p>
+<div class="highlight"><pre class="chroma">softdep nouveau pre: vfio-pci 
+softdep nvidia pre: vfio-pci 
+softdep nvidia* pre: vfio-pci
+options vfio-pci ids=10de:1b81,10de:10f0</pre></div></li>
+
+<li><p>reboot one last time!</p></li>
+</ul>
+
+<p>Note: virt-manager is so simple these days, fuck handcrafting xmls and those custom qemu shell scripts</p>
+
+<h3 id="evdev">EvDev</h3>
+
+<ul>
+<li>You can be lazy and just pass through the USB ports (or devices) or you can be brave and try evdev input swapping.<br />
+<a href="https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF#Passing_keyboard/mouse_via_Evdev" target="_blank">Read This</a><br />
+<br /></li>
+</ul>
+
+<h3 id="audio">Audio</h3>
+
+<ul>
+<li>Using HDMI audio for the time being, can&rsquo;t hurt to try <a href="https://github.com/duncanthrax/scream" target="_blank">SCREAM</a><br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="extras">Extras</h2>
+
+<h3 id="hardware-security">Hardware security</h3>
+
+<p><a href="https://wiki.archlinux.org/index.php/YubiKey" target="_blank">Nuff Said</a></p>
+
+<hr />
+
+<h3 id="personal-vpn">Personal VPN</h3>
+
+<p><a href="https://github.com/trailofbits/algo" target="_blank">Start Here</a></p>
+
+<ul>
+<li><p>Wireguard Client:</p>
+<div class="highlight"><pre class="chroma">yay -S wireguard-arch-dkms</pre></div>
+<p>OR</p>
+<div class="highlight"><pre class="chroma">yay -S wireguard-arch-dkms networkmanager-wireguard-git 
+
+CONF_FILE=&#34;~/algo/configs/1.3.3.7/wireguard/blackvolga.conf&#34;
+nmcli connection import type wireguard file &#34;$CONF_FILE&#34;</pre></div></li>
+
+<li><p>Setup auto-connect: <a href="https://wiki.archlinux.org/index.php/NetworkManager#Use_dispatcher_to_connect_to_a_VPN_after_a_network_connection_is_established" target="_blank">Read This</a></p></li>
+</ul>
+
+<hr />
+
+<h3 id="personal-dns">Personal DNS</h3>
+
+<ul>
+<li><p>PiHole: <a href="https://github.com/pi-hole/pi-hole" target="_blank">https://github.com/pi-hole/pi-hole</a></p></li>
+
+<li><p><em>THE</em> Blocklist: <a href="https://github.com/pi-hole/pi-hole" target="_blank">https://github.com/pi-hole/pi-hole</a></p></li>
+
+<li><p>Userspace goodness: <a href="https://github.com/evilsocket/opensnitch" target="_blank">https://github.com/evilsocket/opensnitch</a></p></li>
+</ul>
+
+<hr />
+
+<h3 id="docker">Docker</h3>
+
+<ul>
+<li><p><a href="https://wiki.archlinux.org/index.php/Docker" target="_blank">Read This</a></p></li>
+
+<li><p>Install</p>
+<div class="highlight"><pre class="chroma">yay -S docker docker-compose docker-machine</pre></div></li>
+</ul>
+
+<h5 id="useful-images">Useful Images</h5>
+
+<ul>
+<li><p>Listed in no particular order</p>
+<div class="highlight"><pre class="chroma">archiveteam/warrior-dockerfile
+jwilder/nginx-proxy
+linuxserver/beets
+linuxserver/couchpotato
+linuxserver/headphones
+linuxserver/jackett
+linuxserver/mylar
+linuxserver/plex
+linuxserver/pyload
+linuxserver/radarr
+linuxserver/sabnzbd
+linuxserver/sonarr
+magicwormhole/magic-wormhole
+portainer/portainer
+timonier/webui-aria2
+writl/pyload
+v2tec/watchtower</pre></div></li>
+</ul>
+
+<h4 id="docker-all-the-things">Docker <em>all</em> the things</h4>
+
+<ul>
+<li>Jessie has done all the work, massive kudos: <a href="https://github.com/jessfraz/dockerfiles" target="_blank">https://github.com/jessfraz/dockerfiles</a><br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h2 id="reference">Reference</h2>
+
+<p><em>Don&rsquo;t take our word for it&hellip;</em></p>
+
+<h3 id="arch-stuff">Arch Stuff</h3>
+
+<ul>
+<li><p><a href="https://wiki.archlinux.org/index.php/User:Altercation/Bullet_Proof_Arch_Install" target="_blank">https://wiki.archlinux.org/index.php/User:Altercation/Bullet_Proof_Arch_Install</a></p></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/General_recommendations" target="_blank">https://wiki.archlinux.org/index.php/General_recommendations</a></p></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/AMDGPU#Installation" target="_blank">https://wiki.archlinux.org/index.php/AMDGPU#Installation</a></p></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/System_maintenance" target="_blank">https://wiki.archlinux.org/index.php/System_maintenance</a></p></li>
+
+<li><p><a href="http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/" target="_blank">http://reasoniamhere.com/2014/01/11/outrageously-useful-tips-to-master-your-z-shell/</a></p></li>
+
+<li><p>Pacman tweaks: <a href="https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#aria2" target="_blank">https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks#aria2</a></p></li>
+
+<li><p>Snapper: <a href="https://wiki.archlinux.org/index.php/Snapper#Enable/disable" target="_blank">https://wiki.archlinux.org/index.php/Snapper#Enable/disable</a></p></li>
+
+<li><p>Snapper hooks: <a href="https://wiki.archlinux.org/index.php/Snapper#Wrapping_pacman_transactions_in_snapshots" target="_blank">https://wiki.archlinux.org/index.php/Snapper#Wrapping_pacman_transactions_in_snapshots</a></p></li>
+
+<li><p>Snap-pac: <a href="https://github.com/wesbarnett/snap-pac" target="_blank">https://github.com/wesbarnett/snap-pac</a></p></li>
+</ul>
+
+<hr />
+
+<h3 id="linux-tweaks">Linux Tweaks</h3>
+
+<ul>
+<li><p>LUKS: <a href="https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions#5-security-aspects" target="_blank">https://gitlab.com/cryptsetup/cryptsetup/wikis/FrequentlyAskedQuestions#5-security-aspects</a></p></li>
+
+<li><p>SSH: <a href="https://infosec.mozilla.org/guidelines/openssh" target="_blank">https://infosec.mozilla.org/guidelines/openssh</a><br />
+<a href="https://stribika.github.io/2015/01/04/secure-secure-shell.html" target="_blank">https://stribika.github.io/2015/01/04/secure-secure-shell.html</a></p></li>
+
+<li><p>An Argument for Increasing TCP&rsquo;s Initial Congestion Window: <a href="https://ai.google/research/pubs/pub36640" target="_blank">https://ai.google/research/pubs/pub36640</a></p></li>
+
+<li><p>Tuning rmem: <a href="https://blog.cloudflare.com/the-story-of-one-latency-spike/" target="_blank">https://blog.cloudflare.com/the-story-of-one-latency-spike/</a></p></li>
+
+<li><p>Audio latency: <a href="https://wiki.archlinux.org/index.php/Gaming#Enabling_realtime_priority_and_negative_nice_level" target="_blank">https://wiki.archlinux.org/index.php/Gaming#Enabling_realtime_priority_and_negative_nice_level</a></p></li>
+
+<li><p>vm: <a href="https://wiki.archlinux.org/index.php/Sysctl#Virtual_memory" target="_blank">https://wiki.archlinux.org/index.php/Sysctl#Virtual_memory</a></p></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/Improving_performance#Benchmarking" target="_blank">https://wiki.archlinux.org/index.php/Improving_performance#Benchmarking</a></p></li>
+
+<li><p>Ryzen compiler options: <a href="https://wiki.gentoo.org/wiki/Ryzen#GCC_5.4" target="_blank">https://wiki.gentoo.org/wiki/Ryzen#GCC_5.4</a></p></li>
+</ul>
+
+<hr />
+
+<h3 id="xfs">XFS</h3>
+
+<ul>
+<li><p>Primer: <a href="http://prestonhunt.com/story/111" target="_blank">http://prestonhunt.com/story/111</a></p></li>
+
+<li><p>XFS perf: <a href="https://wiki.archlinux.org/index.php/XFS#Performance" target="_blank">https://wiki.archlinux.org/index.php/XFS#Performance</a></p></li>
+</ul>
+
+<hr />
+
+<h3 id="btrfs">Btrfs</h3>
+
+<ul>
+<li><p>Quick ref: <a href="https://btrfs.wiki.kernel.org/index.php/SysadminGuide" target="_blank">wiki.kernel.org</a></p></li>
+
+<li><p>Btrfs tools: <a href="https://btrfs.wiki.kernel.org/index.php/FAQ#Understanding_free_space.2C_using_the_original_tools" target="_blank">wiki.kernel.org</a></p></li>
+
+<li><p>Btrfs indepth: <a href="https://www.sciencedirect.com/science/article/pii/S1742287618301993-" target="_blank">sciencedirect.com</a></p></li>
+
+<li><p>Btrfs <a href="https://marc.info/?l=linux-btrfs&amp;m=150791934428057&amp;w=2" target="_blank">backups</a>[marc.info] from Redhat&rsquo;s Chris Murphy:</p>
+
+<ol>
+<li><p>Take a snapshot of the filesystem and use send/receive to another device which you then remove and store.</p>
+
+<blockquote>
+<p>&ldquo;Primary, and two separate backup (separate volume UUIDs), all three are Btrfs. The primary uses send/receive to the two backups. But my organization plan allows me to have only three subvolumes on the primary being snapshot and thus send/receive. So it&rsquo;s easy. Fourth copy, a subset of important data, is in the cloud.&rdquo;</p>
+</blockquote></li>
+
+<li><p>Use rsync to backup to another device which you then remove and store.</p>
+
+<blockquote>
+<p>A fifth copy, also a subset of important data is done doing this to XFS and a big drive kept offsite. It just accumulates. I don&rsquo;t consider it a backup, it&rsquo;s an archive, nothing is deleted. I treat it as WORM. Maybe one day I redo it based on dm-verity so I can add error detection and correction, the cryptographic aspects are a distant second for me.</p>
+</blockquote></li>
+</ol></li>
+
+<li><p>Wrap any shell command with snapper pre-post snapshots: <a href="https://gist.github.com/erikw/5229436" target="_blank">https://gist.github.com/erikw/5229436</a></p></li>
+
+<li><p>Rollback notes: <a href="https://ramsdenj.com/2016/04/05/using-btrfs-for-easy-backup-and-rollback.html" target="_blank">https://ramsdenj.com/2016/04/05/using-btrfs-for-easy-backup-and-rollback.html</a></p></li>
+
+<li><p>Create new subvol: <a href="https://www.spinics.net/lists/linux-btrfs/msg33258.html" target="_blank">https://www.spinics.net/lists/linux-btrfs/msg33258.html</a></p></li>
+
+<li><p>Tools: <a href="https://github.com/kdave/btrfsmaintenance" target="_blank">https://github.com/kdave/btrfsmaintenance</a></p></li>
+</ul>
+
+<h4 id="butter-cheatsheet">Butter Cheatsheet</h4>
+
+<h5 id="basic-stuff">Basic stuff</h5>
+
+<ul>
+<li><p>some useful commands:</p>
+<div class="highlight"><pre class="chroma">btrfs fi show
+
+btrfs device stats /   
+
+btrfs filesystem usage /
+
+btrfs filesystem defragment -r /
+
+btrfs scrub start / &amp;&amp; watch -n 10 &#34;btrfs scrub status /&#34;</pre></div></li>
+</ul>
+
+<h5 id="recovery">Recovery</h5>
+
+<p>Start with a scrub, usually takes a couple hours.</p>
+
+<ul>
+<li><p>check the logged errors with:</p>
+<div class="highlight"><pre class="chroma">btrfs inspect-internal inode-resolve XXXX /mnt</pre></div></li>
+
+<li><p>use a backup of the root tree in read only mode:</p>
+<div class="highlight"><pre class="chroma">mount -o usebackuproot /dev/sdXY /mnt</pre></div></li>
+
+<li><p>see what you can recover if you can&rsquo;t mount:</p>
+<div class="highlight"><pre class="chroma">btrfs restore -v -i -o /dev/sdXY /mnt</pre></div></li>
+</ul>
+
+<p><strong>Bonus!</strong> you can try recovering snapshots using <code>-s</code></p>
+
+<ul>
+<li><p>restore a specified root</p>
+<div class="highlight"><pre class="chroma">btrfs-find-root /dev/sdX
+
+btrfs restore -v -i -o -t &lt;n&gt; /dev/sdX /mnt/restore</pre></div></li>
+</ul>
+
+<p>where <code>n</code> matches the root objectid</p>
+
+<ul>
+<li><p><em>mostly</em> safe:</p>
+<div class="highlight"><pre class="chroma">btrfs rescue zero-log</pre></div></li>
+
+<li><p><strong>not</strong> completely safe:</p>
+<div class="highlight"><pre class="chroma">btrfs rescue super-recover</pre></div></li>
+
+<li><p><strong>even</strong> less safe:<br />
+This will take a <em>very</em> looong time for large drives and can result in data being wrongly restored</p>
+<div class="highlight"><pre class="chroma">btrfs rescue chunk-recover</pre></div></li>
+
+<li><p><strong>last resort</strong><br />
+seriously, <strong>forget this command</strong> unless you have tried everything else<br />
+(multiple times, and even then you <em>should probably forget this anyway</em>)</p>
+<div class="highlight"><pre class="chroma">btrfs check --repair /dev/sdXY</pre></div></li>
+</ul>
+
+<hr />
+
+<h3 id="vfio-kvm-qemu">VFIO / KVM / QEMU</h3>
+
+<ul>
+<li><p>OG: <a href="https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF" target="_blank">https://wiki.archlinux.org/index.php/PCI_passthrough_via_OVMF</a></p></li>
+
+<li><p>iommu=pt: <a href="http://mails.dpdk.org/archives/dev/2014-October/007411.html" target="_blank">http://mails.dpdk.org/archives/dev/2014-October/007411.html</a></p></li>
+
+<li><p><a href="https://github.com/saveriomiroddi/vga-passthrough" target="_blank">https://github.com/saveriomiroddi/vga-passthrough</a></p></li>
+
+<li><p><a href="https://heiko-sieger.info/iommu-groups-what-you-need-to-consider/" target="_blank">https://heiko-sieger.info/iommu-groups-what-you-need-to-consider/</a></p></li>
+
+<li><p><a href="https://gitlab.com/snippets/1678554" target="_blank">https://gitlab.com/snippets/1678554</a></p></li>
+
+<li><p><a href="https://1125.io/#/2019-01-21_21:58_Playing_within_a_Windows_VM_on_Linux_using_PCI-Passthrough.md" target="_blank">https://1125.io/#/2019-01-21_21:58_Playing_within_a_Windows_VM_on_Linux_using_PCI-Passthrough.md</a></p></li>
+
+<li><p><a href="http://mathiashueber.com/ryzen-based-virtual-machine-passthrough-setup-ubuntu-18-04/" target="_blank">http://mathiashueber.com/ryzen-based-virtual-machine-passthrough-setup-ubuntu-18-04/</a></p></li>
+
+<li><p>QEMU: <a href="https://wiki.gentoo.org/wiki/QEMU/Options" target="_blank">https://wiki.gentoo.org/wiki/QEMU/Options</a></p></li>
+
+<li><p>QEMU virtio: <a href="https://wiki.archlinux.org/index.php/QEMU#Installing_virtio_drivers" target="_blank">https://wiki.archlinux.org/index.php/QEMU#Installing_virtio_drivers</a></p></li>
+
+<li><p><a href="https://rokups.github.io/#!pages/gaming-vm-performance.md" target="_blank">https://rokups.github.io/#!pages/gaming-vm-performance.md</a></p></li>
+
+<li><p>pinning: <a href="https://www.redhat.com/archives/vfio-users/2017-January/msg00110.html" target="_blank">https://www.redhat.com/archives/vfio-users/2017-January/msg00110.html</a></p></li>
+
+<li><p>more pinning: <a href="https://forums.unraid.net/topic/47345-performance-improvements-in-vms-by-adjusting-cpu-pinning-and-assignment/" target="_blank">https://forums.unraid.net/topic/47345-performance-improvements-in-vms-by-adjusting-cpu-pinning-and-assignment/</a></p></li>
+
+<li><p>ryzen pinning: <a href="http://mathiashueber.com/cpu-pinning-on-amd-ryzen/" target="_blank">http://mathiashueber.com/cpu-pinning-on-amd-ryzen/</a></p></li>
+
+<li><p>IVSHMEM audio passthru: <a href="https://github.com/duncanthrax/scream#using-ivshmem-between-windows-guest-and-linux-host" target="_blank">https://github.com/duncanthrax/scream#using-ivshmem-between-windows-guest-and-linux-host</a></p></li>
+
+<li><p><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/virtualization_tuning_and_optimization_guide/index" target="_blank">https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html-single/virtualization_tuning_and_optimization_guide/index</a></p></li>
+
+<li><p><a href="https://github.com/joeknock90/Single-GPU-Passthrough" target="_blank">https://github.com/joeknock90/Single-GPU-Passthrough</a></p></li>
+
+<li><p><a href="https://bugzilla.redhat.com/show_bug.cgi?id=1675030" target="_blank">https://bugzilla.redhat.com/show_bug.cgi?id=1675030</a></p></li>
+
+<li><p><a href="https://passthroughpo.st/using-evdev-passthrough-seamless-vm-input/" target="_blank">https://passthroughpo.st/using-evdev-passthrough-seamless-vm-input/</a></p></li>
+
+<li><p><a href="https://forum.level1techs.com/t/increasing-vfio-vga-performance/133443/13" target="_blank">https://forum.level1techs.com/t/increasing-vfio-vga-performance/133443/13</a></p></li>
+
+<li><p><a href="https://wiki.archlinux.org/index.php/KVM#Tips_and_tricks" target="_blank">https://wiki.archlinux.org/index.php/KVM#Tips_and_tricks</a></p></li>
+
+<li><p><a href="https://wiki.libvirt.org/page/Networking#NAT_forwarding_.28aka_.22virtual_networks.22.29" target="_blank">https://wiki.libvirt.org/page/Networking#NAT_forwarding_.28aka_.22virtual_networks.22.29</a></p></li>
+
+<li><p><a href="https://github.com/saveriomiroddi/vga-passthrough/" target="_blank">https://github.com/saveriomiroddi/vga-passthrough/</a></p></li>
+</ul>
+
+<h4 id="notes">Notes</h4>
+
+<ul>
+<li><p>Snapshot is supported with raw block device.</p>
+<div class="highlight"><pre class="chroma">qemu-img create -f qcow2 -b /path/to/base/image.qcow2 /dev/sdc</pre></div></li>
+
+<li><p>If you refuse to use images, LVM is much more flexible and easier to manage than raw block or partitions, with good performance.</p></li>
+</ul>
+
+<hr />
+
+<h3 id="misc">Misc.</h3>
+
+<ul>
+<li><p><a href="https://github.com/roboyoshi/datacurator-filetree" target="_blank">https://github.com/roboyoshi/datacurator-filetree</a></p></li>
+
+<li><p><a href="https://liquorix.net" target="_blank">https://liquorix.net</a></p></li>
+
+<li><p>Ranger config: <a href="https://www.youtube.com/watch?v=nlolvAVqn10&amp;feature=youtu.be" target="_blank">https://www.youtube.com/watch?v=nlolvAVqn10&amp;feature=youtu.be</a></p></li>
+
+<li><p>Pihole on GCP: <a href="https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs" target="_blank">https://github.com/rajannpatel/Pi-Hole-PiVPN-on-Google-Compute-Engine-Free-Tier-with-Full-Tunnel-and-Split-Tunnel-OpenVPN-Configs</a></p></li>
+</ul>
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://blackvolga.github.io/tags/arch/">arch</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/vfio/">vfio</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/kvm/">kvm</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/qemu/">qemu</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/blackvolga" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:blackvolga@pm.me" title="Mail me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://explorer.bitcoin.com/bch/address/bitcoincash:qqyc9j2nxuvjvt27487q4u4xclac2nmmvqasrqmhhm" title="Bitcoin Cash">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+        </ul>
+        <p class="credits theme-by text-muted">
+           <a href="http://gohugo.io">Hugo v0.58.3</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://blackvolga.github.io/js/main.js"></script>
+<script src="https://blackvolga.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://blackvolga.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+

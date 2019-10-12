@@ -20,7 +20,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="BLVCKƔXLGV" />
 
-  <meta name="generator" content="Hugo 0.49.2" />
+  <meta name="generator" content="Hugo 0.58.3" />
   <link rel="canonical" href="https://blackvolga.github.io/post/wsl/" />
   <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
 
@@ -218,8 +218,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        <p>Sometimes we all get stuck on a windows machine. Luckily, since the <a href="https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/" target="_blank">March 2018 Update</a>, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.<br />
-</p>
+        <p>Sometimes we all get stuck on a windows machine. Luckily, since the <a href="https://blogs.msdn.microsoft.com/commandline/2018/03/06/debian-gnulinux-for-wsl-now-available-in-the-windows-store/" target="_blank">March 2018 Update</a>, Windows Subsystem for Linux has grown into a surprisingly superior alternative to the likes of cygwin for your basic terminal needs.</p>
 
 <hr />
 
@@ -271,7 +270,7 @@ You will prompted to create a linux user and pass on first start which will also
     <span class="s1">&#39;hyper-tabs-enhanced&#39;</span><span class="o">]</span>,</code></pre></div><br /></li>
 <li>Add to end of ~/.bashrc:<br />
 <div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash">    bash -c zsh
-    <span class="k">case</span> <span class="nv">$-</span> in # don<span class="err">&#39;</span>t <span class="k">do</span> anything <span class="k">if</span> not running interactively</code></pre></div><br />
+    <span class="k">case</span> <span class="nv">$-</span> in <span class="c1"># don&#39;t do anything if not running interactively</span></code></pre></div><br />
 <br /></li>
 </ul>
 
@@ -292,8 +291,8 @@ setopt EXTENDED_GLOB
 <span class="k">done</span>
 chsh -s /bin/zsh</code></pre></div><br />
 4. Zsh config. Add to ~/.zshrc:<br />
-<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">alias</span> <span class="nv">clip</span><span class="o">=</span><span class="s1">&#39;clip.exe&#39;</span> <span class="c1"># clipboard support
-</span><span class="c1"></span>
+<div class="highlight"><pre class="chroma"><code class="language-Bash" data-lang="Bash"><span class="nb">alias</span> <span class="nv">clip</span><span class="o">=</span><span class="s1">&#39;clip.exe&#39;</span> <span class="c1"># clipboard support</span>
+
 autoload -Uz promptinit
 promptinit
 prompt smiley
@@ -375,7 +374,7 @@ sudo apt install wslu</code></pre></div><br />
               </li>
         </ul>
         <p class="credits theme-by text-muted">
-           <a href="http://gohugo.io">Hugo v0.49.2</a>
+           <a href="http://gohugo.io">Hugo v0.58.3</a>
         </p>
       </div>
     </div>

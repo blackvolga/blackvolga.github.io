@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jquery on BLVCKƔXLGV</title>
+    <title>jquery on BLVCKƔXLGV</title>
     <link>https://blackvolga.github.io/tags/jquery/</link>
-    <description>Recent content in Jquery on BLVCKƔXLGV</description>
+    <description>Recent content in jquery on BLVCKƔXLGV</description>
     <generator>Hugo -- gohugo.io</generator>
     <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
     <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
@@ -20,8 +20,7 @@
       <guid>https://blackvolga.github.io/post/htaccess/</guid>
       <description>&lt;p&gt;A &lt;a href=&#34;https://github.com/blueimp/jQuery-File-Upload&#34; target=&#34;_blank&#34;&gt;popular&lt;/a&gt; jQuery upload plugin used .htaccess for security control but the default behaviour in Apache changed &lt;strong&gt;8 years ago&lt;/strong&gt; (v2.3.9) so attackers have been able to upload payloads using the plugin ever since.&lt;/p&gt;
 
-&lt;p&gt;Luckily it&amp;rsquo;s only the 2nd biggest jQuery repo on GitHub that&amp;rsquo;s been forked 7,834 times!&lt;br /&gt;
-&lt;/p&gt;</description>
+&lt;p&gt;Luckily it&amp;rsquo;s only the 2nd biggest jQuery repo on GitHub that&amp;rsquo;s been forked 7,834 times!&lt;/p&gt;</description>
     </item>
     
   </channel>

