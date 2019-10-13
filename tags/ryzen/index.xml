@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ryzen on BLVCKƔXLGV</title>
+    <link>https://blackvolga.github.io/tags/ryzen/</link>
+    <description>Recent content in ryzen on BLVCKƔXLGV</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>blackvolga@pm.me (GAZ23)</managingEditor>
+    <webMaster>blackvolga@pm.me (GAZ23)</webMaster>
+    <lastBuildDate>Sun, 13 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://blackvolga.github.io/tags/ryzen/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ryzen2 Memory Overclocking</title>
+      <link>https://blackvolga.github.io/post/ryzenram/</link>
+      <pubDate>Sun, 13 Oct 2019 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/post/ryzenram/</guid>
+      <description>&lt;p&gt;Overclocking is not an exact science nor does it require a degree in rocket surgery. Ryzen processors are more sensitive to memory clock speeds than you may be used to. Fortunately Zen2 is affected far less so than predecessors, making previously obscure clock speeds far less ambitious.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
