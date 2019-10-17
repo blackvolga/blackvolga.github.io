@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://blackvolga.github.io/tags/amd/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
+    <loc>https://blackvolga.github.io/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/</loc>
+    <loc>https://blackvolga.github.io/tags/hashcat/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/tags/hcx/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/post/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/tags/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/tags/wifi/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/post/wifi/</loc>
+    <lastmod>2019-10-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://blackvolga.github.io/tags/amd/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -23,22 +53,12 @@
   </url>
   
   <url>
-    <loc>https://blackvolga.github.io/post/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://blackvolga.github.io/tags/ryzen/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://blackvolga.github.io/post/ryzenram/</loc>
-    <lastmod>2019-10-13T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://blackvolga.github.io/tags/</loc>
     <lastmod>2019-10-13T00:00:00+00:00</lastmod>
   </url>
   

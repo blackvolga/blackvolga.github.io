@@ -21,5 +21,14 @@
       <description>&lt;p&gt;Overclocking is not an exact science nor does it require a degree in rocket surgery. Ryzen processors are more sensitive to memory clock speeds than you may be used to. Fortunately Zen2 is affected far less so than predecessors, making previously obscure clock speeds far less ambitious.&lt;/p&gt;</description>
     </item>
     
+    <item>
+      <title>Arch Linux VFIO 2019</title>
+      <link>https://blackvolga.github.io/post/archvfio2019/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      <author>blackvolga@pm.me (GAZ23)</author>
+      <guid>https://blackvolga.github.io/post/archvfio2019/</guid>
+      <description>&lt;p&gt;An incredibly opinionated attempt at updating the Arch Linux VFIO install notes for late 2019 from a disparate collection of sources.&lt;/p&gt;</description>
+    </item>
+    
   </channel>
 </rss>

